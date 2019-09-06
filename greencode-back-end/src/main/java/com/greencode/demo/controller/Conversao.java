@@ -2,9 +2,10 @@ package com.greencode.demo.controller;
 
 public abstract class Conversao {
 	
-	int idTipo;
-	double valorReal;
-	int ponto;
+	private int idTipo;
+	private double valorReal;
+	private int ponto;
+	
 	public int getIdTipo() {
 		return idTipo;
 	}
@@ -25,9 +26,5 @@ public abstract class Conversao {
 	}
 	
 	public abstract int convertePontos();
-	
-	
-	
-	
 
 }
