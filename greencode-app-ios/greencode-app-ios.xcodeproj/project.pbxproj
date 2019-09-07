@@ -1,0 +1,686 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F4E3DC8B2321496600A362CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E3DC8A2321496600A362CB /* AppDelegate.swift */; };
+		F4E3DC8D2321496600A362CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E3DC8C2321496600A362CB /* ViewController.swift */; };
+		F4E3DC902321496600A362CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4E3DC8E2321496600A362CB /* Main.storyboard */; };
+		F4E3DC932321496600A362CB /* greencode_app_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F4E3DC912321496600A362CB /* greencode_app_ios.xcdatamodeld */; };
+		F4E3DC952321496800A362CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4E3DC942321496800A362CB /* Assets.xcassets */; };
+		F4E3DC982321496800A362CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4E3DC962321496800A362CB /* LaunchScreen.storyboard */; };
+		F4E3DCA32321496800A362CB /* greencode_app_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E3DCA22321496800A362CB /* greencode_app_iosTests.swift */; };
+		F4E3DCAE2321496800A362CB /* greencode_app_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E3DCAD2321496800A362CB /* greencode_app_iosUITests.swift */; };
+		F4E3DCC923214B9D00A362CB /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4E3DCC423214B9800A362CB /* Montserrat-Bold.ttf */; };
+		F4E3DCCA23214BA100A362CB /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4E3DCC823214B9800A362CB /* Montserrat-Light.ttf */; };
+		F4E3DCCB23214BA500A362CB /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4E3DCC523214B9800A362CB /* Montserrat-Medium.ttf */; };
+		F4E3DCCC23214BA700A362CB /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4E3DCC623214B9800A362CB /* Montserrat-Regular.ttf */; };
+		F4E3DCCD23214BAB00A362CB /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4E3DCC723214B9800A362CB /* Montserrat-SemiBold.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F4E3DC9F2321496800A362CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4E3DC7F2321496600A362CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4E3DC862321496600A362CB;
+			remoteInfo = "greencode-app-ios";
+		};
+		F4E3DCAA2321496800A362CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4E3DC7F2321496600A362CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4E3DC862321496600A362CB;
+			remoteInfo = "greencode-app-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F4E3DC872321496600A362CB /* greencode-app-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "greencode-app-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4E3DC8A2321496600A362CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F4E3DC8C2321496600A362CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F4E3DC8F2321496600A362CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F4E3DC922321496600A362CB /* greencode_app_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = greencode_app_ios.xcdatamodel; sourceTree = "<group>"; };
+		F4E3DC942321496800A362CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4E3DC972321496800A362CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F4E3DC992321496800A362CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4E3DC9E2321496800A362CB /* greencode-app-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "greencode-app-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4E3DCA22321496800A362CB /* greencode_app_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = greencode_app_iosTests.swift; sourceTree = "<group>"; };
+		F4E3DCA42321496800A362CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4E3DCA92321496800A362CB /* greencode-app-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "greencode-app-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4E3DCAD2321496800A362CB /* greencode_app_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = greencode_app_iosUITests.swift; sourceTree = "<group>"; };
+		F4E3DCAF2321496800A362CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4E3DCC423214B9800A362CB /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Bold.ttf"; path = "../../../../../../Downloads/Montserrat/Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		F4E3DCC523214B9800A362CB /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Medium.ttf"; path = "../../../../../../Downloads/Montserrat/Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		F4E3DCC623214B9800A362CB /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Regular.ttf"; path = "../../../../../../Downloads/Montserrat/Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		F4E3DCC723214B9800A362CB /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-SemiBold.ttf"; path = "../../../../../../Downloads/Montserrat/Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		F4E3DCC823214B9800A362CB /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Light.ttf"; path = "../../../../../../Downloads/Montserrat/Montserrat-Light.ttf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F4E3DC842321496600A362CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4E3DC9B2321496800A362CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4E3DCA62321496800A362CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F4E3DC7E2321496600A362CB = {
+			isa = PBXGroup;
+			children = (
+				F4E3DC892321496600A362CB /* greencode-app-ios */,
+				F4E3DCA12321496800A362CB /* greencode-app-iosTests */,
+				F4E3DCAC2321496800A362CB /* greencode-app-iosUITests */,
+				F4E3DC882321496600A362CB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F4E3DC882321496600A362CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4E3DC872321496600A362CB /* greencode-app-ios.app */,
+				F4E3DC9E2321496800A362CB /* greencode-app-iosTests.xctest */,
+				F4E3DCA92321496800A362CB /* greencode-app-iosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4E3DC892321496600A362CB /* greencode-app-ios */ = {
+			isa = PBXGroup;
+			children = (
+				F4E3DCBF232149DE00A362CB /* AppBuilder */,
+				F4E3DCBD232149AF00A362CB /* Extensions */,
+				F4E3DCBC2321498A00A362CB /* Resource */,
+				F4E3DCBB2321498300A362CB /* Models */,
+				F4E3DCC123214A1B00A362CB /* Controllers */,
+				F4E3DCC0232149F900A362CB /* Storyboard */,
+				F4E3DC992321496800A362CB /* Info.plist */,
+				F4E3DC912321496600A362CB /* greencode_app_ios.xcdatamodeld */,
+			);
+			path = "greencode-app-ios";
+			sourceTree = "<group>";
+		};
+		F4E3DCA12321496800A362CB /* greencode-app-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				F4E3DCA22321496800A362CB /* greencode_app_iosTests.swift */,
+				F4E3DCA42321496800A362CB /* Info.plist */,
+			);
+			path = "greencode-app-iosTests";
+			sourceTree = "<group>";
+		};
+		F4E3DCAC2321496800A362CB /* greencode-app-iosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F4E3DCAD2321496800A362CB /* greencode_app_iosUITests.swift */,
+				F4E3DCAF2321496800A362CB /* Info.plist */,
+			);
+			path = "greencode-app-iosUITests";
+			sourceTree = "<group>";
+		};
+		F4E3DCBB2321498300A362CB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F4E3DCBC2321498A00A362CB /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F4E3DCC323214B6400A362CB /* Fonts */,
+				F4E3DC942321496800A362CB /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F4E3DCBD232149AF00A362CB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F4E3DCBF232149DE00A362CB /* AppBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				F4E3DC8A2321496600A362CB /* AppDelegate.swift */,
+			);
+			path = AppBuilder;
+			sourceTree = "<group>";
+		};
+		F4E3DCC0232149F900A362CB /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F4E3DC8E2321496600A362CB /* Main.storyboard */,
+				F4E3DC962321496800A362CB /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		F4E3DCC123214A1B00A362CB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F4E3DC8C2321496600A362CB /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F4E3DCC323214B6400A362CB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F4E3DCC423214B9800A362CB /* Montserrat-Bold.ttf */,
+				F4E3DCC823214B9800A362CB /* Montserrat-Light.ttf */,
+				F4E3DCC523214B9800A362CB /* Montserrat-Medium.ttf */,
+				F4E3DCC623214B9800A362CB /* Montserrat-Regular.ttf */,
+				F4E3DCC723214B9800A362CB /* Montserrat-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F4E3DC862321496600A362CB /* greencode-app-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4E3DCB22321496800A362CB /* Build configuration list for PBXNativeTarget "greencode-app-ios" */;
+			buildPhases = (
+				F4E3DC832321496600A362CB /* Sources */,
+				F4E3DC842321496600A362CB /* Frameworks */,
+				F4E3DC852321496600A362CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "greencode-app-ios";
+			productName = "greencode-app-ios";
+			productReference = F4E3DC872321496600A362CB /* greencode-app-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F4E3DC9D2321496800A362CB /* greencode-app-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4E3DCB52321496800A362CB /* Build configuration list for PBXNativeTarget "greencode-app-iosTests" */;
+			buildPhases = (
+				F4E3DC9A2321496800A362CB /* Sources */,
+				F4E3DC9B2321496800A362CB /* Frameworks */,
+				F4E3DC9C2321496800A362CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4E3DCA02321496800A362CB /* PBXTargetDependency */,
+			);
+			name = "greencode-app-iosTests";
+			productName = "greencode-app-iosTests";
+			productReference = F4E3DC9E2321496800A362CB /* greencode-app-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F4E3DCA82321496800A362CB /* greencode-app-iosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4E3DCB82321496800A362CB /* Build configuration list for PBXNativeTarget "greencode-app-iosUITests" */;
+			buildPhases = (
+				F4E3DCA52321496800A362CB /* Sources */,
+				F4E3DCA62321496800A362CB /* Frameworks */,
+				F4E3DCA72321496800A362CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4E3DCAB2321496800A362CB /* PBXTargetDependency */,
+			);
+			name = "greencode-app-iosUITests";
+			productName = "greencode-app-iosUITests";
+			productReference = F4E3DCA92321496800A362CB /* greencode-app-iosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4E3DC7F2321496600A362CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Erick Kaique da Silva";
+				TargetAttributes = {
+					F4E3DC862321496600A362CB = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					F4E3DC9D2321496800A362CB = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = F4E3DC862321496600A362CB;
+					};
+					F4E3DCA82321496800A362CB = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = F4E3DC862321496600A362CB;
+					};
+				};
+			};
+			buildConfigurationList = F4E3DC822321496600A362CB /* Build configuration list for PBXProject "greencode-app-ios" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F4E3DC7E2321496600A362CB;
+			productRefGroup = F4E3DC882321496600A362CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4E3DC862321496600A362CB /* greencode-app-ios */,
+				F4E3DC9D2321496800A362CB /* greencode-app-iosTests */,
+				F4E3DCA82321496800A362CB /* greencode-app-iosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4E3DC852321496600A362CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4E3DCCA23214BA100A362CB /* Montserrat-Light.ttf in Resources */,
+				F4E3DCC923214B9D00A362CB /* Montserrat-Bold.ttf in Resources */,
+				F4E3DCCC23214BA700A362CB /* Montserrat-Regular.ttf in Resources */,
+				F4E3DC982321496800A362CB /* LaunchScreen.storyboard in Resources */,
+				F4E3DC952321496800A362CB /* Assets.xcassets in Resources */,
+				F4E3DCCB23214BA500A362CB /* Montserrat-Medium.ttf in Resources */,
+				F4E3DCCD23214BAB00A362CB /* Montserrat-SemiBold.ttf in Resources */,
+				F4E3DC902321496600A362CB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4E3DC9C2321496800A362CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4E3DCA72321496800A362CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F4E3DC832321496600A362CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4E3DC8D2321496600A362CB /* ViewController.swift in Sources */,
+				F4E3DC8B2321496600A362CB /* AppDelegate.swift in Sources */,
+				F4E3DC932321496600A362CB /* greencode_app_ios.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4E3DC9A2321496800A362CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4E3DCA32321496800A362CB /* greencode_app_iosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4E3DCA52321496800A362CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4E3DCAE2321496800A362CB /* greencode_app_iosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F4E3DCA02321496800A362CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4E3DC862321496600A362CB /* greencode-app-ios */;
+			targetProxy = F4E3DC9F2321496800A362CB /* PBXContainerItemProxy */;
+		};
+		F4E3DCAB2321496800A362CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4E3DC862321496600A362CB /* greencode-app-ios */;
+			targetProxy = F4E3DCAA2321496800A362CB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F4E3DC8E2321496600A362CB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4E3DC8F2321496600A362CB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F4E3DC962321496800A362CB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4E3DC972321496800A362CB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F4E3DCB02321496800A362CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F4E3DCB12321496800A362CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F4E3DCB32321496800A362CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2CQU6PBHB9;
+				INFOPLIST_FILE = "greencode-app-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ericksilva.greencode-app-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F4E3DCB42321496800A362CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2CQU6PBHB9;
+				INFOPLIST_FILE = "greencode-app-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ericksilva.greencode-app-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F4E3DCB62321496800A362CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2CQU6PBHB9;
+				INFOPLIST_FILE = "greencode-app-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ericksilva.greencode-app-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/greencode-app-ios.app/greencode-app-ios";
+			};
+			name = Debug;
+		};
+		F4E3DCB72321496800A362CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2CQU6PBHB9;
+				INFOPLIST_FILE = "greencode-app-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ericksilva.greencode-app-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/greencode-app-ios.app/greencode-app-ios";
+			};
+			name = Release;
+		};
+		F4E3DCB92321496800A362CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2CQU6PBHB9;
+				INFOPLIST_FILE = "greencode-app-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ericksilva.greencode-app-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "greencode-app-ios";
+			};
+			name = Debug;
+		};
+		F4E3DCBA2321496800A362CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2CQU6PBHB9;
+				INFOPLIST_FILE = "greencode-app-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ericksilva.greencode-app-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "greencode-app-ios";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F4E3DC822321496600A362CB /* Build configuration list for PBXProject "greencode-app-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4E3DCB02321496800A362CB /* Debug */,
+				F4E3DCB12321496800A362CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4E3DCB22321496800A362CB /* Build configuration list for PBXNativeTarget "greencode-app-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4E3DCB32321496800A362CB /* Debug */,
+				F4E3DCB42321496800A362CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4E3DCB52321496800A362CB /* Build configuration list for PBXNativeTarget "greencode-app-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4E3DCB62321496800A362CB /* Debug */,
+				F4E3DCB72321496800A362CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4E3DCB82321496800A362CB /* Build configuration list for PBXNativeTarget "greencode-app-iosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4E3DCB92321496800A362CB /* Debug */,
+				F4E3DCBA2321496800A362CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F4E3DC912321496600A362CB /* greencode_app_ios.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F4E3DC922321496600A362CB /* greencode_app_ios.xcdatamodel */,
+			);
+			currentVersion = F4E3DC922321496600A362CB /* greencode_app_ios.xcdatamodel */;
+			path = greencode_app_ios.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F4E3DC7F2321496600A362CB /* Project object */;
+}
