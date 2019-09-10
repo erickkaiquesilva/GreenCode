@@ -1,0 +1,9 @@
+html, body{
+    background: #fdfdfd;
+}
+
+.logo{float: left; margin: 0px 10px;}
+.menu{background: #242424;}
+.menu ul{max-width: 1024px;}
+.menu li{margin: 10px 10px}
+.btns{float: right;}
