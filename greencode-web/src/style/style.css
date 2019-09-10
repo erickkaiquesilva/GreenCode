@@ -7,3 +7,14 @@ html, body{
 .menu ul{max-width: 1024px;}
 .menu li{margin: 10px 10px}
 .btns{float: right;}
+
+/* HOME */
+.wallpaper-homes{background: #DDD; height: 700px;}
+.info-banner{width: 700px; max-width: 700px; margin: 50px; float: left;}
+.title-big{font-size: 5em; padding: 30px 0px;}
+.description{font-size: 1.2em; padding: 15px 0px;}
+
+
+/* BUTTONS */
+.button-big{font-size: 2em; margin: 20px 0px; background: #4ccc8c; border: 2px solid #5ab688; font-weight: bold; font-family: 'Montserrat', sans-serif; color: #FFF;}
+.button-big:hover{background: #5ab688;}
