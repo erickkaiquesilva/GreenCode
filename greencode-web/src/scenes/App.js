@@ -3,6 +3,7 @@ import logo from '../images/logo.svg';
 import '../style/style.css';
 import MenuNav from '../ui/menu'
 import Slide from '../ui/slider'
+import Home from '../container/Home'
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
         <MenuNav />
         <Slide />
     <div className="container-fluid">
-    
+        <Home />
     </div>
     </>
   );

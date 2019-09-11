@@ -2,6 +2,15 @@ html, body{
     background: #fdfdfd;
 }
 
+:root{
+    /* PALETA DE CORES */
+    --primary-green: #4ccc8c;
+    --secudary-green: #5ab688;
+
+    --primary-gray: #4F4F4F;
+    --secundary-gray: #828282;
+}
+
 .logo{float: left; margin: 0px 10px;}
 .menu{background: #242424;}
 .menu ul{max-width: 1024px;}
@@ -18,3 +27,16 @@ html, body{
 /* BUTTONS */
 .button-big{font-size: 2em; margin: 20px 0px; background: #4ccc8c; border: 2px solid #5ab688; font-weight: bold; font-family: 'Montserrat', sans-serif; color: #FFF;}
 .button-big:hover{background: #5ab688;}
+
+/* TITLE */
+.title-left{text-align: left;}
+.title-full{font-size: 3.5em;}
+.text-bold{font-weight: bold;}
+
+/* SPACE */
+.pad-full{padding: 10px 0px;}
+.pad-medium{padding: 8px 0px;}
+.pad-small{padding: 4px 0px;}
+.mar-full{margin: 10px 0px}
+.mar-medium{margin: 8px 0px;}
+.mar-small{margin: 4px 0px;}
