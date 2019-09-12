@@ -11,9 +11,11 @@ html, body{
     --secundary-gray: #828282;
 }
 
+.background-gray{background: var(--primary-gray)}
+
 .logo{float: left; margin: 0px 10px;}
-.menu{background: #242424;}
-.menu ul{max-width: 1024px;}
+.menu{float: left; background: #FFF; width: 100%;}
+.menu ul{background: #0F0; float: left;}
 .menu li{margin: 10px 10px}
 .btns{float: right;}
 
@@ -23,10 +25,18 @@ html, body{
 .title-big{font-size: 5em; padding: 30px 0px;}
 .description{font-size: 1.2em; padding: 15px 0px;}
 
+/* LIST */
+.list{list-style: none; margin: 10px 8px}
+.list li{display: block; margin: 10px 0px;}
+
+/* */
+.card-info{border: none;}
+.card-image{border: none;}
 
 /* BUTTONS */
 .button-big{font-size: 2em; margin: 20px 0px; background: #4ccc8c; border: 2px solid #5ab688; font-weight: bold; font-family: 'Montserrat', sans-serif; color: #FFF;}
 .button-big:hover{background: #5ab688;}
+.btns-access{background: #4ccc8c; float: right;}
 
 /* TITLE */
 .title-left{text-align: left;}
@@ -40,3 +50,4 @@ html, body{
 .mar-full{margin: 10px 0px}
 .mar-medium{margin: 8px 0px;}
 .mar-small{margin: 4px 0px;}
+.margin-bottom{margin-bottom: 30px;}

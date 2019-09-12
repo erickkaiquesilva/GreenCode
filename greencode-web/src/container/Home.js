@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import HomeCard from '../ui/section-one'
+import SectionCard from '../ui/section-one'
+import SectionInfo from '../ui/section-two'
 
 class Home extends Component {
     render() {
@@ -11,13 +12,16 @@ class Home extends Component {
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     </p>
                     <div className="row">
-                        <HomeCard />
-                        <HomeCard />
-                        <HomeCard />
+                        <SectionCard />
+                        <SectionCard />
+                        <SectionCard />
                     </div>
                     <div className="row">
-                        <HomeCard />
-                        <HomeCard />
+                        <SectionCard />
+                        <SectionCard />
+                    </div>
+                    <div className="row">
+                        <SectionInfo />
                     </div>
                 </div>
             </>
