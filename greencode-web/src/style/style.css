@@ -20,7 +20,7 @@ html, body{
 
 .topo{float: left; width: 100%; background: transparent; padding: 10px 0px;}
 .topo .logo{float: left; margin: 0px 10px;}
-.topo ul{float: left; margin-left: 70px; max-width: 1024px; width: 1000px;}
+.topo ul{float: left; margin-left: 70px; max-width: 900px; width: 900px;}
 .topo li{margin: 10px 10px}
 .topo li a{font-family: 'Montserrat', sans-serif; font-weight: bold; text-transform: uppercase; color: var(--white); padding: 7px 12px; background: rgba(45, 45, 45, 0.205); border-radius: 7px;}
 
@@ -41,7 +41,7 @@ html, body{
 /* BUTTONS */
 .button-big{font-size: 2em; margin: 20px 0px; background: #4ccc8c; border: 2px solid #5ab688; font-weight: bold; font-family: 'Montserrat', sans-serif; color: #FFF;}
 .button-big:hover{background: #5ab688;}
-.btns-access{float: right; padding: 10px 4px; margin: 4px 6px; border-radius: 10px;}
+.btns-access{float: right; padding: 10px 4px; margin: 4px 16px; border-radius: 10px;}
 
 .btn-green{background: var(--primary-green); color: var(--white); border: 2px solid var(--secudary-green);}
 .btn-green:hover{background: var(--secudary-green); text-decoration: none; color: var(--white);}
