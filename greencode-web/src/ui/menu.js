@@ -3,10 +3,11 @@ import React from 'react';
 const MenuNav = () => {
     return (
         <>
-        <div className="menu">
+        <div className="topo">
             <div className="logo">
                 AQUI O LOGO
             </div>
+
             <ul className="nav justify-content-center">
                 <li className="nav-item">
                     <a className="nav-link active" href="#">Inicio</a>
@@ -22,8 +23,8 @@ const MenuNav = () => {
                 </li>
             </ul>
             
-            <a className="btns-access" href="">LOGAR</a>
-            <a className="btns-access" href="">CADASTRAR-SE</a>
+            <a className="btns-access font-bold btn-green" href="">LOGAR</a>
+            <a className="btns-access font-normal btn-line-white" href="">CADASTRAR-SE</a>
         </div>
        
         </>
