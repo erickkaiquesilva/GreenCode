@@ -1,14 +1,19 @@
 import React from 'react';
 import logo from '../images/logo.svg';
-import '../style/App.css';
+import '../style/style.css';
+import MenuNav from '../ui/menu'
+import Slide from '../ui/slider'
+import Home from '../container/Home'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Hello Word!!!</h1>
-      </header>
+    <>
+        <MenuNav />
+        <Slide />
+    <div className="container-fluid">
+        <Home />
     </div>
+    </>
   );
 }
 
