@@ -9,14 +9,15 @@ public class Usuario {
 	private String cpf;
 	
 	
+	public Usuario() {
+		super();
+	}
 	
 	public Usuario(String senha, String email) {
-		super();
 		this.senha = senha;
 		this.email = email;
 	}
 	public Usuario(String id, String nome, String senha, String email, String cpf) {
-		super();
 		this.id = id;
 		this.nome = nome;
 		this.senha = senha;
