@@ -5,27 +5,24 @@ const BoxSignUp = () => {
     return (
         <>
             <div className="col-12 col-lg-5">
-                <div style={{ overflow: 'hidden' }}>
-                    <div
-                        style={{
-                            width: '300vw',
-                            transform: 'translateX(0)',
-                            transition: 'all 1000ms',
-                            display: 'flex',
-                        }}
-                    >
-                        <div style={{ width: '100vw', background: 'red', height: '100vh' }}>
-                            conteudo 1
-                    </div>
-                        <div style={{ width: '100vw', background: 'green', height: '100vh' }}>
-                            {' '}
-                            conteudo 2
-                    </div>
-                        <div style={{ width: '100vw', background: 'cyan', height: '100vh' }}>
-                            {' '}
-                            conteudo 3
-                    </div>
-                    </div>
+                <h1>Cadastre-se</h1>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                </p>
+                <div className="form form-signup">
+                    <form>
+                        <label>Nome Completo</label>
+                        <input className="fill" type="text" />
+                        <label>CPF</label>
+                        <input className="fill" type="text" />
+                        <label>Email</label>
+                        <input className="fill" type="email" />
+                        <label>Senhar</label>
+                        <input className="fill" type="password" />
+                        <label>Confirme a Senha</label>
+                        <input className="fill" type="password" />
+                        <input type="submit" value="Cadastrar-se" />
+                    </form>
                 </div>
             </div>
             <div className="col-12 col-lg-7"></div>
