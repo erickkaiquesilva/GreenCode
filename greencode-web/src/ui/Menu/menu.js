@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const MenuNav = () => {
     return (
@@ -23,8 +24,8 @@ const MenuNav = () => {
                 </li>
             </ul>
             
-            <a className="btns-access font-bold btn-green" href="">LOGAR</a>
-            <a className="btns-access font-normal btn-line-white" href="">CADASTRAR-SE</a>
+            <Link className="btns-access font-bold btn-green" to="/login">LOGAR</Link>
+            <Link className="btns-access font-normal btn-line-white" to="/signup">CADASTRAR-SE</Link>
         </div>
        
         </>

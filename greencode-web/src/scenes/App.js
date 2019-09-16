@@ -1,19 +1,18 @@
 import React from 'react';
 import logo from '../images/logo.svg';
 import '../style/style.css';
-import MenuNav from '../ui/menu'
-import Slide from '../ui/slider'
-import Home from '../container/Home'
+import Home from '../container/Home/Home'
+import Login from '../container/Login'
+import SignUp from '../container/SignUp'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 function App() {
   return (
-    <>
-        <MenuNav />
-        <Slide />
-    <div className="container-fluid">
-        <Home />
-    </div>
-    </>
+    <BrowserRouter>
+      <Route path="/" exact component={Home} />
+      <Route path="/login" component={Login} />
+      <Route path="/signup" component={SignUp} />
+    </BrowserRouter>
   );
 }
 

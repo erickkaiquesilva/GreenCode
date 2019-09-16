@@ -16,7 +16,7 @@ html, body{
 
 /* BACKGROUNDS */
 .background-gray{background: var(--primary-gray)}
-.background-home{background-image: url("../images/background-home.jpg"); background-repeat: no-repeat; background-attachment: fixed; background-position: top; height: 850px;}
+.background-home{background-image: url("../images/background-home.jpg"); background-repeat: no-repeat; background-attachment: fixed; background-position: top; height: 850px; width: 100%;}
 
 .topo{float: left; width: 100%; background: transparent; padding: 10px 0px;}
 .topo .logo{float: left; margin: 0px 10px;}
@@ -37,6 +37,12 @@ html, body{
 /* */
 .card-info{border: none;}
 .card-image{border: none;}
+
+/* LOGIN */
+.box{margin-top: 250px;}
+.box h1{font-size: 3.5em; padding: 16px; text-align: center; font-weight: bold;}
+.link-singup{text-align: center; padding: 10px; font-weight: bold; margin: 10px auto;}
+.btn-signup{width: 80%;}
 
 /* BUTTONS */
 .button-big{font-size: 2em; margin: 20px 0px; background: #4ccc8c; border: 2px solid #5ab688; font-weight: bold; font-family: 'Montserrat', sans-serif; color: #FFF;}
@@ -67,3 +73,13 @@ html, body{
 .font-bold{font-weight: bold; font-family: 'Montserrat', sans-serif;}
 .font-normal{font-weight: normal; font-family: 'Montserrat', sans-serif;}
 .font-light{font-weight: lighter; font-family: 'Montserrat', sans-serif;}
+
+/* FORM */
+.form .fill{width: 100%; height: 50px; margin-bottom: 10px;}
+.form label{font-family: 'Montserrat', sans-serif;}
+
+.form-login{margin: 14px auto; width: 70%;}
+.form-login label{margin: 20px 0px;}
+.form-login label{font-size: 1.5em; font-weight: bold;}
+.form-login .fill{border-radius: 7px; height: 70px; border: 1px solid var(--secundary-gray); font-weight: normal; color: #DDD; padding: 4px; display: block;}
+.form-login .fill:focus{font-weight: bold; color: var(--primary-gray);}

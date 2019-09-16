@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
-import SectionCard from '../../ui/Home/section-one'
-import SectionInfo from '../../ui/Home/section-two'
-import MenuNav from '../../ui/Menu/menu'
-import Slide from '../../ui/Home/slider'
+import SectionCard from '../../ui/Home/section-one';
+import SectionInfo from '../../ui/Home/section-two';
 
-class Home extends Component {
+class Sections extends Component {
     render() {
         return (
             <>
-                <MenuNav />
-                <Slide />
                 <div className="container-fluid">
                     <div className="container text-center">
                         <h1 className="title-left title-full pad-full">Comece a <span className="text-bold">reciclar !</span></h1>
@@ -36,4 +32,4 @@ class Home extends Component {
     };
 };
 
-export default Home
+export default Sections;
