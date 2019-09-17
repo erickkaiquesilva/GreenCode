@@ -1,0 +1,91 @@
+html, body{
+    background: #fdfdfd;
+}
+
+:root{
+    /* PALETA DE CORES */
+    --primary-green: #4ccc8c;
+    --secudary-green: #5ab688;
+
+    --primary-gray: #2e2e2e;
+    --secundary-gray: #828282;
+
+    --white: #FFF;
+}
+
+
+/* BACKGROUNDS */
+.background-gray{background: var(--primary-gray)}
+.background-home{background-image: url("../images/background-home.jpg"); background-repeat: no-repeat; background-attachment: fixed; background-position: top; height: 850px; width: 100%;}
+
+.topo{float: left; width: 100%; background: transparent; padding: 10px 0px;}
+.topo .logo{float: left; margin: 0px 10px;}
+.topo ul{float: left; margin-left: 70px; max-width: 900px; width: 900px;}
+.topo li{margin: 10px 10px}
+.topo li a{font-family: 'Montserrat', sans-serif; font-weight: bold; text-transform: uppercase; color: var(--white); padding: 7px 12px; background: rgba(45, 45, 45, 0.205); border-radius: 7px;}
+
+/* HOME */
+.wallpaper-homes{background: #DDD; }
+.info-banner{width: 700px; max-width: 700px; margin-top: 70px; float: left; background: transparent;}
+.title-big{font-size: 5em; padding: 30px 0px; color: var(--white);}
+.description{font-size: 1.2em; padding: 15px 0px; color: var(--white);}
+
+/* LIST */
+.list{list-style: none; margin: 10px 8px}
+.list li{display: block; margin: 10px 0px;}
+
+/* */
+.card-info{border: none;}
+.card-image{border: none;}
+
+/* LOGIN */
+.box h1{font-size: 3.5em; padding: 16px; text-align: center; font-weight: bold;}
+.link-singup{text-align: center; padding: 10px; font-weight: bold; margin: 10px auto;}
+.btn-signup{width: 80%;}
+
+/* SIGNUP */
+
+/* BUTTONS */
+.button-big{font-size: 2em; margin: 20px 0px; background: #4ccc8c; border: 2px solid #5ab688; font-weight: bold; font-family: 'Montserrat', sans-serif; color: #FFF;}
+.button-big:hover{background: #5ab688;}
+.btns-access{float: right; padding: 10px 4px; margin: 4px 16px; border-radius: 10px;}
+
+.btn-green{background: var(--primary-green); color: var(--white); border: 2px solid var(--secudary-green);}
+.btn-green:hover{background: var(--secudary-green); text-decoration: none; color: var(--white);}
+
+.btn-line-white{background: transparent; color: var(--white); border: 1px solid var(--white); text-decoration: none;}
+.btn-line-white:hover{text-decoration: none; color: var(--white)}
+
+/* TITLE */
+.title-left{text-align: left;}
+.title-full{font-size: 3.5em;}
+.text-bold{font-weight: bold;}
+
+/* SPACE */
+.pad-full{padding: 10px 0px;}
+.pad-medium{padding: 8px 0px;}
+.pad-small{padding: 4px 0px;}
+.mar-full{margin: 10px 0px}
+.mar-medium{margin: 8px 0px;}
+.mar-small{margin: 4px 0px;}
+.margin-bottom{margin-bottom: 30px;}
+
+/* FONT */
+.font-bold{font-weight: bold; font-family: 'Montserrat', sans-serif;}
+.font-normal{font-weight: normal; font-family: 'Montserrat', sans-serif;}
+.font-light{font-weight: lighter; font-family: 'Montserrat', sans-serif;}
+
+/* FORM */
+.form .fill{width: 100%; height: 50px; margin-bottom: 10px;}
+.form label{font-family: 'Montserrat', sans-serif;}
+
+.form-login{margin: 14px auto; width: 70%;}
+.form-login label{margin: 20px 0px;}
+.form-login label{font-size: 1.5em; font-weight: bold;}
+.form-login .fill{border-radius: 7px; height: 70px; border: 1px solid var(--secundary-gray); font-weight: normal; color: #DDD; padding: 4px; display: block;}
+.form-login .fill:focus{font-weight: bold; color: var(--primary-gray);}
+
+.form-signup{width: 85%;}
+.form-signup label{margin: 15px 0px; font-size: 1.2em; font-weight: bold;}
+.form-signup .fill{border-radius: 7px; height: 70px; border: 1px solid var(--secundary-gray); font-weight: normal; color: #DDD; padding: 4px; display: block;}
+.form-signup .fill:focus{font-weight: bold; color: var(--primary-gray);}
