@@ -43,6 +43,9 @@ html, body{
 .link-singup{text-align: center; padding: 10px; font-weight: bold; margin: 10px auto;}
 .btn-signup{width: 80%;}
 
+/* SIGNUP */
+
+
 /* BUTTONS */
 .button-big{font-size: 2em; margin: 20px 0px; background: #4ccc8c; border: 2px solid #5ab688; font-weight: bold; font-family: 'Montserrat', sans-serif; color: #FFF;}
 .button-big:hover{background: #5ab688;}
