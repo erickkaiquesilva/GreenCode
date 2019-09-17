@@ -39,7 +39,6 @@ html, body{
 .card-image{border: none;}
 
 /* LOGIN */
-.box{margin-top: 250px;}
 .box h1{font-size: 3.5em; padding: 16px; text-align: center; font-weight: bold;}
 .link-singup{text-align: center; padding: 10px; font-weight: bold; margin: 10px auto;}
 .btn-signup{width: 80%;}
