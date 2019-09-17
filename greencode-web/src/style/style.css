@@ -45,7 +45,6 @@ html, body{
 
 /* SIGNUP */
 
-
 /* BUTTONS */
 .button-big{font-size: 2em; margin: 20px 0px; background: #4ccc8c; border: 2px solid #5ab688; font-weight: bold; font-family: 'Montserrat', sans-serif; color: #FFF;}
 .button-big:hover{background: #5ab688;}
@@ -85,3 +84,8 @@ html, body{
 .form-login label{font-size: 1.5em; font-weight: bold;}
 .form-login .fill{border-radius: 7px; height: 70px; border: 1px solid var(--secundary-gray); font-weight: normal; color: #DDD; padding: 4px; display: block;}
 .form-login .fill:focus{font-weight: bold; color: var(--primary-gray);}
+
+.form-signup{width: 85%;}
+.form-signup label{margin: 15px 0px; font-size: 1.2em; font-weight: bold;}
+.form-signup .fill{border-radius: 7px; height: 70px; border: 1px solid var(--secundary-gray); font-weight: normal; color: #DDD; padding: 4px; display: block;}
+.form-signup .fill:focus{font-weight: bold; color: var(--primary-gray);}

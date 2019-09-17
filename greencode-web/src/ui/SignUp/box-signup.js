@@ -5,12 +5,12 @@ const BoxSignUp = () => {
     return (
         <>
             <div className="col-12 col-lg-5">
-                <h1>Cadastre-se</h1>
-                <p>
+                <h1 className="title-left title-full pad-medium">Cadastre-se</h1>
+                <p className="pad-full">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                 </p>
                 <div className="form form-signup">
-                    <form>
+                    <form >
                         <label>Nome Completo</label>
                         <input className="fill" type="text" />
                         <label>CPF</label>
@@ -21,7 +21,7 @@ const BoxSignUp = () => {
                         <input className="fill" type="password" />
                         <label>Confirme a Senha</label>
                         <input className="fill" type="password" />
-                        <input type="submit" value="Cadastrar-se" />
+                        <input type="submit" value="Cadastrar-se" className="btn btn-green button-big btn-signup" />
                     </form>
                 </div>
             </div>
