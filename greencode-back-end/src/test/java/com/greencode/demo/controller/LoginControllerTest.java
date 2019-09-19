@@ -14,14 +14,16 @@ public class LoginControllerTest {
 	
 private LoginController controller;
 	
+	private TodosUsuarios tds;
+
 	@Before
 	public void setUP() {
-		controller = new LoginController();
+		controller = new LoginController(tds);
 	}
 
 	@Test
 	public void loginSucesso() {
-		LoginController controller = new LoginController();
+		LoginController controller = new LoginController(tds);
 		ResponseEntity<String> resposta = controller.validarLogin(new Usuario("admin","admin"));
 
 		assertEquals(HttpStatus.OK, resposta.getStatusCode());
@@ -31,7 +33,7 @@ private LoginController controller;
 	@Test
 	public void loginComFalha() {
 
-		LoginController controller = new LoginController();
+		LoginController controller = new LoginController(tds);
 
 		ResponseEntity<String> resposta = controller.validarLogin(new Usuario("login", "senha"));
 

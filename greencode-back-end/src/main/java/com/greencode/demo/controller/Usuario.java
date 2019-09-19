@@ -1,11 +1,29 @@
 package com.greencode.demo.controller;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+@Entity
+@Table(name = "TB_USUARIO")
 public class Usuario {
+	@Id
+	@GeneratedValue
+	private Long id;
 	
-	private String id;
+	@JsonProperty
 	private String nome;
+	
+	@JsonProperty
 	private String senha;
+	
+	@JsonProperty
 	private String email;
+	
+	@JsonProperty
 	private String cpf;
 	
 	
@@ -17,42 +35,27 @@ public class Usuario {
 		this.senha = senha;
 		this.email = email;
 	}
-	public Usuario(String id, String nome, String senha, String email, String cpf) {
+	public Usuario(Long id, String nome, String senha, String email, String cpf) {
 		this.id = id;
 		this.nome = nome;
 		this.senha = senha;
 		this.email = email;
 		this.cpf = cpf;
 	}
-	public String getId() {
+	public Long getId() {
 		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
 	}
 	public String getNome() {
 		return nome;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
 	public String getSenha() {
 		return senha;
-	}
-	public void setSenha(String senha) {
-		this.senha = senha;
 	}
 	public String getEmail() {
 		return email;
 	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
 	public String getCpf() {
 		return cpf;
-	}
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
 	}
 	
 	
