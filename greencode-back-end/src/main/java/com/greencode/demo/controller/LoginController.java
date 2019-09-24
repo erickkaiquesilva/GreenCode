@@ -31,7 +31,7 @@ public class LoginController {
 		//String email = usuarioLogado.getEmail();
 		
 		if(usuarioLogado != null) {
-			return ResponseEntity.ok("UsuarioLogado");
+			return ResponseEntity.ok("Usuario Logado");
 		}
 	
 		return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Usuario Não Cadastrado");

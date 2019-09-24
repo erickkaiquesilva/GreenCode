@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
@@ -18,16 +19,18 @@ private LoginController controller;
 
 	@Before
 	public void setUP() {
+		tds = Mockito.mock(TodosUsuarios.class);
 		controller = new LoginController(tds);
 	}
 
 	@Test
 	public void loginSucesso() {
+		Mockito.when(tds.logar("admin","admin")).thenReturn(new Usuario("admin","admin"));
 		LoginController controller = new LoginController(tds);
 		ResponseEntity<String> resposta = controller.validarLogin(new Usuario("admin","admin"));
 
 		assertEquals(HttpStatus.OK, resposta.getStatusCode());
-		assertEquals("Sucesso", resposta.getBody());
+		assertEquals("Usuario Logado", resposta.getBody());
 	}
 
 	@Test
@@ -38,7 +41,7 @@ private LoginController controller;
 		ResponseEntity<String> resposta = controller.validarLogin(new Usuario("login", "senha"));
 
 		assertEquals(HttpStatus.UNAUTHORIZED, resposta.getStatusCode());
-		assertEquals("Erro", resposta.getBody());
+		assertEquals("Usuario Não Cadastrado", resposta.getBody());
 
 	}
 	
