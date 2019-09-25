@@ -41,9 +41,8 @@ class BoxLogin extends Component {
         let datas = this.state.datas;
         return (
             <>
-                <div className="col-3"></div>
-                <div className="col-6">
-                    <div className="box">
+                <div className="col-4">
+                    <div className="box-login">
                         <h1>Login</h1>
                         <div className="form form-login">
                             <form onSubmit={this.handleSubmit}>
@@ -51,14 +50,16 @@ class BoxLogin extends Component {
                                 <input ref="email" className="fill" type="email" value={this.state.email} onChange={this.handleChange} />
                                 <label>Senhar</label>
                                 <input ref="password" className="fill" type="password" value={this.state.password} onChange={this.handleChange} />
-                                <center><input type="submit" value="Logar" className="btn btn-green button-big btn-signup" /></center>
+                                <center><input type="submit" value="Logar" className="btn button-full btn-signin radius" /></center>
                             </form>
                         </div>
 
                         <center><Link className="link-singup" to="/signup">Cadastre-se</Link></center>
                     </div>
                 </div>
-                <div className="col-3"></div>
+                <div className="col-8 col-lg-8 box-image" style={{ height: '100vh' }}>
+                    <img src={require('../../images/login.jpg')} />
+                </div>
             </>
         );
     };

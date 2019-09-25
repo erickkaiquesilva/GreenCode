@@ -1,31 +1,39 @@
 html, body{
-    background: #fdfdfd;
-    font-family: 'Dosis', 'sans-serif';
+    background: var(--background-body);
+    outline: none;
+    font-family: 'Dosis', sans-serif;
 }
+
+input:focus{outline: none;}
+select{background: transparent;}
 
 :root{
     /* PALETA DE CORES */
+
     --primary-green: #4ccc8c;
     --secudary-green: #5ab688;
 
     --primary-gray: #2e2e2e;
     --secundary-gray: #828282;
 
-    --color2: #033a03;
+    --green-primary: #225022;
 
     --white: #FFF;
 }
 
+.radius{border-radius: 50px;}
 
 /* BACKGROUNDS */
 .background-gray{background: var(--primary-gray)}
 .background-home{background-image: url("../images/background-home.jpg"); background-repeat: no-repeat; background-attachment: fixed; background-position: top; height: 850px; width: 100%;}
+.background-signup{background-image: url("../images/signup.jpg"); background-repeat: no-repeat; background-attachment: center; background-position: top; height: 850px; width: 100%;}
+.background-login{background-image: url("../images/login.jpg"); background-repeat: no-repeat; background-attachment: center; background-position: top; height: 850px; width: 100%;}
 
 .topo{float: left; width: 100%; background: transparent; padding: 10px 0px;}
 .topo .logo{float: left; margin: 0px 10px;}
 .topo ul{float: left; margin-left: 70px; max-width: 900px; width: 900px;}
 .topo li{margin: 10px 10px}
-.topo li a{ font-weight: bold; text-transform: uppercase; color: var(--white); padding: 7px 12px; background: rgba(45, 45, 45, 0.205); border-radius: 7px;}
+.topo li a{font-family: 'Montserrat', sans-serif; font-weight: bold; text-transform: uppercase; color: var(--white); padding: 7px 12px; background: rgba(45, 45, 45, 0.205); border-radius: 7px;}
 
 /* HOME */
 .wallpaper-homes{background: #DDD; }
@@ -42,15 +50,26 @@ html, body{
 .card-image{border: none;}
 
 /* LOGIN */
-.box h1{font-size: 3em; padding: 16px; text-align: center; font-weight: bold;}
-.link-singup{text-align: center; padding: 10px; font-weight: bold; margin: 10px auto; font-size: 1.3em;}
-.btn-signup{width: 80%;}
+.box-login h1{font-size: 3em; padding: 16px; text-align: left; font-weight: bold; margin-top: 25%;}
+.link-singup{text-align: center; padding: 4px; font-weight: bold;}
+.form-login{margin-top: 10%; margin-bottom: 25%; width: 100%;}
+.form-login label{margin: 20px 0px;}
+.form-login label{font-size: 1em; font-weight: bold;}
+.form-login .fill{border: 0px; border-bottom: 2px solid var(--secundary-gray); padding: 4px;}
+.form-login .fill:focus{font-weight: bold; color: var(--primary-green); border-color: var(--primary-green)}
+.btn-signin{width: 100%;}
+.box-image img{width: 954px; height: 789px;}
 
 /* SIGNUP */
-
+.form-signup{width: 85%;}
+.form-signup label{margin: 15px 0px; font-size: 1.2em; font-weight: bold;}
+.form-signup .fill{border: 0px; border-bottom: 2px solid var(--secundary-gray); padding: 4px;}
+.form-signup .fill:focus{font-weight: bold; color: var(--primary-green); border-color: var(--primary-green)}
+.btn-signup{width: 100%;}
 /* BUTTONS */
-.button-big{font-size: 2em; margin: 20px 0px; background: #4ccc8c; border: 2px solid #5ab688; font-weight: bold;  color: #FFF;}
-.button-big:hover{background: #5ab688;}
+.button-full{font-size: 1.7em; font-weight: bold; margin-top: 70px; background: transparent; border: 1px solid var(--primary-green); color: var(--primary-green);}
+.button-full:hover{background: var(--secudary-green); color: var(--white); transition: all ease .7s;}
+
 .btns-access{float: right; padding: 10px 4px; margin: 4px 16px; border-radius: 10px;}
 
 .btn-green{background: var(--primary-green); color: var(--white); border: 2px solid var(--secudary-green);}
@@ -74,21 +93,6 @@ html, body{
 .margin-bottom{margin-bottom: 30px;}
 
 /* FONT */
-.font-bold{font-weight: bold; }
-.font-normal{font-weight: normal; }
-.font-light{font-weight: lighter; }
 
 /* FORM */
 .form .fill{width: 100%; height: 50px; margin-bottom: 10px;}
-.form{outline: none !important;}
-
-.form-login{margin: 14px auto; width: 70%;}
-.form-login label{margin: 20px 0px;}
-.form-login label{font-size: 1.5em; font-weight: bold;}
-.form-login .fill{border: 0px; border-bottom: 2px solid var(--secundary-gray) }
-.form-login .fill:focus{border-color: var(--primary-green)}
-
-.form-signup{width: 85%;}
-.form-signup label{margin: 15px 0px; font-size: 1.2em; font-weight: bold;}
-.form-signup .fill{border-radius: 7px; height: 70px; border: 1px solid var(--secundary-gray); font-weight: normal; color: #DDD; padding: 4px; display: block;}
-.form-signup .fill:focus{font-weight: bold; color: var(--primary-gray);}

@@ -15,17 +15,29 @@ const BoxSignUp = () => {
                         <input className="fill" type="text" />
                         <label>CPF</label>
                         <input className="fill" type="text" />
-                        <label>Email</label>
-                        <input className="fill" type="email" />
-                        <label>Senhar</label>
-                        <input className="fill" type="password" />
-                        <label>Confirme a Senha</label>
-                        <input className="fill" type="password" />
-                        <input type="submit" value="Cadastrar-se" className="btn btn-green button-big btn-signup" />
+                        <label>Sua Idade</label>
+                        <div className="row">
+                            <div className="col-12 col-lg-4">
+                                <select className="fill" name="day">
+                                    <option value="00">00</option>
+                                </select>
+                            </div>
+                            <div className="col-12 col-lg-4">
+                                <select className="fill" name="day">
+                                    <option value="00">00</option>
+                                </select>
+                            </div>
+                            <div className="col-12 col-lg-4">
+                                <select className="fill" name="day">
+                                    <option value="00">00</option>
+                                </select>
+                            </div>
+                        </div>
+                        <input type="submit" value="Cadastrar-se" className="btn button-full btn-signup radius" />
                     </form>
                 </div>
             </div>
-            <div className="col-12 col-lg-7"></div>
+            <div className="col-12 col-lg-7 background-signup" style={{ height: '100vh' }}></div>
         </>
     )
 }
