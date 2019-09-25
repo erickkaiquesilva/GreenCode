@@ -1,5 +1,6 @@
 html, body{
     background: #fdfdfd;
+    font-family: 'Dosis', 'sans-serif';
 }
 
 :root{
@@ -9,6 +10,8 @@ html, body{
 
     --primary-gray: #2e2e2e;
     --secundary-gray: #828282;
+
+    --color2: #033a03;
 
     --white: #FFF;
 }
@@ -22,7 +25,7 @@ html, body{
 .topo .logo{float: left; margin: 0px 10px;}
 .topo ul{float: left; margin-left: 70px; max-width: 900px; width: 900px;}
 .topo li{margin: 10px 10px}
-.topo li a{font-family: 'Montserrat', sans-serif; font-weight: bold; text-transform: uppercase; color: var(--white); padding: 7px 12px; background: rgba(45, 45, 45, 0.205); border-radius: 7px;}
+.topo li a{ font-weight: bold; text-transform: uppercase; color: var(--white); padding: 7px 12px; background: rgba(45, 45, 45, 0.205); border-radius: 7px;}
 
 /* HOME */
 .wallpaper-homes{background: #DDD; }
@@ -39,14 +42,14 @@ html, body{
 .card-image{border: none;}
 
 /* LOGIN */
-.box h1{font-size: 3.5em; padding: 16px; text-align: center; font-weight: bold;}
-.link-singup{text-align: center; padding: 10px; font-weight: bold; margin: 10px auto;}
+.box h1{font-size: 3em; padding: 16px; text-align: center; font-weight: bold;}
+.link-singup{text-align: center; padding: 10px; font-weight: bold; margin: 10px auto; font-size: 1.3em;}
 .btn-signup{width: 80%;}
 
 /* SIGNUP */
 
 /* BUTTONS */
-.button-big{font-size: 2em; margin: 20px 0px; background: #4ccc8c; border: 2px solid #5ab688; font-weight: bold; font-family: 'Montserrat', sans-serif; color: #FFF;}
+.button-big{font-size: 2em; margin: 20px 0px; background: #4ccc8c; border: 2px solid #5ab688; font-weight: bold;  color: #FFF;}
 .button-big:hover{background: #5ab688;}
 .btns-access{float: right; padding: 10px 4px; margin: 4px 16px; border-radius: 10px;}
 
@@ -71,19 +74,19 @@ html, body{
 .margin-bottom{margin-bottom: 30px;}
 
 /* FONT */
-.font-bold{font-weight: bold; font-family: 'Montserrat', sans-serif;}
-.font-normal{font-weight: normal; font-family: 'Montserrat', sans-serif;}
-.font-light{font-weight: lighter; font-family: 'Montserrat', sans-serif;}
+.font-bold{font-weight: bold; }
+.font-normal{font-weight: normal; }
+.font-light{font-weight: lighter; }
 
 /* FORM */
 .form .fill{width: 100%; height: 50px; margin-bottom: 10px;}
-.form label{font-family: 'Montserrat', sans-serif;}
+.form{outline: none !important;}
 
 .form-login{margin: 14px auto; width: 70%;}
 .form-login label{margin: 20px 0px;}
 .form-login label{font-size: 1.5em; font-weight: bold;}
-.form-login .fill{border-radius: 7px; height: 70px; border: 1px solid var(--secundary-gray); font-weight: normal; color: #DDD; padding: 4px; display: block;}
-.form-login .fill:focus{font-weight: bold; color: var(--primary-gray);}
+.form-login .fill{border: 0px; border-bottom: 2px solid var(--secundary-gray) }
+.form-login .fill:focus{border-color: var(--primary-green)}
 
 .form-signup{width: 85%;}
 .form-signup label{margin: 15px 0px; font-size: 1.2em; font-weight: bold;}

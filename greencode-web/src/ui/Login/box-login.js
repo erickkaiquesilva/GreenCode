@@ -44,7 +44,7 @@ class BoxLogin extends Component {
                 <div className="col-3"></div>
                 <div className="col-6">
                     <div className="box">
-                        <h1>LOGIN</h1>
+                        <h1>Login</h1>
                         <div className="form form-login">
                             <form onSubmit={this.handleSubmit}>
                                 <label>E-mail</label>
