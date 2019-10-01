@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.greencode.demo.domain.TodosUsuarios;
 import com.greencode.demo.domain.Usuario;
 
-@CrossOrigin
 @RestController
 public class LoginController {
 	
