@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 class BoxLogin extends Component {
 
     constructor(props) {
@@ -30,6 +31,13 @@ class BoxLogin extends Component {
         let data = {
             email, password
         }
+
+        axios.post('http://3.91.228.201/login', {email: 'teste@teste', senha: 'teste'})
+            .then(res => {
+                console.log(res.data);
+            }).catch(err => {
+                console.log(err);
+            })
 
         datas.push(data);
 
