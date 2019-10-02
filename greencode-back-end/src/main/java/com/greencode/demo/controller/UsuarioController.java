@@ -19,7 +19,7 @@ public class UsuarioController {
 		tds = todos;
 	}
 	
-	@PostMapping("/cadatrarusuario")
+	@PostMapping("/signup")
 	public ResponseEntity<Boolean> cadastrarUsuario(@RequestBody Usuario usuario){
 		tds.save(usuario);
 		return ResponseEntity.ok(true);
