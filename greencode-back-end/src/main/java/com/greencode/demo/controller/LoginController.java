@@ -28,17 +28,17 @@ public class LoginController {
 	
 	
 	@PostMapping("/login")
-	public ResponseEntity<String> validarLogin(@RequestBody Usuario usuario) {
+	public ResponseEntity<Usuario> validarLogin(@RequestBody Usuario usuario) {
 		Usuario usuarioLogado = tdUsuario.logar(usuario.getEmail(), usuario.getSenha());
 		
 		//String senha = usuarioLogado.getSenha();
 		//String email = usuarioLogado.getEmail();
 		
 		if(usuarioLogado != null) {
-			return ResponseEntity.ok("Usuario Logado");
+			return ResponseEntity.ok(usuario);
 		}
 	
-		return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Usuario Não Cadastrado");
+		return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
 	}
 	
 	@RequestMapping(value="/logout", method = RequestMethod.GET)

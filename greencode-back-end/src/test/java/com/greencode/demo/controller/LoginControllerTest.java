@@ -26,12 +26,13 @@ private LoginController controller;
 
 	@Test
 	public void loginSucesso() {
-		Mockito.when(tds.logar("admin","admin")).thenReturn(new Usuario("admin","admin"));
+		Usuario user = new Usuario("admin","admin");
+		Mockito.when(tds.logar("admin","admin")).thenReturn(user);
 		LoginController controller = new LoginController(tds);
-		ResponseEntity<String> resposta = controller.validarLogin(new Usuario("admin","admin"));
+		ResponseEntity<Usuario> resposta = controller.validarLogin(user);
 
 		assertEquals(HttpStatus.OK, resposta.getStatusCode());
-		assertEquals("Usuario Logado", resposta.getBody());
+		assertEquals(user, resposta.getBody());
 	}
 
 	@Test
@@ -39,10 +40,10 @@ private LoginController controller;
 
 		LoginController controller = new LoginController(tds);
 
-		ResponseEntity<String> resposta = controller.validarLogin(new Usuario("login", "senha"));
+		ResponseEntity<Usuario> resposta = controller.validarLogin(new Usuario("login", "senha"));
 
 		assertEquals(HttpStatus.UNAUTHORIZED, resposta.getStatusCode());
-		assertEquals("Usuario Não Cadastrado", resposta.getBody());
+		//assertEquals("Usuario Não Cadastrado", resposta.getBody());
 
 	}
 	
