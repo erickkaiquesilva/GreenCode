@@ -35,7 +35,8 @@ public class LoginController {
 		//String email = usuarioLogado.getEmail();
 		
 		if(usuarioLogado != null) {
-			return ResponseEntity.ok(usuario);
+			return ResponseEntity.ok(usuarioLogado);
+			
 		}
 	
 		return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
