@@ -1,0 +1,53 @@
+:root{
+    --cinza-escuro: #222222;
+    --verde-escuro: #009944;
+}
+
+.background{background: brown;}
+.pad{padding: 10px 0;}
+/* ESTILIZAÇÃO TOPO */
+.topo{background: var(--cinza-escuro); color: #FFF; padding: 12px 0px;}
+.topo .menu ul{list-style: none;}
+.topo .menu li{display: inline; margin: 0px 40px;}
+.topo .menu{ margin-top: 20px;}
+.topo .btn-login{ margin-top: 10px;}
+.topo .btn-login a{font-size: 1.5em; background: var(--verde-escuro); display: block; max-width: 160px; text-align: center; border-radius: 50px; cursor: pointer;}
+
+/* ESTILIZAÇÃO CONTEUDO INTRODUTÓRIO */
+.conteudo-esquerda{margin: 10% 0%;}
+.conteudo-esquerda h1{font-size: 5em; padding: 14px 0px; font-weight: bold;}
+.conteudo-esquerda p{font-size: 1.7em; font-weight: normal; line-height: 250%;}
+.conteudo-direito button{width: 80%; cursor: pointer; margin-top: 70%; margin-left: 10%; margin-right: 10%; font-size: 2em; border-radius: 50px; font-weight: bold; background: var(--verde-escuro); color: #FFF;}
+
+/* ESTILIZAÇÃO CONTEUDO O QUE SOMOS */
+.oquesomos h1{font-size: 3.5em; padding: 12px 0px;}
+.conteudo-direito{float: left; margin: 10% 0;}
+.caixas-explicativas h3{font-size: 1.7em; text-align: center; padding: 10px 0px; font-weight: bold;}
+.caixas-explicativas p{font-size: 1em; text-align: center; padding: 4px 0px;}
+.caixas-explicativas img{width: 80px; height: 80px; margin-left: 40%;}
+
+/* ESTILIZAÇÃO CONTEUDO NOSSO PROPÓSITO/INCENTIVO */
+.imagemFundo{width: 100vw; height: 500px; background-image: url("../Image/wallpaper.jpg"); background-repeat: no-repeat; background-attachment: fixed; background-position: center;}
+.texto-nossoIncentivo h1{font-size: 3em; font-weight: bold; padding: 8px 12px;}
+.texto-nossoIncentivo ul{list-style: none;}
+.texto-nossoIncentivo li{display: block; margin: 30px 0px;}
+.texto-nossoIncentivo li p{font-size: 1.4em; line-height: 175%;}
+
+/* ESTILIZAÇÃO CONTEUDO RODAPE */
+.rodape{background: var(--cinza-escuro); padding: 30px 0px;}
+.rodape h1{font-size: 3em; color: #FFF; text-align: center; padding-bottom: 20px;}
+.rodape button{margin: 3% 35%; background: var(--cinza-escuro); color: #FFF; width: 30%; height: 70px; font-size: 1.7em; text-transform: uppercase; font-weight: bold; border-radius: 50px; border-color: #FFF; cursor: pointer;}
+
+/* 
+    PÁGINA DE LOGIN
+*/
+
+/* ESTILIZAÇÃO FORMULARIO DE LOGIN */
+.formulario-login{background: #FFF; width: 90%; padding: 20px 10px; margin-top: 25%; margin-left: 10%; border-radius: 10px; box-shadow: 0 0 0.5em var(--cinza-escuro);}
+.formulario-login h1{padding: 10px; font-weight: bold; font-size: 2em;}
+.formulario-login .caixadeentrada{width: 90%; height: 70px; outline: none; padding: 4px; margin: 30px 20px; border: 0px; border-bottom: 2px solid var(--cinza-escuro);}
+.formulario-login input[type="submit"]{width: 70%; height: 50px; border-radius: 50px; margin-left: 20px; cursor: pointer; font-weight: bold; border-color: var(--verde-escuro); color: var(--verde-escuro); outline: none;}
+
+/* CLASS ESTILIZADORAS CASOS GENÉRICOS */
+.borda-separadora{background: var(--cinza-escuro); width: 100%; padding: 2px 0px;}
+.espaco{margin-bottom: 70px;}
