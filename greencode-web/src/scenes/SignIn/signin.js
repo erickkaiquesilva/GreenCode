@@ -1,8 +1,35 @@
 import React, { Component } from 'react';
 import NavBar from '../../Components/NavBar/navbar'
+import { signIn } from '../../Actions/authentication'
 
 export default class SignIn extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            email: '',
+            senha: ''
+        }
+        
+    }
+
+    handleChange = (event) => {
+        console.log(event.target.value);
+
+        const state = Object.assign({}, this.state);
+
+        let field = event.target.id;
+
+        state[field] = event.target.value;
+
+        this.setState(state);
+
+        this.signIn(state)
+    }
+
     render(){
+        console.log(this.state);
         return(
             <>
                 <NavBar />
@@ -19,8 +46,8 @@ export default class SignIn extends Component {
                             <div className="formulario-login">
                                 <h1>Sign In</h1>
                                 <form>
-                                    <input className="caixadeentrada" type="email" placeholder="Email" />
-                                    <input className="caixadeentrada" type="senha" placeholder="Senha" />
+                                    <input onChange={(e) => this.handleChange(e)} className="caixadeentrada" id="nome" type="email" placeholder="Email" />
+                                    <input onChange={(e) => this.handleChange(e)} className="caixadeentrada" id="senha" type="senha" placeholder="Senha" />
                                     <input type="submit" value="Login" />
                                 </form>
                             </div>

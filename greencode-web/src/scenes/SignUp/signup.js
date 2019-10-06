@@ -28,6 +28,7 @@ export default class SignUp extends Component {
                             </div>
                         </article>
                     </div>
+                    
                     <div className="espaco"></div>
                     <div className="espaco"></div>
                 </div>
