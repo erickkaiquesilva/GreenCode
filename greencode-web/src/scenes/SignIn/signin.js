@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import NavBar from '../../Components/NavBar/navbar'
-import { signIn } from '../../Actions/authentication'
+import NavBar from '../../Components/NavBar/navbar';
+import { signIn } from '../../Actions/authentication';
 
 export default class SignIn extends Component {
 
@@ -24,8 +24,12 @@ export default class SignIn extends Component {
         state[field] = event.target.value;
 
         this.setState(state);
+    }
 
-        this.signIn(state)
+    handleSubmit = (event) => {
+        event.preventDefault();
+
+        signIn(this.state)
     }
 
     render(){
@@ -45,9 +49,9 @@ export default class SignIn extends Component {
                         <article className="col-lg-6">
                             <div className="formulario-login">
                                 <h1>Sign In</h1>
-                                <form>
-                                    <input onChange={(e) => this.handleChange(e)} className="caixadeentrada" id="nome" type="email" placeholder="Email" />
-                                    <input onChange={(e) => this.handleChange(e)} className="caixadeentrada" id="senha" type="senha" placeholder="Senha" />
+                                <form onSubmit={this.handleSubmit}>
+                                    <input onChange={(e) => this.handleChange(e)} className="caixadeentrada" id="email" type="email" placeholder="Email" />
+                                    <input onChange={(e) => this.handleChange(e)} className="caixadeentrada" id="senha" type="password" placeholder="Senha" />
                                     <input type="submit" value="Login" />
                                 </form>
                             </div>
