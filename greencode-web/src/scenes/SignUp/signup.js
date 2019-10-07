@@ -1,35 +1,8 @@
 import React, { Component } from 'react';
 import NavBar from '../../Components/NavBar/navbar'
-import { signIn } from '../../Actions/authentication'
 
-export default class SignIn extends Component {
-
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            email: '',
-            senha: ''
-        }
-        
-    }
-
-    handleChange = (event) => {
-        console.log(event.target.value);
-
-        const state = Object.assign({}, this.state);
-
-        let field = event.target.id;
-
-        state[field] = event.target.value;
-
-        this.setState(state);
-
-        this.signIn(state)
-    }
-
+export default class SignUp extends Component {
     render(){
-        console.log(this.state);
         return(
             <>
                 <NavBar />
@@ -44,15 +17,21 @@ export default class SignIn extends Component {
                         </article>
                         <article className="col-lg-6">
                             <div className="formulario-login">
-                                <h1>Sign In</h1>
+                                <h1>Sign Up</h1>
                                 <form>
-                                    <input onChange={(e) => this.handleChange(e)} className="caixadeentrada" id="nome" type="email" placeholder="Email" />
-                                    <input onChange={(e) => this.handleChange(e)} className="caixadeentrada" id="senha" type="senha" placeholder="Senha" />
+                                    <input className="caixadeentrada" type="text" placeholder="Nome Completo" />
+                                    <input className="caixadeentrada" type="text" placeholder="CPF" />
+                                    <input className="caixadeentrada" type="email" placeholder="Email de Acesso" />
+                                    <input className="caixadeentrada" type="password" placeholder="Senha" />
+                                    <input className="caixadeentrada" type="password" placeholder="Confirme Senha" />
                                     <input type="submit" value="Login" />
                                 </form>
                             </div>
                         </article>
                     </div>
+                    
+                    <div className="espaco"></div>
+                    <div className="espaco"></div>
                 </div>
             </>
         )
