@@ -11,7 +11,7 @@ export const signIn = (user) => {
 }
 
 export const signUp = (user) => {
-    axios.post('http://35.171.167.97/login', user)
+    axios.post('http://18.232.61.39/signup', user)
         .then(res => {
             console.log(res.data)
         })

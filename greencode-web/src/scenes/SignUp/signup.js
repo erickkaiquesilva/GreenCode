@@ -53,7 +53,7 @@ export default class SignUp extends Component {
                         <article className="col-lg-6">
                             <div className="formulario-login">
                                 <h1>Sign Up</h1>
-                                <form>
+                                <form onSubmit={this.handleSubmit}>
                                     <input onChange={(e) => this.handleChange(e)} className="caixadeentrada" id="nome" type="text" placeholder="Nome Completo" />
                                     <input onChange={(e) => this.handleChange(e)} className="caixadeentrada" id="cpf" type="text" placeholder="CPF" />
                                     <input onChange={(e) => this.handleChange(e)} className="caixadeentrada" id="email" type="email" placeholder="Email de Acesso" />
