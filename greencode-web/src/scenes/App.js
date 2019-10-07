@@ -13,7 +13,7 @@ import '../Resource/style/normalize.css'
 
 function App() {
   return (
-    <Teste2 />
+    <Teste3 />
     // <BrowserRouter>
     //   <Route path="/" exact component={Home} />
     //   <Route path="/login" component={Login} />

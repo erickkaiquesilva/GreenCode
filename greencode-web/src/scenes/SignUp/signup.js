@@ -20,6 +20,7 @@ export default class SignUp extends Component {
                                 <h1>Sign Up</h1>
                                 <form>
                                     <input className="caixadeentrada" type="text" placeholder="Nome Completo" />
+                                    <input className="caixadeentrada" type="text" placeholder="CPF" />
                                     <input className="caixadeentrada" type="email" placeholder="Email de Acesso" />
                                     <input className="caixadeentrada" type="password" placeholder="Senha" />
                                     <input className="caixadeentrada" type="password" placeholder="Confirme Senha" />
