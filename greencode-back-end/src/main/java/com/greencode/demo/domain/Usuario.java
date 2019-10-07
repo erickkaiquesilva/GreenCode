@@ -1,14 +1,16 @@
 package com.greencode.demo.domain;
 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
-@Table(name = "TB_USUARIO")
+@Table(name="TB_USUARIO",uniqueConstraints={@UniqueConstraint(columnNames="email")})
 public class Usuario {
 	@Id
 	@GeneratedValue
@@ -25,7 +27,6 @@ public class Usuario {
 	
 	@JsonProperty
 	private String cpf;
-	
 	
 	public Usuario() {
 		super();
