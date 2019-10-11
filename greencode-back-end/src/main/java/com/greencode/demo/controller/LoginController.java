@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.greencode.demo.accesslist.AccessList;
 import com.greencode.demo.domain.TodosUsuarios;
 import com.greencode.demo.domain.Usuario;
 
@@ -20,7 +21,8 @@ import com.greencode.demo.domain.Usuario;
 public class LoginController {
 	
 	private TodosUsuarios tdUsuario;
-	
+	AccessList<String> lista = new AccessList<String>(50);
+ 	
 	@Autowired
 	public LoginController(TodosUsuarios usuarios) {
 		tdUsuario = usuarios;
@@ -35,8 +37,8 @@ public class LoginController {
 		//String email = usuarioLogado.getEmail();
 		
 		if(usuarioLogado != null) {
-			return ResponseEntity.ok(usuarioLogado);
-			
+			lista.adiciona(usuario.getEmail());
+			return ResponseEntity.ok(usuarioLogado);			
 		}
 	
 		return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
