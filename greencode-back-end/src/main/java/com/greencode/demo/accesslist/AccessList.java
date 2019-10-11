@@ -22,22 +22,6 @@ public class AccessList <T>{
 			}
 		}
 		
-		
-		
-		public void exibe() {
-			if (nroElem == 0) {							
-				System.out.println("\nLista vazia");		
-			}
-			else {
-				System.out.println("\nLista:");			
-				for (int i=0; i < nroElem; i++) {
-					System.out.print(vetor[i] + "\t");	
-				}
-				System.out.println();
-			}
-		}
-		
-		
 		public int busca (T elem) {
 			for (int i=0; i < nroElem; i++) {  
 				if (vetor[i].equals(elem)) {			
