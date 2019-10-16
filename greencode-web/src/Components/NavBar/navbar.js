@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default class NavBar extends Component {
     render() {
@@ -18,7 +18,7 @@ export default class NavBar extends Component {
                         </ul>
                     </div>
                     <div className="btn-login col-lg-3">
-                        <a>LOGIN</a>
+                    <Link className="link-login" to="/signIn">Login</Link>
                     </div>
                 </div>
             </div>

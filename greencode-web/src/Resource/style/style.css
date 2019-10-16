@@ -11,7 +11,7 @@
 .topo .menu li{display: inline; margin: 0px 40px;}
 .topo .menu{ margin-top: 20px;}
 .topo .btn-login{ margin-top: 10px;}
-.topo .btn-login a{font-size: 1.5em; background: var(--verde-escuro); display: block; max-width: 160px; text-align: center; border-radius: 50px; cursor: pointer;}
+.topo .btn-login .link-login{font-size: 1.5em; background: var(--verde-escuro); display: block; max-width: 160px; text-align: center; border-radius: 50px; cursor: pointer;}
 
 /* ESTILIZAÇÃO CONTEUDO INTRODUTÓRIO */
 .conteudo-esquerda{margin: 10% 0%;}
