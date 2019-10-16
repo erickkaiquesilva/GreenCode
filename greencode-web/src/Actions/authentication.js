@@ -1,21 +1,8 @@
-import axios from 'axios';
+import axios from "axios";
+import { Redirect } from "react-router-dom";
 
-export const signIn = (user) => {
-    axios.post('http://35.171.167.97/login', user)
-        .then(res => {
-            console.log(res.data)
-        })
-        .catch(e => {
-            console.log(e);
-        })
-}
+const api = axios.create({
+  baseURL: "http://3.211.16.250"
+});
 
-export const signUp = (user) => {
-    axios.post('http://18.232.61.39/signup', user)
-        .then(res => {
-            console.log(res.data)
-        })
-        .catch(e => {
-            console.log(e);
-        })
-}
+export default api;
