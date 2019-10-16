@@ -1,9 +1,12 @@
 package com.greencode.demo.domain;
 
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
@@ -27,6 +30,15 @@ public class Usuario {
 	
 	@JsonProperty
 	private String cpf;
+	
+	@JsonProperty
+	private int pontos;
+	
+	@OneToMany(mappedBy = "usuario")
+	private List<Transacao> transacao;
+	
+	@OneToMany(mappedBy = "usuario")
+	private List<Reciclados> reciclados;
 	
 	public Usuario() {
 		super();
@@ -58,7 +70,9 @@ public class Usuario {
 	public String getCpf() {
 		return cpf;
 	}
-	
+	public int getPontos() {
+		return pontos;
+	}
 	
 	
 }

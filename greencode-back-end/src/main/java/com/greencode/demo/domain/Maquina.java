@@ -1,8 +1,11 @@
 package com.greencode.demo.domain;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -28,6 +31,9 @@ public class Maquina {
 
 	@JsonProperty
 	private int idReciclavel;
+	
+	@OneToMany(mappedBy = "maquina")
+	private List<Reciclados> reciclados;
 
 	public Maquina() {
 		super();

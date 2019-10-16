@@ -1,8 +1,11 @@
 package com.greencode.demo.domain;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -16,6 +19,9 @@ public class Tipo {
 	
 	@JsonProperty
 	private String tipo;
+	
+	@OneToMany(mappedBy = "tipo")
+	private List<Reciclavel> reciclaveis;
 
 	public Tipo() {
 		super();

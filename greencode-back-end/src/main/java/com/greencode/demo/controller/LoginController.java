@@ -33,9 +33,6 @@ public class LoginController {
 	public ResponseEntity<Usuario> validarLogin(@RequestBody Usuario usuario) {
 		Usuario usuarioLogado = tdUsuario.logar(usuario.getEmail(), usuario.getSenha());
 		
-		//String senha = usuarioLogado.getSenha();
-		//String email = usuarioLogado.getEmail();
-		
 		if(usuarioLogado != null) {
 			lista.adiciona(usuario.getEmail());
 			return ResponseEntity.ok(usuarioLogado);			
