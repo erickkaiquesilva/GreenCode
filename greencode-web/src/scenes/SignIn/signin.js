@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NavBar from '../../Components/NavBar/navbar';
 import { signIn } from '../../Actions/authentication';
 
+
 export default class SignIn extends Component {
 
     constructor(props) {
