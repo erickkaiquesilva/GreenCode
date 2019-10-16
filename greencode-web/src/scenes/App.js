@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Teste from './Intro/index';
-import Teste2 from './SignIn/signin';
-import Teste3 from './SignUp/signup';
+import Home from './Intro/index';
+import SignIn from './SignIn/signin';
+import SignUp from './SignUp/signup';
 
 // ROTAS
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
@@ -13,12 +13,11 @@ import '../Resource/style/normalize.css'
 
 function App() {
   return (
-    <Teste3 />
-    // <BrowserRouter>
-    //   <Route path="/" exact component={Home} />
-    //   <Route path="/login" component={Login} />
-    //   <Route path="/signup" component={SignUp} />
-    // </BrowserRouter>
+    <BrowserRouter>
+      <Route path="/" exact component={Home} />
+      <Route path="/login" component={SignIn} />
+      <Route path="/signup" component={SignUp} />
+    </BrowserRouter>
   );
 }
 
