@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import NavBar from "../../Components/NavBar/navbar";
-import api from "../../Actions/authentication";
-
-import md5 from "md5";
+import { signIn } from "../../Actions/resquest";
 
 import { withRouter } from "react-router-dom";
 
@@ -13,7 +11,6 @@ export default class SignIn extends Component {
     this.state = {
       email: "",
       senha: "",
-      usuario: []
     };
   }
 
@@ -26,14 +23,6 @@ export default class SignIn extends Component {
 
     state[field] = event.target.value;
 
-    var result1 = md5("teste");
-    var result2 = md5("teste");
-    if (result1 == result2) {
-      console.log(true);
-    } else {
-      console.log(false);
-    }
-
     this.setState(state);
   };
 
@@ -44,15 +33,17 @@ export default class SignIn extends Component {
       senha: this.state.senha
     };
 
-    api
-      .post("/login", payload)
-      .then(res => {
-        this.setState({ usuario: res.data });
-        console.log(this.state.usuario);
-      })
-      .catch(e => {
-        console.log("error", e);
-      });
+    try {
+        const res = signIn(this.state)
+            res.then((response) => {
+                // console.log(response)
+                this.props.history.push('/dashboard', response.data)
+            })
+            .catch(err => console.log(err))
+    } catch (err) {
+        console.log("error ", err);
+    }
+
   };
 
   render() {

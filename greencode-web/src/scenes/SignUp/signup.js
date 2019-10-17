@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import NavBar from "../../Components/NavBar/navbar";
 
-import api from "../../Actions/authentication";
-
 export default class SignUp extends Component {
   constructor(props) {
     super(props);
