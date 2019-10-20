@@ -23,7 +23,7 @@ public class UsuarioController {
 	@PostMapping("/signup")
 	public ResponseEntity<Boolean> cadastrarUsuario(@RequestBody Usuario usuario){
 		
-		if(tds.buscarEmail(usuario.getEmail()).getEmail() != null) {
+		if(tds.buscarEmail(usuario.getEmail()) != null) {
 			return ResponseEntity.ok(false);
 		}
 		

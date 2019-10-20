@@ -1,7 +1,7 @@
 package com.greencode.demo.controller;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -29,11 +29,12 @@ public class LoginController {
 	
 	
 	@PostMapping("/login")
-	public ResponseEntity<Usuario> validarLogin(@RequestBody Usuario usuario) {
+	public ResponseEntity<Usuario> validarLogin(@RequestBody Usuario usuario, HttpSession session) {
 		Usuario usuarioLogado = tdUsuario.logar(usuario.getEmail(), usuario.getSenha());
 		
 		if(usuarioLogado != null) {
 			lista.adiciona(usuario.getEmail());
+			session.setAttribute("usuarioLogado", usuarioLogado);
 			return ResponseEntity.ok(usuarioLogado);			
 		}
 	
@@ -41,12 +42,14 @@ public class LoginController {
 	}
 	
 	@RequestMapping(value="/logout", method = RequestMethod.GET)
-	public String logoutPage (HttpServletRequest request, HttpServletResponse response) {
-		/*Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-	    if (auth != null){    
-	        new SecurityContextLogoutHandler().logout(request, response, auth);
-	    }*/
-	    return "redirect:/login?logout";
+	public String logout(HttpSession session) {
+		System.out.println(session.getAttribute("usuarioLogado"));
+		if(session.getAttribute("usuarioLogado") != null){
+			session.invalidate();
+		    return "deslogado com sucesso";
+		}
+		
+		return "já foi deslogado";
 	}
 	
 	
