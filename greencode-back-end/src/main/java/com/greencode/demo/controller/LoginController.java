@@ -6,7 +6,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,17 +13,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.greencode.demo.accesslist.AccessList;
-import com.greencode.demo.domain.TodosUsuarios;
+import com.greencode.demo.domain.UsuariosRepository;
 import com.greencode.demo.domain.Usuario;
 
 @RestController
 public class LoginController {
 	
-	private TodosUsuarios tdUsuario;
+	private UsuariosRepository tdUsuario;
 	AccessList<String> lista = new AccessList<String>(50);
  	
 	@Autowired
-	public LoginController(TodosUsuarios usuarios) {
+	public LoginController(UsuariosRepository usuarios) {
 		tdUsuario = usuarios;
 	}
 	

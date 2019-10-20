@@ -7,16 +7,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.greencode.demo.domain.TodosUsuarios;
+import com.greencode.demo.domain.UsuariosRepository;
 import com.greencode.demo.domain.Usuario;
 
 @RestController
 public class UsuarioController {
 
-	private TodosUsuarios tds;
+	private UsuariosRepository tds;
 	
 	@Autowired
-	public UsuarioController(TodosUsuarios todos) {
+	public UsuarioController(UsuariosRepository todos) {
 		tds = todos;
 	}
 	

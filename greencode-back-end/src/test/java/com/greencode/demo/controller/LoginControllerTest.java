@@ -9,18 +9,18 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import com.greencode.demo.controller.LoginController;
-import com.greencode.demo.domain.TodosUsuarios;
+import com.greencode.demo.domain.UsuariosRepository;
 import com.greencode.demo.domain.Usuario;
 
 public class LoginControllerTest {
 	
 private LoginController controller;
 	
-	private TodosUsuarios tds;
+	private UsuariosRepository tds;
 
 	@Before
 	public void setUP() {
-		tds = Mockito.mock(TodosUsuarios.class);
+		tds = Mockito.mock(UsuariosRepository.class);
 		controller = new LoginController(tds);
 	}
 

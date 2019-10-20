@@ -1,10 +1,12 @@
 package com.greencode.demo.domain;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@Entity
 public class Endereco {
 	@Id
 	@GeneratedValue
