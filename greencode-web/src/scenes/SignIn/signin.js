@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import NavBar from "../../Components/NavBar/navbar";
 import { signIn } from "../../Actions/resquest";
-
 import { withRouter } from "react-router-dom";
+
+// TESTE MOCK
+import { signInMock } from "../../Actions/requetMock";
 
 export default class SignIn extends Component {
   constructor(props) {
@@ -34,10 +36,11 @@ export default class SignIn extends Component {
     };
 
     try {
-        const res = signIn(this.state)
+        const res = signInMock(this.state)
             res.then((response) => {
-                // console.log(response)
-                this.props.history.push('/dashboard', response.data)
+              console.log(response);
+                localStorage.setItem('teste', JSON.stringify(response))
+                this.props.history.push('/dashboard')
             })
             .catch(err => console.log(err))
     } catch (err) {

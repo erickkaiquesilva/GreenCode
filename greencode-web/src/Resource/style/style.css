@@ -198,19 +198,69 @@
 .dashboard h1 {
   padding: 20px 0px;
 }
-.boxInfoUsuario {
-  border: 1px solid var(--cinza-escuro);
-  border-radius: 7px;
-  padding: 10px;
+.header{
+  /* background: #009944; */
 }
-.boxInfoUsuario h3 {
-  font-size: 1.3em;
-  font-weight: normal;
+.btnResgate{
+  /* background: #222222; */
 }
-.boxInfoUsuario p {
-  font-size: 2.5em;
+.boxInfoUser{
+  float: left;
+  margin: 4px 10px;
+  padding: 4px 10px;
+  /* background: #fefefe; */
+  width: 200px; 
+}
+.boxInfoUser h4{
   font-weight: bold;
+  font-size: 1.3em;
 }
+.boxInfoUser p{
+  font-weight: 500;
+  font-size: 1.5em;
+}
+.progreco h1{
+  font-size: 1.3em;
+  border-bottom: 1px solid #222222;
+  width: 100%;
+  padding-top: 3px;
+}
+.boxProgress {
+  float: left;
+  width: 250px;
+  margin: 4px 13px;
+  /* background: #009944; */
+}
+.boxProgress h4{
+  text-align: center;
+  padding: 10px 0px;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+.boxProgress .image_timeline {
+  width: 100%;
+  max-width: 126px;
+  height: 126px;
+  /* background: #222222; */
+  float: left;
+  margin: 10% 25%;
+  border-radius: 100px;
+}
+.image_timeline img {
+  float: left;
+  width: 100%;
+  max-width: 126px;
+  height: 126px;
+}
+.btn-resgate{
+  width: 80%;
+  height: 50px;
+  font-weight: 700;
+  font-size: 1.3em;
+  border-radius: 50px;
+  float: left;
+  margin: 25% 10%;
+} 
 .extrato h3 {
   border-bottom: 1px solid var(--cinza-escuro);
   padding: 4px 0px;
@@ -228,11 +278,17 @@
   width: 46px;
   height: 46px;
   border-radius: 50px;
-  background: #222222;
+  background: #FFF;
   float: left;
   margin-top: 7%;
   margin-left: 4px;
   margin-right: 10px;
+}
+.imageExtrato img{
+  float: left;
+  width: 100%;
+  max-width: 46px;
+  height: 46px;
 }
 .boxInfoExtrato ul {
   list-style: none;
@@ -242,14 +298,49 @@
   display: block;
   margin: -10px;
 }
-.boxParceiros .imageParceiros {
-  width: 106px;
-  height: 106px;
-  background: var(--verde-escuro);
+.boxInfoExtrato .list_extract img{
+  float: left;
+  width: 100%;
+  max-width: 24px;
+  height: 24px;
 }
+.parceiros{
+  /* box-shadow: 0 0 0.1em var(--cinza-escuro); */
+}
+.boxParceiros {
+  float: left;
+  width: 100%;
+  /* background: #009944; */
+  margin-bottom: 10px;
+}
+.boxParceiros .imageParceiros {
+  float: left;
+  width: 100%;
+  padding: 10px;
+  /* height: 106px; */
+  /* background: var(--verde-escuro); */
+} 
 /*
     Classes Reutilizaveis
 */
 .textBold {
   font-weight: bold;
+}
+.simulacaoImage{
+  width: 100%;
+  max-width: 126px;
+  height: 126px;
+  background: #222222;
+  float: left;
+  margin: 10% 25%;
+  border-radius: 100px;
+}
+.image_large {
+  max-width: 300px;
+}
+.image_medium {
+  max-width: 150px;
+}
+.image_small {
+  max-width: 96px;
 }
