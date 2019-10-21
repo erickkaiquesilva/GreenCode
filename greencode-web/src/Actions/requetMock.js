@@ -8,7 +8,7 @@ export const signInMock = (user) => {
  })}, 500))
 }
 
-export const summaryMock = (user) => {
+export const summaryMock = ({ id_user }) => {
     return new Promise((resolve, reject) => setTimeout(() => { 
         resolve({ 
             id_user: 7,
@@ -16,8 +16,31 @@ export const summaryMock = (user) => {
                 recorded_points: '40',
                 registered_items: '7',
                 type: 'Lata Metálica',
-                location: 'Av.Paulista 345'
-            }]    
+                location: 'Av.Paulista 345',
+                id: 1
+            },
+            {
+                recorded_points: '40',
+                registered_items: '7',
+                type: 'Lata ',
+                location: 'Av.Paulista 345',
+                id: 2
+            },
+            {
+                recorded_points: '40',
+                registered_items: '7',
+                type: 'Lata ',
+                location: 'Av.Paulista 345',
+                id: 2
+            },
+            {
+                recorded_points: '40',
+                registered_items: '7',
+                type: 'Lata ',
+                location: 'Av.Paulista 345',
+                id: 2
+            }
+        ]    
  })}, 500))
 }
 
@@ -25,7 +48,7 @@ export const balanceMock = (id_user) => {
     return new Promise((resolve, reject) => setTimeout(() => { 
         resolve({ 
             id_user: 17,
-            recorded_points: 750,
+            recorded_points: 450,
             recorded_items: 70
  })}, 500))
 }

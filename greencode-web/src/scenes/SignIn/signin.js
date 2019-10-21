@@ -36,15 +36,15 @@ export default class SignIn extends Component {
     };
 
     try {
-        const res = signInMock(this.state)
-            res.then((response) => {
-              console.log(response);
-                localStorage.setItem('teste', JSON.stringify(response))
-                this.props.history.push('/dashboard')
-            })
-            .catch(err => console.log(err))
+      signInMock(this.state)
+        .then((response) => {
+          console.log(response);
+          localStorage.setItem('user', JSON.stringify(response))
+          this.props.history.push('/dashboard')
+        })
+        .catch(err => console.log(err))
     } catch (err) {
-        console.log("error ", err);
+      console.log("error ", err);
     }
 
   };

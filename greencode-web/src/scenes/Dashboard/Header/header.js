@@ -7,29 +7,27 @@ export default class Balance extends Component {
 
         this.state = {
             id_user: 0,
-            recorded_points: 500,
-            recorded_items: 1000
+            name: "",
+            recorded_points: 0,
+            recorded_items: 0
         }
     }
+    
     componentDidMount() {
-        var teste = Object.assign({}, this.state);
+        
+        let user = JSON.parse(localStorage.getItem('user'));
+        this.setState({id_user: user.id_user, name: user.name})
+
         try {
             const res = balanceMock(this.state.id_user)
             res.then((response) => {
-                localStorage.setItem('teste', JSON.stringify(response))
+                localStorage.setItem('balance', JSON.stringify(response))
+                this.setState({recorded_points: response.recorded_points, recorded_items: response.recorded_items})
             })
                 .catch(err => console.log(err))
         } catch (err) {
             console.log("error ", err);
         }
-
-        var teste = JSON.parse(localStorage.getItem('teste'))
-        // console.log(teste)
-
-        this.setState({id_user: teste.id_user})
-
-        console.log("XPTO --- ", this.state.id_user);
-
     }
 
     render() {
@@ -37,14 +35,14 @@ export default class Balance extends Component {
             <div className="row">
                 <div className="col-lg-1"></div>
                 <div className="col-lg-7 header">
-                    <h1>Hello USUARIO!</h1>
+                    <h1>Hello {this.state.name}</h1>
                     <div className="boxInfoUser">
                         <h4>Seus Pontos</h4>
-                        <p>Pts 300</p>
+                        <p>Pts {this.state.recorded_points}</p>
                     </div>
                     <div className="boxInfoUser">
                         <h4>Voce Reciclou já</h4>
-                        <p>400 Items</p>
+                        <p>{this.state.recorded_items} Items</p>
                     </div>
                 </div>
                 <div className="col-lg-4 btnResgate">
