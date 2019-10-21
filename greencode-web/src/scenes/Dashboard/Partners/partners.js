@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 
+/* 
+    IMPORT IMAGES
+*/
 import parceiro1 from "../../../Resource/Image/logo_parceiros/parceiro1.png";
 import parceiro2 from "../../../Resource/Image/logo_parceiros/parceiro2.png";
 import parceiro3 from "../../../Resource/Image/logo_parceiros/parceiro3.jpg";
@@ -26,6 +29,7 @@ export default class Summary extends Component {
                     <img className="imageParceiros image_medium" src={parceiro7} alt="" />
                     <img className="imageParceiros image_medium" src={parceiro3} alt="" />
                 </div>
+                <button className="btn btn-marketplace">Ver MarketPlace</button>
             </div>
         )
     }

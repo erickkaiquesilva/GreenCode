@@ -6,7 +6,7 @@ export default class Balance extends Component {
         super(props);
 
         this.state = {
-            id_user: "",
+            id_user: 0,
             recorded_points: 500,
             recorded_items: 1000
         }
@@ -16,17 +16,19 @@ export default class Balance extends Component {
         try {
             const res = balanceMock(this.state.id_user)
             res.then((response) => {
-                // localStorage.setItem('teste', JSON.stringify(response))
+                localStorage.setItem('teste', JSON.stringify(response))
             })
                 .catch(err => console.log(err))
         } catch (err) {
             console.log("error ", err);
         }
 
-        // var teste = JSON.parse(localStorage.getItem('teste'))
+        var teste = JSON.parse(localStorage.getItem('teste'))
+        // console.log(teste)
 
-        // console.log("XPTO --- ", teste.name);
-        console.log(teste)
+        this.setState({id_user: teste.id_user})
+
+        console.log("XPTO --- ", this.state.id_user);
 
     }
 

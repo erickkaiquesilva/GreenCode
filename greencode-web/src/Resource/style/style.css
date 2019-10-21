@@ -307,6 +307,12 @@
 .parceiros{
   /* box-shadow: 0 0 0.1em var(--cinza-escuro); */
 }
+.parceiros .btn-marketplace{
+  width: 80%;
+  height: 45px;
+  border-radius: 50px;
+  margin: 4% 10%;
+}
 .boxParceiros {
   float: left;
   width: 100%;
