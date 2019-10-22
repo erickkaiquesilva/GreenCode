@@ -12,9 +12,9 @@ public class CreateFile {
 	private Formatter saida = null;
 	private Date atualdate = new Date();
 
-	public void gravar(ArrayList<AccessList> email) {
+	public void gravar(AccessList email) {
 		try {
-			arquivo = new FileWriter("access-log" + atualdate + ".log");
+			arquivo = new FileWriter("/var/log/greencode/access-log" + atualdate + ".log");
 			saida = new Formatter(arquivo);
 		} catch (Exception erro) {
 			System.out.println("Erro ao gerar o arquivo - " + atualdate);
@@ -22,7 +22,7 @@ public class CreateFile {
 		}
 		
 		try {
-			for (AccessList a : email) {
+			for (int i = 0; i < email.getTamanho(); i++) {
 				saida.format("%s - acesso efetuado às: %s", email,atualdate);
 			}
 		} catch (FormatterClosedException erro) {
