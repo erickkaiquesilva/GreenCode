@@ -35,18 +35,14 @@ export default class Balance extends Component {
             <div className="row">
                 <div className="col-lg-1"></div>
                 <div className="col-lg-7 header">
-                    <h1>Hello {this.state.name}</h1>
+                    <h1>Wellcome <br /> {this.state.name}</h1>
                     <div className="boxInfoUser">
                         <h4>Seus Pontos</h4>
                         <p>Pts {this.state.recorded_points}</p>
                     </div>
-                    <div className="boxInfoUser">
-                        <h4>Voce Reciclou já</h4>
-                        <p>{this.state.recorded_items} Items</p>
-                    </div>
                 </div>
                 <div className="col-lg-4 btnResgate">
-                    <button className="btn btn-resgate">Resgatar Meus Pontos</button>
+                    
                 </div>
             </div>
         )

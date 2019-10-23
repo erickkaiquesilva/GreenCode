@@ -12,7 +12,6 @@ export default class Summary extends Component {
         this.state = {
             id_user: 0,
             extract: []
-            // srcPath: 'trofelVazio'
         }
     }
 
@@ -22,12 +21,11 @@ export default class Summary extends Component {
 
     componentWillMount() {
         try {
-            const user = localStorage.getItem('teste')
+            const user = localStorage.getItem('user')
             summaryMock(user)
                 .then((response) => {
                     console.log()
-                    this.setState({ extract: response.extract });
-                    // handleBla
+                    this.setState({ id_user: response.id_user, extract: response.extract });
                 })
                 .catch(err => console.log(err))
         } catch (err) {
@@ -38,7 +36,7 @@ export default class Summary extends Component {
     render() {
         return (
             <div className="col-lg-4 extrato">
-                <h3>Extrato de Pontos</h3>
+                <h3>Seus Ultimos Registros</h3>
 {/* <img src={srcPath}> */}
                 {this.state.extract.map(item => (
                     <div className="boxInfoExtrato" key={item.id}>

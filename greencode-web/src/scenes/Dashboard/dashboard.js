@@ -3,7 +3,6 @@ import NavBar from "../../Components/NavBar/navbar";
 import Header from "./Header/header";
 import Summary from "./Summary/summary";
 import Patners from "./Partners/partners";
-import TimeLine from "./TimeLine/timeline";
 
 export default class Dashboard extends Component {
   constructor(props) {
@@ -11,9 +10,9 @@ export default class Dashboard extends Component {
   }
 
   componentDidMount() {
-    var teste = JSON.parse(localStorage.getItem('teste'))
+    var user = JSON.parse(localStorage.getItem('user'))
 
-    if (!teste.authentication) {
+    if (!user.authentication) {
       // this.props.history.push('/')
     }
   }
@@ -26,14 +25,11 @@ export default class Dashboard extends Component {
           <Header />
           <div className="espaco"></div>
           <div className="espaco"></div>
-          <TimeLine />
-          <div className="espaco"></div>
-          <div className="espaco"></div>
           <div className="row">
             <div className="col-lg-1"></div>
-            <Summary />
-            <div className="col-lg-1"></div>
             <Patners />
+            <div className="col-lg-1"></div>
+            <Summary />
           </div>
           <div className="espaco"></div>
           <div className="espaco"></div>

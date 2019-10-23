@@ -15,11 +15,17 @@ export default class Summary extends Component {
     render() {
         return (
             <div className="col-lg-5 parceiros">
-                <h1>Our partners.</h1>
-                <p>
-                    View available products and services.
-                </p>
+                <div className="boxMissiao">
+                    <h2>Trilha Sustentavel</h2>
+                    <p>
+                        Seja bem vindo User, você acaba de iniciar sua trilha para se torna uma pessoa sustentavel.
+                    </p>
+                </div>
+                <div className="espaco"></div>
+                <div className="espaco"></div>
+                <div className="espaco"></div>
                 <div className="boxParceiros">
+                    <h1>Parceiros GreenCode.</h1>
                     <img className="imageParceiros image_large" src={parceiro1} alt="" />
                     <img className="imageParceiros image_medium" src={parceiro2} alt="" />
                     <img className="imageParceiros image_medium" src={parceiro4} alt="" />

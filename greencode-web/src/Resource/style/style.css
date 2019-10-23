@@ -201,19 +201,23 @@
 .header{
   /* background: #009944; */
 }
+.header h1{
+  float: left;
+}
 .btnResgate{
   /* background: #222222; */
 }
 .boxInfoUser{
   float: left;
-  margin: 4px 10px;
+  margin-top: 20px;
+  margin-left: 50px;
   padding: 4px 10px;
-  /* background: #fefefe; */
+  /* background: #000; */
   width: 200px; 
 }
 .boxInfoUser h4{
   font-weight: bold;
-  font-size: 1.3em;
+  font-size: 1.7em;
 }
 .boxInfoUser p{
   font-weight: 500;
@@ -306,6 +310,23 @@
 }
 .parceiros{
   /* box-shadow: 0 0 0.1em var(--cinza-escuro); */
+}
+.boxMissiao{
+  float: left;
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  padding: 10px 0px;
+  border: 1px solid #DDD;
+  border-radius: 5px;
+}
+.boxMissiao h2 {
+  font-size: 2.5em;
+  padding: 14px;
+}
+.boxMissiao p {
+  font-size: 1.2em;
+  padding: 14px;
 }
 .parceiros .btn-marketplace{
   width: 80%;
