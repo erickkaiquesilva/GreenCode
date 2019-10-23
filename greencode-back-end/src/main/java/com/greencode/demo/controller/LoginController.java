@@ -21,7 +21,7 @@ import com.greencode.demo.domain.Usuario;
 public class LoginController {
 	
 	private UsuariosRepository tdUsuario;
-	AccessList<String> lista = new AccessList<String>(50);
+	AccessList<String> lista = new AccessList<String>(1);
  	
 	@Autowired
 	public LoginController(UsuariosRepository usuarios) {
@@ -36,6 +36,7 @@ public class LoginController {
 		if(usuarioLogado != null) {
 			lista.adiciona(usuario.getEmail());
 			if(lista.getTamanho() == 1) {
+			System.out.println(lista);
 				new CreateFile().gravar(lista);
 				lista.limpa();
 			}
