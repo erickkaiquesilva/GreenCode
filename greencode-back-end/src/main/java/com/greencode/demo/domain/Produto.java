@@ -34,9 +34,6 @@ public class Produto {
             mappedBy = "produtos")
     private Set<Transacao> transacao = new HashSet<>();
 
-
-
-
 	public Produto(){
 		
 	}

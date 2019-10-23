@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.greencode.demo.accesslist.AccessList;
+import com.greencode.demo.accesslist.CreateFile;
 import com.greencode.demo.domain.UsuariosRepository;
 import com.greencode.demo.domain.Usuario;
 
@@ -34,6 +35,10 @@ public class LoginController {
 		
 		if(usuarioLogado != null) {
 			lista.adiciona(usuario.getEmail());
+			if(lista.getTamanho() == 1) {
+				new CreateFile().gravar(lista);
+				lista.limpa();
+			}
 			session.setAttribute("usuarioLogado", usuarioLogado);
 			return ResponseEntity.ok(usuarioLogado);			
 		}

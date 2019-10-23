@@ -48,7 +48,7 @@ public class MaquinaController {
 	}
 	
 	@PostMapping("/maquina/atualizarStatus")
-	public ResponseEntity<Boolean> atualizarNumero(@RequestBody Maquina maquina){
+	public ResponseEntity<Boolean> atualizarStatus(@RequestBody Maquina maquina){
 		tdMaquinas.atualizarStatus(maquina.getStatus(), maquina.getId());
 		
 		
