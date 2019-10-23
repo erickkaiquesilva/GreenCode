@@ -12,22 +12,16 @@ export default class Summary extends Component {
         this.state = {
             id_user: 0,
             extract: []
-            // srcPath: 'trofelVazio'
         }
     }
 
-    // function handleBla() {
-    //     setState(srcPath)
-    // }
-
     componentWillMount() {
         try {
-            const user = localStorage.getItem('teste')
+            const user = localStorage.getItem('user')
             summaryMock(user)
                 .then((response) => {
                     console.log()
                     this.setState({ extract: response.extract });
-                    // handleBla
                 })
                 .catch(err => console.log(err))
         } catch (err) {
