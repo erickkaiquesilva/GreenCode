@@ -15,10 +15,6 @@ export default class Summary extends Component {
         }
     }
 
-    // function handleBla() {
-    //     setState(srcPath)
-    // }
-
     componentWillMount() {
         try {
             const user = localStorage.getItem('user')
@@ -37,7 +33,6 @@ export default class Summary extends Component {
         return (
             <div className="col-lg-4 extrato">
                 <h3>Seus Ultimos Registros</h3>
-{/* <img src={srcPath}> */}
                 {this.state.extract.map(item => (
                     <div className="boxInfoExtrato" key={item.id}>
                         <div className="imageExtrato"><img src={lata_icon} alt="Icon" /></div>
