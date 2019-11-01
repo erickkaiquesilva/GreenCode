@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.greencode.demo.domain.Maquina;
-import com.greencode.demo.domain.MaquinaRepository;
+import com.greencode.demo.dao.MaquinaRepository;
+import com.greencode.demo.model.Maquina;
 
 @RestController
 public class MaquinaController {
@@ -42,7 +42,7 @@ public class MaquinaController {
 	@GetMapping("/maquina/buscarPorTipo/{tipo}")
 	public ResponseEntity<List<Maquina>> buscarPorCidade(@PathVariable String tipo){
 		
-		List<Maquina> maquinasAchadas = tdMaquinas.buscarPorTipo(tipo);
+		List<Maquina> maquinasAchadas = tdMaquinas.findByTipo(tipo);
 		
 		return ResponseEntity.ok(maquinasAchadas);
 	}

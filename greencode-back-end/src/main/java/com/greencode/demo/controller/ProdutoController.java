@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.greencode.demo.domain.Produto;
-import com.greencode.demo.domain.ProdutoRepository;
+import com.greencode.demo.dao.ProdutoRepository;
+import com.greencode.demo.model.Produto;
 
 @RestController
 public class ProdutoController {

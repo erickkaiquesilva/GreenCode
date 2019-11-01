@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.greencode.demo.accesslist.AccessList;
 import com.greencode.demo.accesslist.CreateFile;
-import com.greencode.demo.domain.UsuariosRepository;
-import com.greencode.demo.domain.Usuario;
+import com.greencode.demo.dao.UsuariosRepository;
+import com.greencode.demo.model.Usuario;
 
 @RestController
 public class LoginController {

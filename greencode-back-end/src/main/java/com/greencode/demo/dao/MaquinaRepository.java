@@ -1,4 +1,4 @@
-package com.greencode.demo.domain;
+package com.greencode.demo.dao;
 
 import java.util.List;
 
@@ -10,11 +10,13 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import com.greencode.demo.model.Maquina;
+
 @Repository
 public interface MaquinaRepository extends JpaRepository<Maquina, Long>{
 	
-	@Query("select m from Maquina m where m.tipoMaquina = :tipo")
-	public List<Maquina> buscarPorTipo(@Param("tipo") String tipo);
+	//@Query("select m from Maquina m where m.tipoMaquina = :tipo")
+	public List<Maquina> findByTipo(String tipo);
 	
 	@Transactional
 	@Modifying

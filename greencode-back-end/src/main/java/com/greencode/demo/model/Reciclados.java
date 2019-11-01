@@ -1,8 +1,7 @@
-package com.greencode.demo.domain;
+package com.greencode.demo.model;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;

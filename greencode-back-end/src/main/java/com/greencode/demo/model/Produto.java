@@ -1,4 +1,4 @@
-package com.greencode.demo.domain;
+package com.greencode.demo.model;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -38,11 +38,11 @@ public class Produto {
 		
 	}
 	
-	public Produto(Long idProduto, double preco, String nome) {
-		super();
+	public Produto(Long idProduto, double preco, String nome, Set<Transacao> transacao) {
 		this.idProduto = idProduto;
 		this.preco = preco;
 		this.nome = nome;
+		this.transacao = transacao;
 	}
 
 	

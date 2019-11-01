@@ -1,4 +1,4 @@
-package com.greencode.demo.domain;
+package com.greencode.demo.model;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
@@ -45,12 +45,19 @@ public class Transacao {
                 inverseJoinColumns = { @JoinColumn(name = "produtos_id") })
 	private Set<Produto> produtos = new HashSet<>();
 	
-	public Transacao(long id, LocalDateTime data_hora, int valor_transacao, Usuario usuario) {
-		super();
+	public Transacao(long id, LocalDateTime data_hora, int valor_transacao, Usuario usuario, HashSet<Produto> produtos) {
 		this.id = id;
 		this.data_hora = data_hora;
 		this.valor_transacao = valor_transacao;
 		this.usuario = usuario;
+		this.produtos = produtos;
+	}
+	
+	public Transacao(LocalDateTime data_hora, int valor_transacao, Usuario usuario, HashSet<Produto> produtos) {
+		this.data_hora = data_hora;
+		this.valor_transacao = valor_transacao;
+		this.usuario = usuario;
+		this.produtos = produtos;
 	}
 
 	public Transacao() {
@@ -71,6 +78,10 @@ public class Transacao {
 
 	public Usuario getUsuario() {
 		return usuario;
+	}
+	
+	public Set<Produto> getProdutos() {
+		return produtos;
 	}
 	
 	

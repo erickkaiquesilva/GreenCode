@@ -1,4 +1,4 @@
-package com.greencode.demo.domain;
+package com.greencode.demo.model;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;

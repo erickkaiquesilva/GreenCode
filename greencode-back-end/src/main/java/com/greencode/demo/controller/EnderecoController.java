@@ -1,6 +1,5 @@
 package com.greencode.demo.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,8 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.greencode.demo.domain.Endereco;
-import com.greencode.demo.domain.EnderecoRepository;
+import com.greencode.demo.dao.EnderecoRepository;
+import com.greencode.demo.model.Endereco;
 
 @RestController
 public class EnderecoController {

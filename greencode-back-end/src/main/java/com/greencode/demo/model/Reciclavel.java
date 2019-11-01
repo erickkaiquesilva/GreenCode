@@ -1,4 +1,4 @@
-package com.greencode.demo.domain;
+package com.greencode.demo.model;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -11,7 +11,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -45,9 +44,7 @@ public class Reciclavel {
             mappedBy = "reciclavel")
     private Set<Reciclados> reciclados = new HashSet<>();
 
-	public Reciclavel() {
-		super();
-	}
+	public Reciclavel() {}
 
 	public Reciclavel(Long id, int peso, int pontos, int idTipo) {
 		this.id = id;
