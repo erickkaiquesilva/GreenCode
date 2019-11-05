@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default class NavBar extends Component {
     render() {
-        return(
+        return (
             <div className="container-fluid topo">
                 <div className="row">
                     <div className="logo col-lg-3 logo">
@@ -18,7 +18,7 @@ export default class NavBar extends Component {
                         </ul>
                     </div>
                     <div className="btn-login col-lg-3">
-                    <Link className="link-login" to="/signIn">Login</Link>
+                        <Link className="link-login" to="/signIn">Login</Link>
                     </div>
                 </div>
             </div>

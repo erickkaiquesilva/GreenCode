@@ -32,8 +32,7 @@ export default class Summary extends Component {
     render() {
         return (
             <div className="col-lg-4 extrato">
-                <h3>Extrato de Pontos</h3>
-{/* <img src={srcPath}> */}
+                <h3>Seus Ultimos Registros</h3>
                 {this.state.extract.map(item => (
                     <div className="boxInfoExtrato" key={item.id}>
                         <div className="imageExtrato"><img src={lata_icon} alt="Icon" /></div>

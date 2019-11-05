@@ -38,11 +38,11 @@ export default class SignUp extends Component {
         <div className="container">
           <div className="row">
             <article className="conteudo-esquerda col-lg-6">
-              <h1>Here you recycle in a fun way!</h1>
+              <h1>Aqui você recicla de uma maneira divertida!</h1>
               <div className="borda-separadora"></div>
               <p>
-                Do not have an account yet ? so sign up now and start changing
-                the world in a fun way.
+                Não tem uma conta ainda ? então inscreva-se agora e comece a mudar
+                o mundo de uma maneira divertida.
               </p>
             </article>
             <article className="col-lg-6">
