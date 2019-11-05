@@ -1,6 +1,11 @@
 :root {
   --cinza-escuro: #222222;
   --verde-escuro: #009944;
+
+  --vermelho: #F55F3B;
+  --amarelo: #FFD235;
+  --azul: #418EEB;
+  --verde: #28FF5F;
 }
 
 .background {
@@ -14,6 +19,9 @@
   background: var(--cinza-escuro);
   color: #fff;
   padding: 12px 0px;
+}
+.topo .logo {
+  padding: 0px 50px;
 }
 .topo .menu ul {
   list-style: none;
