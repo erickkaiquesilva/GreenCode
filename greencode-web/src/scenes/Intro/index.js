@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import NavBar from '../../Components/NavBar/navbar'
 import Logo from '../../Resource/Image/teste.png';
 
@@ -90,7 +91,9 @@ export default class Intro extends Component {
 
                 <footer className="container-fluid rodape">
                     <h1>start changing the planet in a smart and fun way</h1>
-                    <button>Cadastre-se</button>
+                    <Link to="/signUp">
+                        <button>Cadastre-se</button>
+                    </Link>
                 </footer>
 
             </>

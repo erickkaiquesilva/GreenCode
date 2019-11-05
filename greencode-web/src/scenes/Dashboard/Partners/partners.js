@@ -30,7 +30,7 @@ export default class Summary extends Component {
                     <img className="imageParceiros image_medium" src={parceiro2} alt="" />
                     <img className="imageParceiros image_medium" src={parceiro4} alt="" />
                 </div>
-                <button className="btn btn-marketplace">Ver MarketPlace</button>
+                <button className="btn btn-marketplace">Trocar Meus Pontos</button>
             </div>
         )
     }

@@ -13,7 +13,7 @@ export default class Dashboard extends Component {
     var user = JSON.parse(localStorage.getItem('user'))
 
     if (!user.authentication) {
-      // this.props.history.push('/')
+      this.props.history.push('/')
     }
   }
 

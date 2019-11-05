@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import NavBar from "../../Components/NavBar/navbar";
 import { signIn } from "../../Actions/resquest";
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 
 // TESTE MOCK
 import { signInMock } from "../../Actions/requetMock";
@@ -59,7 +59,7 @@ export default class SignIn extends Component {
               <h1>Aqui você recicla de uma maneira divertida!</h1>
               <div className="borda-separadora"></div>
               <p>
-                Não tem uma conta ainda ? então inscreva-se agora e
+                Não tem uma conta ainda ? então <Link to="/signUp"><a>inscreva-se</a></Link> agora e
                 comece a mudar o mundo de uma maneira divertida.
               </p>
             </article>
