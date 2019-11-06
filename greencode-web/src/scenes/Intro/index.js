@@ -22,26 +22,15 @@ export default class Intro extends Component {
                         <div className="col-lg-1"></div>
                     </div>
                 </div>
+                <div className="espaco"></div>
                 <div className="container">
-
                     <article className="oquesomos ">
-                        <h1>how green code works</h1>
+                        <h1>Como a Green Code funciona!</h1>
                         <div className="espaco"></div>
                         <div className="row">
-                            <section className="caixas-explicativas col-lg-4">
-                                <h3>TITULO EXPLICATIVO</h3>
-                                <p>Explicação de cada passo</p>
-                                <img src={Logo} />
-                            </section>
-                            <section className="caixas-explicativas col-lg-4">
-                                <h3>TITULO EXPLICATIVO</h3>
-                                <p>Explicação de cada passo</p>
-                                <img src={Logo} />
-                            </section>
-                            <section className="caixas-explicativas col-lg-4">
-                                <h3>TITULO EXPLICATIVO</h3>
-                                <p>Explicação de cada passo</p>
-                                <img src={Logo} />
+                            <div className="col-lg-1"></div>
+                            <section className="box-explicativo col-lg-4">
+                                <h1>Titulo Seção</h1>
                             </section>
                         </div>
                         <div className="espaco"></div>

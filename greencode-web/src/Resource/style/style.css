@@ -98,6 +98,13 @@
   font-size: 3.5em;
   padding: 12px 0px;
 }
+.box-explicativo {
+  padding: 15px;
+  border: 1px solid #DDD;
+}
+.box-explicativo h1 {
+  font-size: 1.7em;
+}
 .conteudo-direito {
   float: left;
   margin: 10% 0;
