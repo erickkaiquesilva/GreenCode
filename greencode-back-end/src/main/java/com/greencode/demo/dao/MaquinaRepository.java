@@ -16,7 +16,7 @@ import com.greencode.demo.model.Maquina;
 public interface MaquinaRepository extends JpaRepository<Maquina, Long>{
 	
 	//@Query("select m from Maquina m where m.tipoMaquina = :tipo")
-	public List<Maquina> findByTipo(String tipo);
+	public List<Maquina> findByTipoMaquina(String tipo);
 	
 	@Transactional
 	@Modifying

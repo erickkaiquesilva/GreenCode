@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -35,11 +35,7 @@ public class Transacao {
 	@JoinColumn(name="usuario_id")
 	private Usuario usuario;
 	
-	@ManyToMany(fetch = FetchType.LAZY,
-            cascade = {
-                    CascadeType.PERSIST,
-                    CascadeType.MERGE
-                })
+	@ManyToMany(fetch = FetchType.LAZY)
         @JoinTable(name = "Produtos_transacao",
                 joinColumns = { @JoinColumn(name = "transacao_id") },
                 inverseJoinColumns = { @JoinColumn(name = "produtos_id") })
@@ -53,11 +49,16 @@ public class Transacao {
 		this.produtos = produtos;
 	}
 	
-	public Transacao(LocalDateTime data_hora, int valor_transacao, Usuario usuario, HashSet<Produto> produtos) {
+	public Transacao(LocalDateTime data_hora, int valor_transacao, Usuario usuario) {
 		this.data_hora = data_hora;
 		this.valor_transacao = valor_transacao;
 		this.usuario = usuario;
-		this.produtos = produtos;
+	}
+
+	@Override
+	public String toString() {
+		return "Transacao [data_hora=" + data_hora + ", valor_transacao=" + valor_transacao + ", usuario=" + usuario
+				+ ", produtos=" + produtos + "]";
 	}
 
 	public Transacao() {
@@ -83,6 +84,7 @@ public class Transacao {
 	public Set<Produto> getProdutos() {
 		return produtos;
 	}
+	
 	
 	
 	

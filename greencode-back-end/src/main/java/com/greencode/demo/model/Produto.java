@@ -26,12 +26,7 @@ public class Produto {
 	@JsonProperty
 	private String nome;
 	
-	@ManyToMany(fetch = FetchType.LAZY,
-            cascade = {
-                CascadeType.PERSIST,
-                CascadeType.MERGE
-            },
-            mappedBy = "produtos")
+	@ManyToMany(fetch = FetchType.LAZY,mappedBy = "produtos")
     private Set<Transacao> transacao = new HashSet<>();
 
 	public Produto(){
@@ -44,14 +39,16 @@ public class Produto {
 		this.nome = nome;
 		this.transacao = transacao;
 	}
+	
+	public Produto(Long idProduto, String nome, double preco) {
+		this.idProduto = idProduto;
+		this.preco = preco;
+		this.nome = nome;
+	}
 
 	
 	public Long getIdProduto() {
 		return idProduto;
-	}
-
-	public void setIdProduto(Long idProduto) {
-		this.idProduto = idProduto;
 	}
 
 	public Set<Transacao> getTransacao() {

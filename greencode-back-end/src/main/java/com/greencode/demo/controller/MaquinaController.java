@@ -42,7 +42,7 @@ public class MaquinaController {
 	@GetMapping("/maquina/buscarPorTipo/{tipo}")
 	public ResponseEntity<List<Maquina>> buscarPorCidade(@PathVariable String tipo){
 		
-		List<Maquina> maquinasAchadas = tdMaquinas.findByTipo(tipo);
+		List<Maquina> maquinasAchadas = tdMaquinas.findByTipoMaquina(tipo);
 		
 		return ResponseEntity.ok(maquinasAchadas);
 	}

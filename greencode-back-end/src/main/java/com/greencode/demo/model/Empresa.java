@@ -1,10 +1,11 @@
 package com.greencode.demo.model;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-
+@Entity
 public class Empresa {
 	
 	@Id
@@ -15,7 +16,7 @@ public class Empresa {
 	private String nome;
 	
 	@JsonProperty
-	private Integer CNPJ;
+	private Integer cnpj;
 
 	public Long getIdEmpresa() {
 		return idEmpresa;
@@ -34,11 +35,11 @@ public class Empresa {
 	}
 
 	public Integer getCNPJ() {
-		return CNPJ;
+		return cnpj;
 	}
 
 	public void setCNPJ(Integer cNPJ) {
-		CNPJ = cNPJ;
+		cnpj = cNPJ;
 	}
 	
 	

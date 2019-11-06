@@ -26,13 +26,22 @@ public class ProdutoController {
 	@GetMapping("produto/porNome/{nome}")
 	public ResponseEntity<List<Produto>> buscarPorNome(@PathVariable String nome){
 		
-		List<Produto> produtosAchados = produtos.porNome(nome);
+		List<Produto> produtosAchados = produtos.buscarPorNome(nome);
 		
 		return ResponseEntity.ok(produtosAchados);
 	}
 	
+	@GetMapping("produto/buscarTodos")
+	public ResponseEntity<List<Produto>> buscarTodos(){
+		
+		List<Produto> produtosAchados = produtos.buscarTodos();
+		
+		return ResponseEntity.ok(produtosAchados);
+	}
+
+	
 	@PostMapping("produto/criar")
-	public ResponseEntity<Boolean> cadastrarMaquina(@RequestBody Produto produto){
+	public ResponseEntity<Boolean> cadastrarProduto(@RequestBody Produto produto){
 		
 		produtos.save(produto);
 		
@@ -40,7 +49,7 @@ public class ProdutoController {
 	}
 	
 	@PostMapping("/produto/deletar")
-	public ResponseEntity<Boolean> deletarEndereco(@RequestBody Produto produto){
+	public ResponseEntity<Boolean> deletarProduto(@RequestBody Produto produto){
 		
 		produtos.delete(produto);
 		

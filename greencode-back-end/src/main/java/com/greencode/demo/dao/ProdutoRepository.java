@@ -13,8 +13,11 @@ import com.greencode.demo.model.Produto;
 
 public interface ProdutoRepository extends JpaRepository<Produto, Long>{
 	
-	@Query("select p from Produto p where p.nome = :nome")
-	public List<Produto> porNome(@Param("nome") String nome);
+	@Query("select NEW com.greencode.demo.model.Produto(p.idProduto, p.nome, p.preco) from Produto p where p.nome = :nome")
+	public List<Produto> buscarPorNome(String nome);
+	
+	@Query("select NEW com.greencode.demo.model.Produto(p.idProduto, p.nome, p.preco) from Produto p")
+	public List<Produto> buscarTodos();
 	
 	@Transactional
 	@Modifying

@@ -27,8 +27,9 @@ public class UsuarioController {
 	LocalDateTime dataHora;
 	
 	@Autowired
-	public UsuarioController(UsuariosRepository todos) {
+	public UsuarioController(UsuariosRepository todos, TransacaoRepository transacoes) {
 		tds = todos;
+		this.transacoes = transacoes;
 	}
 	
 	@PostMapping("/signup")
@@ -60,7 +61,14 @@ public class UsuarioController {
 				pontosAtualizados = (int) pontosAtuais - (int) total;
 				
 				tds.atualizarPontos(pontosAtualizados, usuarioId);
-				Transacao transacao = new Transacao(dataHora,total,usuario,(HashSet<Produto>) produtos);
+				Transacao transacao = new Transacao(dataHora,total,usuario);
+				
+				for(Produto p : produtos) {
+					transacao.getProdutos().add(p);
+					p.getTransacao().add(transacao);
+				}
+				System.out.println(transacao.toString());
+				
 				transacoes.save(transacao);
 				return ResponseEntity.ok(true);
 			}
