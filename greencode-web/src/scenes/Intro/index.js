@@ -8,21 +8,21 @@ export default class Intro extends Component {
         return (
             <>
                 <NavBar />
-                <div className="container">
+                <div className="container-fluid wallpaper-intro">
                     <div className="row">
-                        <div className="col-lg-6 conteudo-esquerda">
-                            <h1>O que é a Green Code?</h1>
+                        <div className="col-lg-1"></div>
+                        <div className="col-lg-10 conteudo-intro">
+                            <h1>O que é a <br />Green Code?</h1>
                             <p>
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                             </p>
-                        </div>
-                        <div className="col-lg-6 conteudo-direito">
                             <button>Cadastre-se</button>
                         </div>
+                        <div className="col-lg-1"></div>
                     </div>
-
-                    <div className="borda-separadora"></div>
+                </div>
+                <div className="container">
 
                     <article className="oquesomos ">
                         <h1>how green code works</h1>

@@ -31,7 +31,7 @@ export default class Summary extends Component {
 
     render() {
         return (
-            <div className="col-lg-4 extrato">
+            <div className="col-lg-5 extrato">
                 <h3>Seus Ultimos Registros</h3>
                 {this.state.extract.map(item => (
                     <div className="boxInfoExtrato" key={item.id}>

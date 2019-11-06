@@ -33,16 +33,15 @@ export default class Balance extends Component {
     render() {
         return (
             <div className="row">
-                <div className="col-lg-1"></div>
                 <div className="col-lg-7 header">
-                    <h1>Wellcome <br /> {this.state.name.split(' ').slice(0, 2).join(' ')}</h1>
+                    <h1>Bem vindo <br /> {this.state.name.split(' ').slice(0, 2).join(' ')}</h1>
                     <div className="boxInfoUser">
                         <h4>Seus Pontos</h4>
                         <p>Pts {this.state.recorded_points}</p>
                     </div>
                 </div>
-                <div className="col-lg-4 btnResgate">
-
+                <div className="col-lg-5 btnResgate">
+                    <button>Trocar Seus Pontos</button>
                 </div>
             </div>
         )

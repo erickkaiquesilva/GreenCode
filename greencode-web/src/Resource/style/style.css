@@ -47,18 +47,38 @@
 }
 
 /* ESTILIZAÇÃO CONTEUDO INTRODUTÓRIO */
-.conteudo-esquerda {
-  margin: 10% 0%;
+.wallpaper-intro{
+  width: 100%;
+  background:  url("../Image/wallpaper-intro.jpg") no-repeat center center;
+  background-attachment: fixed;
+  background-size: cover;
 }
-.conteudo-esquerda h1 {
+.conteudo-intro {
+  margin: 5% 0;
+}
+.conteudo-intro h1 {
   font-size: 5em;
   padding: 14px 0px;
   font-weight: bold;
+  color: #FFF;
+  padding: 15px 20px;
 }
-.conteudo-esquerda p {
-  font-size: 1.7em;
+.conteudo-intro p {
+  width: 80%;
+  font-size: 1.5em;
   font-weight: normal;
-  line-height: 250%;
+  line-height: 200%;
+  padding: 40px;
+  color: #FFF;
+}
+.conteudo-intro button {
+  width: 70%;
+  max-width: 300px;
+  height: 50px;
+  border-radius: 50px;
+  margin: 0 5%;
+  outline: none;
+  cursor: pointer;
 }
 .conteudo-direito button {
   width: 80%;
@@ -212,8 +232,13 @@
 .header h1{
   float: left;
 }
-.btnResgate{
-  /* background: #222222; */
+.btnResgate button {
+  width: 80%;
+  height: 50px;
+  margin: 10% 10%;
+  border-radius: 50px;
+  outline: none;
+  cursor: pointer;
 }
 .boxInfoUser{
   float: left;

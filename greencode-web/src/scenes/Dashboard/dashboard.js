@@ -26,8 +26,8 @@ export default class Dashboard extends Component {
           <div className="espaco"></div>
           <div className="espaco"></div>
           <div className="row">
-            <div className="col-lg-1"></div>
             <Patners />
+            <div className="col-lg-1"></div>
             <div className="col-lg-1"></div>
             <Summary />
           </div>
