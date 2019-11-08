@@ -97,25 +97,43 @@
 
 /* ESTILIZAÇÃO CONTEUDO O QUE SOMOS */
 .oquesomos h1 {
-  font-size: 3.5em;
-  padding: 12px 0px;
+  font-size: 2.5em;
+  text-align: center;
 }
-.box-explicativo {
+.box-nos {
   padding: 15px;
-  border: 1px solid #DDD;
-  background: var(--corTeste);
+  /* border: 1px solid #DDD; */
+  /* background: var(--corTeste); */
   width: 100%;
-  border-radius: 15px;
+  /* border-radius: 15px; */
 }
-.box-explicativo h1 {
-  font-size: 1.9em;
+.box-nos h1 {
+  font-size: 2em;
   font-weight: bold;
   padding: 2px 10px;
+  text-align: left;
 }
-.box-explicativo p {
-  font-size: 1em;
-  font-weight: normal;
-  padding: 2px 10px;
+.box-nos ul {
+  list-style: none;
+}
+.box-nos ul li {
+  display: block;
+  margin: 50px 0px;
+}
+.box-nos img {
+  width: 100%;
+  max-width: 46px;
+  margin-right: 15px;
+}
+.box-motivoGreencode h1 {
+  font-size: 2em;
+  text-align: right;
+}
+.box-motivoGreencode p {
+  text-align: right;
+  font-size: 1.5em;
+  font-weight: lighter;
+  line-height: 200%;
 }
 .caixas-explicativas h3 {
   font-size: 1.7em;

@@ -8,6 +8,8 @@ import ImageTeste1 from '../../Resource/Image/imageTeste1.png';
 import ImageTeste2 from '../../Resource/Image/imageTeste2.png';
 import iconGit from '../../Resource/Image/vector-git.png';
 import iconFacebook from '../../Resource/Image/vector-facebook.png';
+import iconIdea from '../../Resource/Image/iconIdea.png';
+import iconTime from '../../Resource/Image/iconTime.png';
 
 export default class Intro extends Component {
     render() {
@@ -29,43 +31,43 @@ export default class Intro extends Component {
                     </div>
                 </div>
                 <div className="espaco"></div>
-                <div className="container">
+                <div className="container-fluid">
                     <article className="oquesomos ">
-                        <h1>Quem é a Green Code</h1>
                         <div className="espaco"></div>
                         <div className="row">
                             <div className="col-lg-1"></div>
-                            <section className="box-explicativo col-lg-4">
-                                <h1>Nossa Missão</h1>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                </p>
+                            <section className="box-nos col-lg-5">
+                                <h1>O que somos.</h1>
+                                <ul>
+                                    <li>
+                                        <p>
+                                            <img src={iconIdea} />Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <img src={iconIdea} />Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <img src={iconTime} />Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        </p>
+                                    </li>
+                                </ul>
                             </section>
-                            <div className="col-lg-2"></div>
-                            <section className="box-explicativo col-lg-4">
-                                <h1>O que nos motiva</h1>
+                            <div className="col-lg-5 box-motivoGreencode">
+                                <h1>Motivo por existirmos</h1>
                                 <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
                                 </p>
-                            </section>
+                            </div>
                             <div className="col-lg-1"></div>
-                        </div>
-                        <div className="espaco"></div>
-                        <div className="row">
-                            <div className="col-lg-3"></div>
-                            <section className="box-explicativo col-lg-6">
-                                <h1>O que nos motiva</h1>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                </p>
-                            </section>
-                            <div className="col-lg-3"></div>
                         </div>
                     </article>
                     <div className="espaco"></div>
                 </div>
-
+                <div className="espaco"></div>
                 <section className="container-fluid secao-comofunciona">
                     <h1>Como a Green Code funciona!</h1>
                     <p>
