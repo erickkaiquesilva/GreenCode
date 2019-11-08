@@ -5,10 +5,13 @@ import java.util.HashSet;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
+import javax.websocket.server.PathParam;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -41,6 +44,17 @@ public class UsuarioController {
 		
 		tds.save(usuario);
 		return ResponseEntity.ok(true);
+	}
+	
+	@GetMapping("/usuario/pontos")
+	public ResponseEntity<Integer> buscarPontos(HttpSession session){
+		Usuario usuario = (Usuario) session.getAttribute("usuarioLogado");
+		if(usuario != null) {
+			int pontos = tds.buscarPontosPorId(usuario.getId());
+			return ResponseEntity.ok(pontos);
+		}
+		
+		return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
 	}
 	
 	@PostMapping("/usuario/gastar")

@@ -21,7 +21,7 @@ public interface UsuariosRepository extends JpaRepository<Usuario, Long> {
 	public Usuario buscarEmail(@Param("email") String email);
 	
 	@Query("select u.pontos from Usuario u where u.id = :id")
-	public int buscarPontosPorId(@Param("id") Long id);
+	public int buscarPontosPorId(Long id);
 	
 	@Transactional
 	@Modifying
