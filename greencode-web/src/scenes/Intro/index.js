@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../../Components/NavBar/navbar'
-import Logo from '../../Resource/Image/teste.png';
+import ImageApp from '../../Resource/Image/movel.png';
+import LogoAppStore from '../../Resource/Image/logo-appStore.png';
+import LogoGooglePlay from '../../Resource/Image/logo-googlePlay.png';
+import ImageTeste1 from '../../Resource/Image/imageTeste1.png';
+import ImageTeste2 from '../../Resource/Image/imageTeste2.png';
+import iconGit from '../../Resource/Image/vector-git.png';
+import iconFacebook from '../../Resource/Image/vector-facebook.png';
 
 export default class Intro extends Component {
     render() {
@@ -25,57 +31,173 @@ export default class Intro extends Component {
                 <div className="espaco"></div>
                 <div className="container">
                     <article className="oquesomos ">
-                        <h1>Como a Green Code funciona!</h1>
+                        <h1>Quem é a Green Code</h1>
                         <div className="espaco"></div>
                         <div className="row">
                             <div className="col-lg-1"></div>
                             <section className="box-explicativo col-lg-4">
-                                <h1>Titulo Seção</h1>
+                                <h1>Nossa Missão</h1>
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </p>
                             </section>
+                            <div className="col-lg-2"></div>
+                            <section className="box-explicativo col-lg-4">
+                                <h1>O que nos motiva</h1>
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </p>
+                            </section>
+                            <div className="col-lg-1"></div>
                         </div>
                         <div className="espaco"></div>
                         <div className="row">
-                            <section className="caixas-explicativas col-lg-4">
-                                <h3>TITULO EXPLICATIVO</h3>
-                                <p>Explicação de cada passo</p>
-                                <img src={Logo} />
+                            <div className="col-lg-3"></div>
+                            <section className="box-explicativo col-lg-6">
+                                <h1>O que nos motiva</h1>
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </p>
                             </section>
-                            <section className="caixas-explicativas col-lg-4">
-                                <h3>TITULO EXPLICATIVO</h3>
-                                <p>Explicação de cada passo</p>
-                                <img src={Logo} />
-                            </section>
-                            <section className="caixas-explicativas col-lg-4">
-                                <h3>TITULO EXPLICATIVO</h3>
-                                <p>Explicação de cada passo</p>
-                                <img src={Logo} />
-                            </section>
+                            <div className="col-lg-3"></div>
                         </div>
                     </article>
+                    <div className="espaco"></div>
                 </div>
-                <div className="espaco"></div>
-                <article className="container-fluid pad">
+
+                <section className="container-fluid secao-comofunciona">
+                    <h1>Como a Green Code funciona!</h1>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </p>
                     <div className="row">
-                        <div className="imagemFundo col-lg-6"></div>
-                        <div className="texto-nossoIncentivo col-lg-6">
-                            <h1>our encouragement</h1>
-                            <ul>
-                                <li>
-                                    <p>1 - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                </li>
-                                <li>
-                                    <p>2 - Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                </li>
-                                <li>
-                                    <p> 3- When an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                </li>
+                        <div className="col-lg-1"></div>
+                        <article className="col-lg-3 box-comofunciona">
+                            <h1>Crie sua conta</h1>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+                        </article>
+                        <article className="col-lg-3 box-comofunciona">
+                            <h1>Programa de Pontos</h1>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+                        </article>
+                        <article className="col-lg-3 box-comofunciona">
+                            <h1>Um GreenCoder</h1>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+                        </article>
+                        <div className="col-lg-1"></div>
+                    </div>
+                    <ul>
+                        <li><button>Cadastre-se</button></li>
+                        <li><button>Saiba mais</button></li>
+                    </ul>
+                </section>
+
+                <div className="espaco"></div>
+                <article className="container-fluid section-app">
+                    <div className="row">
+                        <div className="col-lg-6 banner-app">
+                            <img src={ImageApp} />
+                        </div>
+                        <div className="col-lg-6 box-conteudo-app">
+                            <h1>Green Code!</h1>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+                            <ul className="logos-lojas">
+                                <li><img src={LogoAppStore} /></li>
+                                <li><img src={LogoGooglePlay} /></li>
                             </ul>
                         </div>
                     </div>
+
                 </article>
 
                 <div className="espaco"></div>
                 <div className="espaco"></div>
+
+                <section className="container secition-equipe">
+                    <h1>Conheça a Equipe da Green Code.</h1>
+                    <div className="row">
+                        <div className="col-lg-1"></div>
+                        <article className="col-lg-3 box-equipe">
+                            <img src={ImageTeste1} />
+                            <h4>Nome do Integrante</h4>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <ul>
+                                <li><img src={iconGit} /></li>
+                                <li><img src={iconFacebook} /></li>
+                            </ul>
+                        </article>
+                        <article className="col-lg-3 box-equipe">
+                            <img src={ImageTeste2} />
+                            <h4>Nome do Integrante</h4>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <ul>
+                                <li><img src={iconGit} /></li>
+                                <li><img src={iconFacebook} /></li>
+                            </ul>
+                        </article>
+                        <article className="col-lg-3 box-equipe">
+                            <img src={ImageTeste2} />
+                            <h4>Nome do Integrante</h4>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <ul>
+                                <li><img src={iconGit} /></li>
+                                <li><img src={iconFacebook} /></li>
+                            </ul>
+                        </article>
+                        <div className="col-lg-1"></div>
+                    </div>
+
+                    <div className="espaco"></div>
+
+                    <div className="row">
+                        <div className="col-lg-1"></div>
+                        <article className="col-lg-3 box-equipe">
+                            <img src={ImageTeste1} />
+                            <h4>Nome do Integrante</h4>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <ul>
+                                <li><img src={iconGit} /></li>
+                                <li><img src={iconFacebook} /></li>
+                            </ul>
+                        </article>
+                        <article className="col-lg-3 box-equipe">
+                            <img src={ImageTeste2} />
+                            <h4>Nome do Integrante</h4>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <ul>
+                                <li><img src={iconGit} /></li>
+                                <li><img src={iconFacebook} /></li>
+                            </ul>
+                        </article>
+                        <article className="col-lg-3 box-equipe">
+                            <img src={ImageTeste2} />
+                            <h4>Nome do Integrante</h4>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <ul>
+                                <li><img src={iconGit} /></li>
+                                <li><img src={iconFacebook} /></li>
+                            </ul>
+                        </article>
+                        <div className="col-lg-1"></div>
+                    </div>
+                </section>
+
                 <div className="espaco"></div>
 
                 <footer className="container-fluid rodape">
