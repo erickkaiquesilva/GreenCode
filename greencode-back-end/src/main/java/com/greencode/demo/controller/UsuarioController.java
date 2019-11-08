@@ -36,14 +36,14 @@ public class UsuarioController {
 	}
 	
 	@PostMapping("/signup")
-	public ResponseEntity<Boolean> cadastrarUsuario(@RequestBody Usuario usuario){
+	public ResponseEntity<Usuario> cadastrarUsuario(@RequestBody Usuario usuario){
 		
 		if(tds.buscarEmail(usuario.getEmail()) != null) {
-			return ResponseEntity.ok(false);
+			return ResponseEntity.status(HttpStatus.CONFLICT).build();
 		}
 		
 		tds.save(usuario);
-		return ResponseEntity.ok(true);
+		return ResponseEntity.ok(usuario);
 	}
 	
 	@GetMapping("/usuario/pontos")

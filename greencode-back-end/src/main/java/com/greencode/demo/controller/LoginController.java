@@ -37,7 +37,7 @@ public class LoginController {
 			lista.adiciona(usuario.getEmail());
 			if(lista.getTamanho() == 1) {
 			System.out.println(lista);
-				//new CreateFile().gravar(lista);
+				new CreateFile().gravar(lista);
 				lista.limpa();
 			}
 			session.setAttribute("usuarioLogado", usuarioLogado);
@@ -49,7 +49,6 @@ public class LoginController {
 	
 	@RequestMapping(value="/logout", method = RequestMethod.GET)
 	public String logout(HttpSession session) {
-		System.out.println(session.getAttribute("usuarioLogado"));
 		if(session.getAttribute("usuarioLogado") != null){
 			session.invalidate();
 		    return "deslogado com sucesso";
