@@ -1,13 +1,14 @@
 :root {
-  --cinza-escuro: #222222;
-  --verde-escuro: #009944;
+  --cinza-escuro: #3E3E3E;
 
-  --vermelho: #F55F3B;
-  --amarelo: #FFD235;
-  --azul: #418EEB;
-  --verde: #28FF5F;
+  --verde-primario: #97CD29;
+  --verde-secundario: #056A54;
 
-  --corTeste: #DDD;
+  --cinza-primario: #3E3E3E;
+
+  --laranja: #FF5733;
+
+  --branco-neve: #F5F7F8;
 }
 
 .background {
@@ -18,7 +19,7 @@
 }
 /* ESTILIZAÇÃO TOPO */
 .topo {
-  background: var(--cinza-escuro);
+  background: var(--verde-primario);
   color: #fff;
   padding: 12px 0px;
 }
@@ -51,12 +52,13 @@
 /* ESTILIZAÇÃO CONTEUDO INTRODUTÓRIO */
 .wallpaper-intro{
   width: 100%;
-  background:  url("../Image/wallpaper-intro.jpg") no-repeat center center;
+  background:  url("../Image/fundo-inico.png") no-repeat center center;
   background-attachment: fixed;
   background-size: cover;
 }
 .conteudo-intro {
   margin: 5% 0;
+  min-height: 550px;
 }
 .conteudo-intro h1 {
   font-size: 5em;
@@ -76,11 +78,15 @@
 .conteudo-intro button {
   width: 70%;
   max-width: 300px;
-  height: 50px;
+  font-size: 1.4em;
+  height: 65px;
   border-radius: 50px;
   margin: 0 5%;
+  background: var(--verde-primario);
   outline: none;
   cursor: pointer;
+  color: #FFF;
+  border: 3px solid var(--verde-primario);
 }
 .conteudo-direito button {
   width: 80%;
@@ -107,12 +113,6 @@
   width: 100%;
   /* border-radius: 15px; */
 }
-.box-nos h1 {
-  font-size: 2em;
-  font-weight: bold;
-  padding: 2px 10px;
-  text-align: left;
-}
 .box-nos ul {
   list-style: none;
 }
@@ -124,16 +124,29 @@
   width: 100%;
   max-width: 46px;
   margin-right: 15px;
+  float: left;
 }
+.box-nos h2 {
+  font-weight: bold;
+  font-size: 1.7em;
+  color: var(--laranja);
+}
+.box-nos p {
+  font-size: 1.3em;
+  color: var(--verde-primario);
+}
+/* .box-motivoGreencode {background: #009944;} */
 .box-motivoGreencode h1 {
-  font-size: 2em;
-  text-align: right;
+  text-align: left;
+  font-weight: bold;
+  font-size: 3em;
+  color: var(--cinza-primario);
+  position: absolute;
 }
-.box-motivoGreencode p {
-  text-align: right;
-  font-size: 1.5em;
-  font-weight: lighter;
-  line-height: 200%;
+.box-motivoGreencode img {
+  width: 60%;
+  height: 90%;
+  margin: 0 20%;
 }
 .caixas-explicativas h3 {
   font-size: 1.7em;
@@ -154,88 +167,138 @@
 
 /* ESTILIZAÇÃO CONTEUDO COMO FUNCIONA */
 .secao-comofunciona {
-  background: #DDD;
-  padding: 10px 0px;
+  /* background: #DDD; */
 }
 .secao-comofunciona h1 {
-  font-size: 2.5em;
-  text-align: center;
-}
-.secao-comofunciona p {
-  text-align: center;
-  width: 50%;
-  margin: 0 auto;
-}
-.secao-comofunciona ul {
-  list-style: none;
-  width: 70%;
-  margin: 2% 15%;
-}
-.secao-comofunciona ul li {
-  display: inline;
-  margin: 0 30px;
-}
-.secao-comofunciona button {
-  width: 70%;
-  max-width: 350px;
-  height: 50px;
-  border-radius: 50px;
-  border: 1px solid #DDD;
-  outline: none;
-  cursor: pointer;
-  margin: 0 2.5%;
-}
-.box-comofunciona {
-  height: 450px;
-  background: #FFF;
-  margin-bottom: 20px;
-  margin-top: 70px;
-  margin-left: 2%;
-  border: 1px solid #DDD;
-  border-radius: 10px;
-}
-.box-comofunciona h1 {
-  text-align: left !important;
-  font-size: 2.8em;
-  padding: 20px 20px;
-}
-.box-comofunciona p {
-  text-align: left !important;
-  width: 90%;
-}
-/* ESTILIZAÇÃO CONTEUDO APP */
-.banner-app {
-  /* background: #009944; */
-}
-.banner-app img {
-  width: 100%;
-}
-.box-conteudo-app h1 {
-  text-align: right;
-  padding: 10px 25px;
   font-size: 3em;
+  text-align: left;
+  color: var(--verde-primario);
+  font-weight: bold;
+  padding: 25px;
+  /* margin-bottom: 70px; */
 }
-.box-conteudo-app p {
-  text-align: right;
-  line-height: 175%;
-  padding: 10px 25px;
-  font-size: 1.5em;
-  right: 0;
-}
-.box-conteudo-app .logos-lojas {
-  margin: 5% 0;
+.como-funciona-explicacao ul{
   list-style: none;
+  float: left;
+  margin-bottom: 70px;
 }
-.box-conteudo-app .logos-lojas li {
+.como-funciona-explicacao li {
+  display: inline-block;
+  margin-top: 50px;
+  padding: 10px;
+}
+.como-funciona-explicacao li img {
+  width: 100%;
+  max-width: 56px;
+  float: left;
+  padding: 4px;
+}
+.como-funciona-explicacao li p {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-left: 70px;
+  color: var(--laranja);
+}
+.banner-app {
+  background:  url("../Image/greencode-app.png") no-repeat center center;
+  background-size: contain;
+  background-attachment: center;
+}
+.rodape-comofunciona {
+  background: var(--verde-secundario);
+  padding: 10px 0px;
+  bottom: 0;
+}
+.rodape-comofunciona .texto-rodape img {
+  float: left;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 96px;
+}
+.rodape-comofunciona .texto-rodape h1 {
+  color: #FFF;
+  margin-left: 100px;
+  font-weight: lighter;
+  font-size: 2.4em;
+}
+/* ESTILIZAÇÃO CONTEUDO PORQUE RECICLAR */
+.explicacao-reciclar h1 {
+  font-size: 3em;
+  font-weight: bold;
+  color: var(--verde-secundario);
+  padding: 10px 15px;
+  margin-top: 20px;
+}
+.explicacao-reciclar p {
+  font-size: 1.3em;
+  font-weight: normal;
+  padding: 25px 20px;
+  color: var(--cinza-primario);
+  line-height: 200%;
+  color: var(--verde-primario);
+}
+.explicacao-reciclar .iconsReciclagem {
+  width: 100%;
+  float: left;
+  margin-top: 70px;
+}
+.explicacao-reciclar .iconsReciclagem ul {
+  list-style: none;
+  width: 100%;
+  float: left;
+}
+.explicacao-reciclar .iconsReciclagem li {
+  display: inline-block;
+  width: 45%;
+  margin: 0 2%;
+}
+.explicacao-reciclar .iconsReciclagem img {
+  width: 100%;
+  max-width: 86px;
+  float: left;
+}
+.explicacao-reciclar .iconsReciclagem p {
+  width: 40%;
+  font-size: 1em;
+  padding: 0;
+  font-weight: lighter;
+  float: left;
+  color: var(--laranja);
+}
+.banner-oquereciclamos {
+  background: #009944;
+  background:  url("../Image/bannerOqueReciclamos.png") no-repeat center center;
+  background-size: cover;
+  background-attachment: center;
+  height: 100vh;
+}
+/* ESTILIZAÇÃO MARCAS QUE APOIA */
+.secao-marcas h1 {
+  text-align: center;
+  font-weight: lighter;
+}
+ul.logoMarcas {
+  list-style: none;
+  margin: 40px 0px;
+}
+ul.logoMarcas li {
   display: inline;
+  margin: 15px 70px;
 }
-.box-conteudo-app .logos-lojas img {
-  width: 50%;
+ul.logoMarcas li img {
+  width: 80%;
+  max-width: 108px;
 }
 /* ESTILIZAÇÃO SEÇÃO EQUIPE */
+.secition-equipe {
+  background: var(--verde-secundario);
+  padding-bottom: 90px;
+}
 .secition-equipe h1 {
   text-align: center;
   padding: 3% 0;
+  font-weight: lighter;
+  color: var(--verde-primario);
 }
 .box-equipe {
   margin-left: 2%;
@@ -268,71 +331,102 @@
   max-width: 18px;
   display: inline;
 }
-/* ESTILIZAÇÃO CONTEUDO RODAPE */
-.rodape {
-  background: var(--cinza-escuro);
+/* ESTILIZAÇÃO CONTEUDO FALE CONOSCO */
+.faleconos-explicacao {
+  background: #FFF;
   padding: 30px 0px;
 }
-.rodape h1 {
-  font-size: 3em;
-  color: #fff;
-  text-align: center;
-  padding-bottom: 20px;
-}
-.rodape button {
-  margin: 3% 35%;
-  background: var(--cinza-escuro);
-  color: #fff;
-  width: 30%;
-  height: 70px;
-  font-size: 1.7em;
-  text-transform: uppercase;
+.faleconos-explicacao .box-mesagem h1 {
+  font-size: 6em;
+  padding: 10px 20px;
   font-weight: bold;
-  border-radius: 50px;
-  border-color: #fff;
-  cursor: pointer;
+  margin-bottom: 10px;
 }
-
+.faleconos-explicacao .box-mesagem p {
+  padding: 10px 20px;
+  font-size: 1.7em;
+  font-weight: lighter;
+  color: var(--cinza-primario);
+  line-height: 200%;
+}
+.formulario-faleconosco form {
+  display: block;
+}
+.formulario-faleconosco input,
+.formulario-faleconosco select,
+.formulario-faleconosco textarea {
+  max-width: 400px;
+  margin: 20px 10px;
+}
+.formulario-faleconosco textarea { height: 180px;}
+.formulario-faleconosco input[type="submit"] {
+  max-width: 300px;
+}
 /* 
     PÁGINA DE LOGIN
 */
 
 /* ESTILIZAÇÃO FORMULARIO DE LOGIN */
-.formulario-login {
-  background: #fff;
-  width: 90%;
-  padding: 20px 10px;
-  margin-top: 25%;
-  margin-left: 10%;
-  border-radius: 10px;
-  box-shadow: 0 0 0.5em var(--cinza-escuro);
+.fundo-login {
+  background: var(--verde-primario);
+  height: 100vh;
+  background:  url("../Image/fundo-login.jpg") no-repeat center center;
+  background-size: cover;
 }
-.formulario-login h1 {
-  padding: 10px;
+.box-login {
+  padding: 20px;
+  background: #FFF;
+  border-radius: 7px;
+  margin: 5% 0;
+}
+.box-login h1 {
+  font-size: 2.5em;
+  padding: 0px 10px;
+  color: var(--cinza-primario);
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.box-login p {
+  font-size: 1em;
+  padding: 0px 10px;
+  color: var(--cinza-primario);
+  margin-left: 20px;
+}
+.box-login p.texto-cadastrese {
+  width: 400px;
+  font-weight: lighter;
+  color: var(--cinza-primario);
+}
+p.texto-cadastrese a {
   font-weight: bold;
-  font-size: 2em;
+  color: var(--verde-secundario);
 }
-.formulario-login .caixadeentrada {
-  width: 90%;
-  height: 70px;
-  outline: none;
-  padding: 4px;
-  margin: 30px 20px;
-  border: 0px;
-  border-bottom: 2px solid var(--cinza-escuro);
+.formulario-login label {
+  display: block;
+  font-weight: lighter;
+  color: #DDD;
+}
+.formulario-login form {
+  display: block;
+  padding: 20px;
+  margin-left: 20px;
+}
+.formulario-login input {
+  margin-bottom: 40px;
+  max-width: 450px;
 }
 .formulario-login input[type="submit"] {
-  width: 70%;
-  height: 50px;
-  border-radius: 50px;
-  margin-left: 20px;
-  cursor: pointer;
-  font-weight: bold;
-  border-color: var(--verde-escuro);
-  color: var(--verde-escuro);
-  outline: none;
+  max-width: 200px;
+  height: 45px;
+  margin: 30px 0px;
 }
-
+.formulario-login .link-esqueciSenha {
+  text-align: right;
+  display: block;
+  margin-right: 50px;
+  color: var(--verde-secundario) !important; 
+  font-weight: bold;
+}
 /* CLASS ESTILIZADORAS CASOS GENÉRICOS */
 .borda-separadora {
   background: var(--cinza-escuro);
@@ -342,7 +436,68 @@
 .espaco {
   margin-bottom: 70px;
 }
-
+/*
+    PÁGINA DE CADASTRO
+*/
+.fundo-cadastro {
+  background: #056A54;
+  background:  url("../Image/fundo-cadastro.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 130vh;
+}
+.box-cadastrosss {
+  padding: 50px;
+  background: #FFF;
+  border-radius: 7px;
+  margin: 4% 0;
+}
+.box-cadastrosss h1 {
+  font-size: 2.5em;
+  padding: 0px 10px;
+  color: var(--cinza-primario);
+  margin-top: 20px;
+}
+.box-cadastrosss p {
+  font-size: 1em;
+  padding: 0px 10px;
+  color: var(--cinza-primario);
+}
+.formulario-cadastro label {
+  display: block;
+  font-weight: lighter;
+  color: #DDD;
+}
+.formulario-cadastro form {
+  display: inline;
+  padding: 10px;
+  margin-left: 20px;
+}
+.formulario-cadastro input {
+  max-width: 550px;
+  margin-bottom: 30px;
+}
+.campos-metade {
+  float: left;
+  width: 47%;
+  margin-right: 10px;
+}
+.campos-metade label {
+  display: inline-block;
+  width: 45%;
+}
+.campos-metade input {
+  width: 100%;
+}
+.formulario-cadastro input[type="submit"] {
+  max-width: 200px;
+  height: 45px;
+  margin: 30px 0px;
+}
+/* .campos-metade input, 
+.campos-metade label {
+  background: #009944;
+} */
 /*
     PÁGINA DE DASHBOARD
 */
@@ -464,9 +619,6 @@
   max-width: 24px;
   height: 24px;
 }
-.parceiros{
-  /* box-shadow: 0 0 0.1em var(--cinza-escuro); */
-}
 .boxMissiao{
   float: left;
   width: 100%;
@@ -506,6 +658,76 @@
 /*
     Classes Reutilizaveis
 */
+.form-arredondado {
+  width: 100%;
+  border-radius: 7px;
+  height: 75px;
+  border: 1px solid var(--cinza-primario);
+  padding: 10px;
+  outline: none;
+}
+.form-arredondado:focus {
+  border-color: var(--verde-primario);
+  font-weight: bold;
+  color: var(--verde-primario);
+}
+.btn-form-arredondado {
+  width: 80%;
+  height: 55px;
+  border-radius: 100px;
+  font-weight: bold;
+  color: var(--cinza-primario);
+  border: 2px solid var(--cinza-primario);
+  background: #FFF;
+  cursor: pointer;
+  transition: all 0.7s;
+}
+.btn-form-arredondado:hover {
+  color: #FFF;
+  background: var(--verde-primario);
+  border-color: var(--verde-primario);
+}
+.formulario-linha {
+  width: 100%;
+  height: 50px;
+  border: 0px;
+  border-bottom: 2px solid var(--cinza-primario);
+  outline: none;
+  transition: ease-in 0.4s;
+}
+.formulario-linha-metade {
+  display: inline-block;
+  width: 45%;
+  /* float: left; */
+  height: 50px;
+  border: 0px;
+  border-bottom: 2px solid var(--cinza-primario);
+  outline: none;
+  transition: ease-in 0.4s;
+}
+.formulario-linha:focus,
+.formulario-linha-metade:focus {
+  border-color: var(--verde-primario);
+  color: var(--verde-primario);
+  font-weight: bold;
+}
+.btn-formulario-linha {
+  width: 80%;
+  height: 55px;
+  border-radius: 100px;
+  font-weight: bold;
+  color: #FFF;
+  background: var(--verde-primario);
+  cursor: pointer;
+  border: 2px solid var(--verde-primario);
+}
+.green-primary{
+  color: var(--verde-primario);
+}
+.btn-orange {
+  background: var(--laranja);
+  border-color: var(--laranja);
+}
 .textBold {
   font-weight: bold;
 }
@@ -527,3 +749,16 @@
 .image_small {
   max-width: 96px;
 }
+.btn-signUp-large button{
+  width: 100%;
+  height: 75px;
+  font-size: 1.7em;
+  border-radius: 100px;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 10% 0;
+  color: #FFF;
+}
+.fl-left{float: left;}
+.fl-right{float: right;}

@@ -36,10 +36,10 @@ export default class SignIn extends Component {
     };
 
     try {
-      signInMock(this.state)
+      signIn(this.state)
         .then((response) => {
-          console.log(response);
-          localStorage.setItem('user', JSON.stringify(response))
+          console.log(response.data);
+          localStorage.setItem('user', JSON.stringify(response.data))
           this.props.history.push('/dashboard')
         })
         .catch(err => console.log(err))
@@ -52,39 +52,40 @@ export default class SignIn extends Component {
   render() {
     return (
       <>
-        <NavBar />
-        <div className="container">
+        <div className="container-fluid fundo-login">
           <div className="row">
-            <article className="conteudo-esquerda col-lg-6">
-              <h1>Aqui você recicla de uma maneira divertida!</h1>
-              <div className="borda-separadora"></div>
+            <div className="col-lg-1"></div>
+            <article className="col-lg-5 box-login">
+              <h1>Faça Seu Login</h1>
               <p>
-                Não tem uma conta ainda ? então <Link to="/signUp"><a>inscreva-se</a></Link> agora e
-                comece a mudar o mundo de uma maneira divertida.
-              </p>
-            </article>
-            <article className="col-lg-6">
+                E comece a ganhar pontos reciclando.
+                </p>
               <div className="formulario-login">
-                <h1>Sign In</h1>
                 <form onSubmit={this.handleSubmit}>
+                  <label>E-mail</label>
                   <input
                     onChange={e => this.handleChange(e)}
-                    className="caixadeentrada"
+                    className="formulario-linha"
                     id="email"
                     type="email"
-                    placeholder="Email"
+                    placeholder="exemplo@email.com.br"
                   />
+                  <label>Senha</label>
                   <input
                     onChange={e => this.handleChange(e)}
-                    className="caixadeentrada"
+                    className="formulario-linha"
                     id="senha"
                     type="password"
-                    placeholder="Senha"
+                    placeholder="**************"
                   />
-                  <input type="submit" value="Login" />
+                  <Link><a className="link-esqueciSenha">Esqueci Minha Senha</a></Link>
+                  <input className="btn-formulario-linha" type="submit" value="Login" />
                 </form>
               </div>
+              <p className="texto-cadastrese">Não tem uma conta ainda?
+                Faça já seu <Link to="/signUp"><a>cadastro</a></Link> e comece a recicla de uma maneira divertida e diferente.</p>
             </article>
+            <div className="col-lg-6"></div>
           </div>
         </div>
       </>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import NavBar from "../../Components/NavBar/navbar";
+import { signUp } from "../../Actions/resquest";
 
 export default class SignUp extends Component {
   constructor(props) {
@@ -10,7 +11,6 @@ export default class SignUp extends Component {
       cpf: "",
       email: "",
       senha: "",
-      confirmeSenha: ""
     };
   }
 
@@ -28,66 +28,88 @@ export default class SignUp extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+
+    try {
+      signUp(this.state)
+        .then((response) => {
+          console.log(response);
+          localStorage.setItem('user', JSON.stringify(response))
+          this.props.history.push('/dashboard')
+        })
+        .catch(err => console.log(err))
+    } catch (err) {
+      console.log("error ", err);
+    }
   };
 
   render() {
     console.log(this.state);
     return (
       <>
-        <NavBar />
-        <div className="container">
+        <div className="container-fluid fundo-cadastro">
           <div className="row">
-            <article className="conteudo-esquerda col-lg-6">
-              <h1>Aqui você recicla de uma maneira divertida!</h1>
-              <div className="borda-separadora"></div>
+            <div className="col-lg-1"></div>
+            <article className="col-lg-5 box-cadastrosss">
+              <h1>Crie Sua Conta</h1>
               <p>
-                Não tem uma conta ainda ? então inscreva-se agora e comece a mudar
-                o mundo de uma maneira divertida.
-              </p>
-            </article>
-            <article className="col-lg-6">
-              <div className="formulario-login">
-                <h1>Sign Up</h1>
+                E ajude o mundo a ser mais limpo
+                </p>
+              <div className="formulario-cadastro">
                 <form onSubmit={this.handleSubmit}>
+                  <label>E-mail</label>
                   <input
                     onChange={e => this.handleChange(e)}
-                    className="caixadeentrada"
+                    className="formulario-linha"
                     id="nome"
-                    type="text"
-                    placeholder="Nome Completo"
+                    type="email"
+                    placeholder="exemplo@email.com.br"
+                    required
                   />
+                  <div className="campos-metade">
+                    <label>Nome</label>
+                    <input
+                      onChange={e => this.handleChange(e)}
+                      className="formulario-linha-metade fl-left"
+                      id="confirmeSenha"
+                      type="password"
+                      placeholder="José"
+                      required
+                    />
+                  </div>
+                  <div className="campos-metade">
+                    <label>Sobrenome</label>
+                    <input
+                      onChange={e => this.handleChange(e)}
+                      className="formulario-linha-metade"
+                      id="email"
+                      type="email"
+                      placeholder="Silva"
+                      required
+                    />
+                  </div>
+                  <label>CPF</label>
                   <input
                     onChange={e => this.handleChange(e)}
-                    className="caixadeentrada"
+                    className="formulario-linha"
                     id="cpf"
                     type="text"
-                    placeholder="CPF"
+                    placeholder="999.999.999-90"
+                    required
                   />
+                  <label>Senha</label>
                   <input
                     onChange={e => this.handleChange(e)}
-                    className="caixadeentrada"
-                    id="email"
-                    type="email"
-                    placeholder="Email de Acesso"
-                  />
-                  <input
-                    onChange={e => this.handleChange(e)}
-                    className="caixadeentrada"
+                    className="formulario-linha"
                     id="senha"
                     type="password"
-                    placeholder="Senha"
+                    placeholder="**************"
+                    required
                   />
-                  <input
-                    onChange={e => this.handleChange(e)}
-                    className="caixadeentrada"
-                    id="confirmeSenha"
-                    type="password"
-                    placeholder="Confirme Senha"
-                  />
-                  <input type="submit" value="Login" />
+                  <input className="btn-formulario-linha" type="submit" value="Criar Conta" />
                 </form>
               </div>
             </article>
+            <div className="col-lg-6"></div>
           </div>
 
           <div className="espaco"></div>
