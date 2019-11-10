@@ -16,7 +16,7 @@ export default class Balance extends Component {
     componentDidMount() {
 
         let user = JSON.parse(localStorage.getItem('user'));
-        this.setState({ id_user: user.id_user, name: user.name })
+        this.setState({ id_user: user.id_user, name: user.nome })
 
         try {
             const res = balanceMock(this.state.id_user)
@@ -34,7 +34,7 @@ export default class Balance extends Component {
         return (
             <div className="row">
                 <div className="col-lg-7 header">
-                    <h1>Bem vindo <br /> {this.state.name.split(' ').slice(0, 2).join(' ')}</h1>
+                    <h1>Bem vindo <br /> {this.state.name}</h1>
                     <div className="boxInfoUser">
                         <h4>Seus Pontos</h4>
                         <p>Pts {this.state.recorded_points}</p>
