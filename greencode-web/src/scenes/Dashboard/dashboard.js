@@ -20,19 +20,9 @@ export default class Dashboard extends Component {
   render() {
     return (
       <>
-        <NavBar />
-        <div className="container dashboard">
-          <Header />
-          <div className="espaco"></div>
-          <div className="espaco"></div>
-          <div className="row">
-            <Patners />
-            <div className="col-lg-1"></div>
-            <div className="col-lg-1"></div>
+        <div className="container-fluid dashboard">
+            <Header />
             <Summary />
-          </div>
-          <div className="espaco"></div>
-          <div className="espaco"></div>
         </div>
       </>
     );

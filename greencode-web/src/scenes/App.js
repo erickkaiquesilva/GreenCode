@@ -4,6 +4,7 @@ import Home from "./Intro/index";
 import SignIn from "./SignIn/signin";
 import SignUp from "./SignUp/signup";
 import Dashboard from "./Dashboard/dashboard";
+import Welcome from "./Welcome/welcome";
 
 // ROTAS
 import { BrowserRouter, Switch, Route } from "react-router-dom";
@@ -18,6 +19,7 @@ function App() {
       <Route path="/" exact component={Home} />
       <Route path="/signin" component={SignIn} />
       <Route path="/signup" component={SignUp} />
+      <Route path="/welcome" component={Welcome} />
       <Route path="/dashboard" component={Dashboard} />
     </BrowserRouter>
   );
