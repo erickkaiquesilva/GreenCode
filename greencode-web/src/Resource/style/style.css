@@ -17,6 +17,9 @@
 .pad {
   padding: 10px 0;
 }
+.fundo-branco-neve {
+  background: var(--branco-neve);
+}
 /* ESTILIZAÇÃO TOPO */
 .topo {
   background: var(--verde-primario);
@@ -427,15 +430,6 @@ p.texto-cadastrese a {
   color: var(--verde-secundario) !important; 
   font-weight: bold;
 }
-/* CLASS ESTILIZADORAS CASOS GENÉRICOS */
-.borda-separadora {
-  background: var(--cinza-escuro);
-  width: 100%;
-  padding: 2px 0px;
-}
-.espaco {
-  margin-bottom: 70px;
-}
 /*
     PÁGINA DE CADASTRO
 */
@@ -494,88 +488,134 @@ p.texto-cadastrese a {
   height: 45px;
   margin: 30px 0px;
 }
-/* .campos-metade input, 
-.campos-metade label {
+/*
+    PÁGINA DE BOAS VINDAS
+*/
+.fundo-welcome {
+  height: 100vh;
+}
+.message-welcome {
+  margin: 5% 0;
+}
+.message-welcome h1 {
+  font-size: 5em;
+  margin: 20px 0;
+}
+.message-welcome .box-welcome-message {
+  padding: 20px;
+  background: var(--verde-secundario);
+  border-radius: 10px;
+}
+.box-welcome-message p {
+  font-size: 1.3em;
+  color: #FFF;
+  line-height: 200%;
+  padding: 20px;
+}
+.message-welcome button {
+  width: 60%;
+  height: 70px;
+  border-radius: 100px;
+  color: #FFF;
+  font-size: 1.3em;
+  outline: none;
+  background: var(--verde-primario);
+  border-color: var(--verde-primario);
+  margin-top: 70px;
+  cursor: pointer;
+}
+.banner-welcome {
   background: #009944;
-} */
+  background:  url("../Image/fundo-welcome.gif") no-repeat center center;
+  background-size: cover;
+}
 /*
     PÁGINA DE DASHBOARD
 */
+.dashboard {
+  background: var(--branco-neve);
+}
 .dashboard h1 {
   padding: 20px 0px;
 }
-.header{
-  /* background: #009944; */
+.informacoes-usuario {
+   margin: 10% 0;
+   padding: 20px;
 }
-.header h1{
-  float: left;
-}
-.btnResgate button {
-  width: 80%;
-  height: 50px;
-  margin: 10% 10%;
-  border-radius: 50px;
-  outline: none;
-  cursor: pointer;
-}
-.boxInfoUser{
-  float: left;
-  margin-top: 20px;
-  margin-left: 50px;
-  padding: 4px 10px;
-  /* background: #000; */
-  width: 200px; 
-}
-.boxInfoUser h4{
+.informacoes-usuario h1 {
+  font-size: 2.7em;
   font-weight: bold;
-  font-size: 1.7em;
 }
-.boxInfoUser p{
-  font-weight: 500;
-  font-size: 1.5em;
-}
-.progreco h1{
+.informacoes-usuario button {
+  margin: 70px 50px;
+  width: 70%;
+  height: 70px;
+  border: 2px solid var(--verde-primario);
+  background: var(--verde-primario);
+  text-transform: uppercase;
+  color: #FFF;
   font-size: 1.3em;
-  border-bottom: 1px solid #222222;
-  width: 100%;
-  padding-top: 3px;
-}
-.boxProgress {
-  float: left;
-  width: 250px;
-  margin: 4px 13px;
-  /* background: #009944; */
-}
-.boxProgress h4{
-  text-align: center;
-  padding: 10px 0px;
-  font-size: 1.5em;
-  font-weight: 400;
-}
-.boxProgress .image_timeline {
-  width: 100%;
-  max-width: 126px;
-  height: 126px;
-  /* background: #222222; */
-  float: left;
-  margin: 10% 25%;
   border-radius: 100px;
+  cursor: pointer;
+  outline: none;
+  font-weight: bold;
 }
-.image_timeline img {
+.informacoes-usuario .box-pontos {
   float: left;
-  width: 100%;
-  max-width: 126px;
-  height: 126px;
+  background: var(--verde-secundario);
+  width: 45%;
+  padding: 15px;
+  border-radius: 10px;
+  margin-right: 20px;
 }
-.btn-resgate{
-  width: 80%;
-  height: 50px;
-  font-weight: 700;
+.box-pontos h4,
+.box-itens h4 {
   font-size: 1.3em;
-  border-radius: 50px;
+  font-weight: lighter;
+  color: #FFF;
+}
+.box-pontos p,
+.box-itens p {
+  font-size: 1.3em;
+  color: #FFF;
+  font-weight: bold;
+}
+.informacoes-usuario .box-itens {
   float: left;
-  margin: 25% 10%;
-} 
+  background: var(--verde-primario);
+  width: 45%;
+  padding: 15px;
+  border-radius: 10px;
+}
+.secao-objetivo {
+  margin: 10% 0;
+  padding: 20px;
+}
+.secao-objetivo p {
+  font-size: 1.2em;
+  font-weight: lighter;
+  color: var(--cinza-primario);
+  padding: 15px;
+  line-height: 220%;
+}
+.secao-objetivo .message-objetivo {
+  width: 90%;
+  background: var(--laranja);
+  padding: 7px;
+  border-radius: 10px;
+}
+.message-objetivo h1 {
+  font-size: 1.9em;
+  padding: 4px 10px;
+  color: #FFF;
+  font-weight: lighter;
+}
+.message-objetivo p {
+  font-size: 0.9em;
+  color: #FFF;
+  font-weight: normal;
+  line-height: 150%;
+}
 .extrato h3 {
   border-bottom: 1px solid var(--cinza-escuro);
   padding: 4px 0px;
@@ -583,27 +623,27 @@ p.texto-cadastrese a {
   font-weight: bold;
 }
 .boxInfoExtrato {
-  background: #fefefe;
+  background: var(--branco-neve);
   padding: 10px;
   margin-bottom: 7px;
   border-radius: 5px;
-  box-shadow: 0 0 0.1em var(--cinza-escuro);
+  border: 1px solid var(--verde-secundario);
 }
 .boxInfoExtrato .imageExtrato {
-  width: 46px;
-  height: 46px;
+  float: left;
+  width: 56px;
+  height: 56px;
   border-radius: 50px;
   background: #FFF;
-  float: left;
-  margin-top: 7%;
+  margin-top: 4%;
   margin-left: 4px;
   margin-right: 10px;
 }
 .imageExtrato img{
   float: left;
   width: 100%;
-  max-width: 46px;
-  height: 46px;
+  max-width: 56px;
+  height: 56px;
 }
 .boxInfoExtrato ul {
   list-style: none;
@@ -619,42 +659,35 @@ p.texto-cadastrese a {
   max-width: 24px;
   height: 24px;
 }
-.boxMissiao{
-  float: left;
-  width: 100%;
-  max-width: 400px;
-  height: 250px;
-  padding: 10px 0px;
-  border: 1px solid #DDD;
-  border-radius: 5px;
+.secao-marketplace {
+  /* background: #056A54; */
 }
-.boxMissiao h2 {
-  font-size: 2.5em;
-  padding: 14px;
+.secao-marketplace h1 {
+  color: var(--cinza-primario);
+  font-weight: bold;
 }
-.boxMissiao p {
+.secao-marketplace p {
   font-size: 1.2em;
-  padding: 14px;
+  font-weight: lighter;
+  color: var(--cinza-primario);
+  padding: 15px;
+  line-height: 220%;
 }
-.parceiros .btn-marketplace{
-  width: 80%;
-  height: 45px;
-  border-radius: 50px;
-  margin: 4% 10%;
+.secao-marketplace button {
+  width: 70%;
+  height: 70px;
+  border: 2px solid var(--verde-primario);
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--verde-primario);
+  font-size: 1.3em;
+  border-radius: 100px;
+  cursor: pointer;
+  outline: none;
+  font-weight: bold;
+  margin: 5% 13%; 
 }
-.boxParceiros {
-  float: left;
-  width: 100%;
-  /* background: #009944; */
-  margin-bottom: 10px;
-}
-.boxParceiros .imageParceiros {
-  float: left;
-  width: 100%;
-  padding: 10px;
-  /* height: 106px; */
-  /* background: var(--verde-escuro); */
-} 
+/* CÓDIGO ANTIGO */
 /*
     Classes Reutilizaveis
 */
@@ -762,3 +795,12 @@ p.texto-cadastrese a {
 }
 .fl-left{float: left;}
 .fl-right{float: right;}
+/* CLASS ESTILIZADORAS CASOS GENÉRICOS */
+.borda-separadora {
+  background: var(--cinza-escuro);
+  width: 100%;
+  padding: 2px 0px;
+}
+.espaco {
+  margin-bottom: 70px;
+}

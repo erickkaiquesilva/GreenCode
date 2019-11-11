@@ -31,24 +31,39 @@ export default class Summary extends Component {
 
     render() {
         return (
-            <div className="col-lg-5 extrato">
-                <h3>Seus Ultimos Registros</h3>
-                {this.state.extract.map(item => (
-                    <div className="boxInfoExtrato" key={item.id}>
-                        <div className="imageExtrato"><img src={lata_icon} alt="Icon" /></div>
-                        <ul className="list_extract">
-                            <li>
-                                <p className="textBold">{item.type}</p>
-                            </li>
-                            <li>
-                                <p>40Pts</p>
-                            </li>
-                            <li>
-                                <p><img src={location_icon} alt="Icon" />Coletado Av.Paulista</p>
-                            </li>
-                        </ul>
-                    </div>
-                ))}
+            <div className="row">
+                <div className="col-lg-1"></div>
+                <div className="col-lg-4 extrato">
+                    <h3>Ultimos Pontos Gastos</h3>
+                    {this.state.extract.map(item => (
+                        <div className="boxInfoExtrato" key={item.id}>
+                            <div className="imageExtrato"><img src={lata_icon} alt="Icon" /></div>
+                            <ul className="list_extract">
+                                <li>
+                                    <p className="textBold">{item.type}</p>
+                                </li>
+                                <li>
+                                    <p>40Pts</p>
+                                </li>
+                                <li>
+                                    <p><img src={location_icon} alt="Icon" />Coletado Av.Paulista</p>
+                                </li>
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+                <div className="col-lg-1"></div>
+                <div className="col-lg-5 secao-marketplace">
+                    <h1>Marketplace</h1>
+                    <p>
+                        No marketplace da Green Code, voce pode
+                        trocar seus pontos por descontos em produtos/serviços
+                        ou até mesmo cobrir 100% do valor com eles.
+                        Troque já seus pontos e aproveite.
+                    </p>
+                    <button>Trocar Pontos</button>
+                </div>
+                <div className="col-lg-1"></div>
             </div>
         )
     }
