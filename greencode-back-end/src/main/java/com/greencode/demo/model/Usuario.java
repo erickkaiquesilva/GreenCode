@@ -23,6 +23,9 @@ public class Usuario {
 	private String nome;
 	
 	@JsonProperty
+	private String sobrenome;
+	
+	@JsonProperty
 	private String senha;
 	
 	@JsonProperty
@@ -48,12 +51,13 @@ public class Usuario {
 		this.senha = senha;
 		this.email = email;
 	}
-	public Usuario(Long id, String nome, String senha, String email, String cpf) {
+	public Usuario(Long id, String nome, String senha,String sobrenome, String email, String cpf) {
 		this.id = id;
 		this.nome = nome;
 		this.senha = senha;
 		this.email = email;
 		this.cpf = cpf;
+		this.sobrenome = sobrenome;
 	}
 	public Long getId() {
 		return id;
@@ -72,6 +76,9 @@ public class Usuario {
 	}
 	public int getPontos() {
 		return pontos;
+	}
+	public String getSobrenome() {
+		return sobrenome;
 	}
 	
 	

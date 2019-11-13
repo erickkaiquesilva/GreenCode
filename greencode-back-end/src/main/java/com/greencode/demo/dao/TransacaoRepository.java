@@ -7,11 +7,12 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import com.greencode.demo.model.Transacao;
-import com.greencode.demo.model.Usuario;
 
 public interface TransacaoRepository extends JpaRepository<Transacao, Long>{
 	
-	@Query("select t from Transacao t where t.usuario = :usuario order by t.data_hora desc")
-	public List<Transacao> buscarPorUsuario(@Param("usuario") Usuario usuario);
+	@Query(value = "select t.data_hora as datahora, t.valor_transacao as valor,prod.nome as nome, "
+			+ "t.id as id from tb_transacao as t join produtos_transacao as p join tb_produto prod" + 
+			" where usuario_id = :id and t.id = p.transacao_id and p.produtos_id = prod.id_produto order by t.id;", nativeQuery = true)
+	public List<Object> buscarPorUsuario(@Param("id") Long id);
 	
 }
