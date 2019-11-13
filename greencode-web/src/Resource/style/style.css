@@ -377,6 +377,8 @@ ul.logoMarcas li img {
   background-size: cover;
 }
 .box-login {
+  width: 100%;
+  max-width: 600px;
   padding: 20px;
   background: #FFF;
   border-radius: 7px;
@@ -441,6 +443,8 @@ p.texto-cadastrese a {
   height: 130vh;
 }
 .box-cadastrosss {
+  width: 100%;
+  max-width: 600px;
   padding: 50px;
   background: #FFF;
   border-radius: 7px;

@@ -45,6 +45,7 @@ export default class Balance extends Component {
                         <h4>Qtds Itens Reciclados</h4>
                         <p>Pts {this.state.recorded_points}</p>
                     </div>
+                    
                     <button>Reciclar</button>
                 </div>
                 <div className="col-lg-5 secao-objetivo">

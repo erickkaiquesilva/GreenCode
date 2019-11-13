@@ -12,7 +12,7 @@ export default class SignIn extends Component {
                     <div className="row">
                         <div className="col-lg-1"></div>
                         <div className="col-lg-5 message-welcome">
-                            <h1>Bem Vindo Teste Teste</h1>
+                            <h1>Bem Vindo <br />Teste Teste</h1>
                             <div className="box-welcome-message">
                                 <p>
                                     Voce acaba de se juntar
