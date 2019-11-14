@@ -47,7 +47,7 @@ public class UsuarioController {
 	}
 	
 	@PostMapping("/usuario/pontos")
-	public ResponseEntity<Integer> buscarPontos(Usuario usuario){
+	public ResponseEntity<Integer> buscarPontos(@RequestBody Usuario usuario){
 		
 		if(usuario != null) {
 			int pontos = tds.buscarPontosPorId(usuario.getId());
@@ -58,7 +58,7 @@ public class UsuarioController {
 	}
 	
 	@PostMapping("/usuario/gastar")
-	public ResponseEntity<Boolean> gastar(@RequestBody List<Produto> produtos, Usuario usuario){
+	public ResponseEntity<Boolean> gastar(@RequestBody List<Produto> produtos, @RequestBody Usuario usuario){
 
 		if(usuario != null) {
 			Long usuarioId = usuario.getId();

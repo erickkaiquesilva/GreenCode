@@ -13,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.greencode.demo.dao.TransacaoRepository;
@@ -31,7 +32,7 @@ private TransacaoRepository transacoes;
 	}
 	
 	@PostMapping("/transacoes")
-	public ResponseEntity<List<Object>> buscarPorUsuario(Usuario usuario){
+	public ResponseEntity<List<Object>> buscarPorUsuario(@RequestBody Usuario usuario){
 		
 		if(usuario != null) {
 			List<Object> lista = transacoes.buscarPorUsuario(usuario.getId());

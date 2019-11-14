@@ -80,6 +80,12 @@ public class Usuario {
 	public String getSobrenome() {
 		return sobrenome;
 	}
+
+	@Override
+	public String toString() {
+		return "Usuario [id=" + id + ", nome=" + nome + ", sobrenome=" + sobrenome + ", senha=" + senha + ", email="
+				+ email + ", cpf=" + cpf + ", pontos=" + pontos + "]";
+	}
 	
 	
 }
