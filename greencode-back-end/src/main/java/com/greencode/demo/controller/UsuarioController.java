@@ -47,8 +47,8 @@ public class UsuarioController {
 	}
 	
 	@GetMapping("/usuario/pontos")
-	public ResponseEntity<Integer> buscarPontos(HttpSession session){
-		Usuario usuario = (Usuario) session.getAttribute("usuarioLogado");
+	public ResponseEntity<Integer> buscarPontos(Usuario usuario){
+		
 		if(usuario != null) {
 			int pontos = tds.buscarPontosPorId(usuario.getId());
 			return ResponseEntity.ok(pontos);
@@ -58,8 +58,8 @@ public class UsuarioController {
 	}
 	
 	@PostMapping("/usuario/gastar")
-	public ResponseEntity<Boolean> gastar(@RequestBody List<Produto> produtos, HttpSession session){
-		Usuario usuario = (Usuario) session.getAttribute("usuarioLogado");
+	public ResponseEntity<Boolean> gastar(@RequestBody List<Produto> produtos, Usuario usuario){
+
 		if(usuario != null) {
 			Long usuarioId = usuario.getId();
 			int pontosAtuais = tds.buscarPontosPorId(usuarioId);

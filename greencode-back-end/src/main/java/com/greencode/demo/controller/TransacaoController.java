@@ -30,8 +30,7 @@ private TransacaoRepository transacoes;
 	}
 	
 	@GetMapping("/transacoes")
-	public ResponseEntity<List<Object>> buscarPorUsuario(HttpSession session){
-		Usuario usuario = (Usuario) session.getAttribute("usuarioLogado");
+	public ResponseEntity<List<Object>> buscarPorUsuario(Usuario usuario){
 		
 		if(usuario != null) {
 			List<Object> lista = transacoes.buscarPorUsuario(usuario.getId());
