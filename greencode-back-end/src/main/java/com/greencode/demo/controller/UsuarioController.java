@@ -46,7 +46,7 @@ public class UsuarioController {
 		return ResponseEntity.ok(usuario);
 	}
 	
-	@GetMapping("/usuario/pontos")
+	@PostMapping("/usuario/pontos")
 	public ResponseEntity<Integer> buscarPontos(Usuario usuario){
 		
 		if(usuario != null) {
