@@ -55,7 +55,7 @@ public class UsuarioController {
 		}
 		
 		return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
-	}
+	} 
 	
 	@PostMapping("/usuario/gastar")
 	public ResponseEntity<Boolean> gastar(@RequestBody List<Produto> produtos, @RequestBody Usuario usuario){

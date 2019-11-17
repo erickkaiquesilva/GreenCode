@@ -21,7 +21,7 @@ import com.greencode.demo.model.Usuario;
 @SuppressWarnings("deprecation")
 public class LoginControllerTest {
 	
-private LoginController controller;
+	private LoginController controller;
 	
 	private UsuariosRepository tds;
 	private HttpSession session = new HttpSession() {
