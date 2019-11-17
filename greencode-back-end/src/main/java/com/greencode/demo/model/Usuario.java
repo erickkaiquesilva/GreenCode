@@ -58,6 +58,7 @@ public class Usuario {
 		this.email = email;
 		this.cpf = cpf;
 		this.sobrenome = sobrenome;
+		this.pontos = pontos;
 	}
 	public Long getId() {
 		return id;

@@ -81,7 +81,7 @@ public class UsuarioController {
 					transacao.getProdutos().add(p);
 					p.getTransacao().add(transacao);
 				}
-				System.out.println(transacao.toString());
+				//System.out.println(transacao.toString());
 				
 				transacoes.save(transacao);
 				return ResponseEntity.ok(true);
@@ -92,12 +92,6 @@ public class UsuarioController {
 		}else {
 			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
 		}
-		
-		
-		
-		
-		
-		
 		
 	}
 }

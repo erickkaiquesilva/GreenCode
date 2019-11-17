@@ -51,7 +51,6 @@ public class MaquinaController {
 	public ResponseEntity<Boolean> atualizarStatus(@RequestBody Maquina maquina){
 		tdMaquinas.atualizarStatus(maquina.getStatus(), maquina.getId());
 		
-		
 		return ResponseEntity.ok(true);
 	}
 }
