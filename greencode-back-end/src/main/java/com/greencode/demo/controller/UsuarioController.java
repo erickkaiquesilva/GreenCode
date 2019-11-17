@@ -57,6 +57,18 @@ public class UsuarioController {
 		return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
 	} 
 	
+	@PostMapping("/usuario/mudarSenha/{senha}")
+	public ResponseEntity<String> mudarSenha(@RequestBody Usuario usuario, @PathVariable("senha") String novaSenha){
+		
+		if(usuario != null) {
+			tds.atualizarSenha(novaSenha,usuario.getId());
+			return ResponseEntity.ok("Senha Alterada");
+		}
+		
+		return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+	} 
+	
+	
 	@PostMapping("/usuario/gastar")
 	public ResponseEntity<Boolean> gastar(@RequestBody List<Produto> produtos, @RequestBody Usuario usuario){
 

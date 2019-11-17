@@ -1,4 +1,4 @@
-package com.greencode.demo.model;
+package com.greencode.email.model;
 
 
 import java.util.List;
@@ -37,11 +37,11 @@ public class Usuario {
 	@JsonProperty
 	private int pontos;
 	
-	@OneToMany(mappedBy = "usuario")
-	private List<Transacao> transacao;
+	//@OneToMany(mappedBy = "usuario")
+	//private List<Transacao> transacao;
 	
-	@OneToMany(mappedBy = "usuario")
-	private List<Reciclados> reciclados;
+	//@OneToMany(mappedBy = "usuario")
+	//private List<Reciclados> reciclados;
 	
 	public Usuario() {
 		super();
@@ -58,7 +58,6 @@ public class Usuario {
 		this.email = email;
 		this.cpf = cpf;
 		this.sobrenome = sobrenome;
-		
 	}
 	public Long getId() {
 		return id;
