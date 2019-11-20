@@ -14,7 +14,6 @@ import org.mockito.Mockito;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import com.greencode.demo.controller.LoginController;
 import com.greencode.demo.dao.UsuariosRepository;
 import com.greencode.demo.model.Usuario;
 
