@@ -61,7 +61,21 @@ public class UsuarioController {
 		}
 		
 		return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
-	} 
+	}
+	
+	
+	
+	@PostMapping("/usuario/atualizarPontos/{pontos}")
+	public ResponseEntity<Boolean> atualizaPontos(@RequestBody Usuario usuario, @PathVariable int pontos){
+		
+		if(usuario != null) {
+			Long usuarioId = usuario.getId();
+			tds.atualizarPontos(pontos, usuarioId);
+			return ResponseEntity.ok(true);
+		}
+		return ResponseEntity.ok(false);
+		
+	}
 	
 	
 	@PostMapping("/usuario/gastar")
