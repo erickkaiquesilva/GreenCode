@@ -5,8 +5,12 @@
  */
 package com.greencode.maquina;
 
+import com.greencode.maquina.gui.JPassWordFieldHint;
+import com.greencode.maquina.gui.JTextFieldHint;
 import com.greencode.maquina.gui.Reciclando;
-import org.springframework.boot.SpringApplication;
+import java.awt.Color;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -21,11 +25,13 @@ public class Application extends javax.swing.JFrame {
     /**
      * Creates new form Application
      */
-     static Application ex;
+    static Application ex;
+
     public Application() {
         initComponents();
     }
-
+    
+    Reciclando reciclando = new Reciclando();
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -35,52 +41,155 @@ public class Application extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        userName = new JTextFieldHint(new JTextField(), "user-icon", "exemplo@email.com");
+        passField = new JPassWordFieldHint(new JPasswordField(), "padlock", "*********");
+        ;
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(800, 570));
+        setMinimumSize(new java.awt.Dimension(800, 570));
+        setPreferredSize(new java.awt.Dimension(800, 570));
+        setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("Logar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel2.setBackground(new java.awt.Color(254, 254, 254));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(159, 157, 157), 1, true));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 204, 330, -1));
+
+        jLabel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(159, 157, 157), 1, true));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 274, 330, -1));
+
+        jLabel2.setFont(new java.awt.Font("Ubuntu", 0, 30)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(1, 1, 1));
+        jLabel2.setText("Faça Seu Login");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(1, 1, 1));
+        jLabel3.setText("E comece a ganhar pontos recilcando.");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
+
+        userName.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 250, 250), 1, true));
+        userName.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                userNameMouseClicked(evt);
             }
         });
+        userName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userNameActionPerformed(evt);
+            }
+        });
+        jPanel2.add(userName, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 330, 35));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(145, 145, 145)
-                .addComponent(jButton1)
-                .addContainerGap(196, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(228, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(49, 49, 49))
-        );
+        passField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 254, 254)));
+        passField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                passFieldMouseClicked(evt);
+            }
+        });
+        jPanel2.add(passField, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 330, 35));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/button.png"))); // NOI18N
+        jLabel6.setMaximumSize(new java.awt.Dimension(200, 45));
+        jLabel6.setMinimumSize(new java.awt.Dimension(200, 45));
+        jLabel6.setPreferredSize(new java.awt.Dimension(200, 45));
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, -1, -1));
+
+        jLabel7.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(146, 146, 146));
+        jLabel7.setText("comece a reciclar de uma maneira divertida e diferente");
+        jLabel7.setToolTipText("");
+        jLabel7.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 330, -1));
+
+        jLabel8.setFont(new java.awt.Font("Ubuntu", 0, 15)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(176, 173, 173));
+        jLabel8.setText("Senha");
+        jLabel8.setToolTipText("");
+        jLabel8.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 60, -1));
+
+        jLabel9.setFont(new java.awt.Font("Ubuntu", 1, 12)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(40, 121, 40));
+        jLabel9.setText("Esqueci minha senha");
+        jLabel9.setToolTipText("");
+        jLabel9.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, 120, -1));
+
+        jLabel10.setFont(new java.awt.Font("Ubuntu", 0, 15)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(176, 173, 173));
+        jLabel10.setText("E-mail");
+        jLabel10.setToolTipText("");
+        jLabel10.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 60, -1));
+
+        jLabel11.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(146, 146, 146));
+        jLabel11.setText("Não tem uma conta ainda? Faça já seu cadastro nosso site e");
+        jLabel11.setToolTipText("");
+        jLabel11.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 330, -1));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 400, 440));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fundo-login.jpg"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 800));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Reciclando recicla = new Reciclando();
-        recicla.recebeAnterior(ex);
-        recicla.setVisible(true);
-        ex.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void userNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userNameActionPerformed
+
+    }//GEN-LAST:event_userNameActionPerformed
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        setVisible(false);
+        reciclando.setVisible(true);
+    }//GEN-LAST:event_jLabel6MouseClicked
+
+    private void userNameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userNameMouseClicked
+        userName.setForeground(new Color(151, 205, 41));
+        passField.setForeground(new Color(60, 60, 60));
+    }//GEN-LAST:event_userNameMouseClicked
+
+    private void passFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passFieldMouseClicked
+        passField.setForeground(new Color(151, 205, 41));
+        userName.setForeground(new Color(60, 60, 60));
+    }//GEN-LAST:event_passFieldMouseClicked
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        
+
         ConfigurableApplicationContext ctx = new SpringApplicationBuilder(Application.class)
                 .headless(false).run(args);
-        
+
         java.awt.EventQueue.invokeLater(() -> {
             ex = ctx.getBean(Application.class);
             ex.setVisible(true);
@@ -88,6 +197,20 @@ public class Application extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JTextField passField;
+    private javax.swing.JTextField userName;
     // End of variables declaration//GEN-END:variables
 }
