@@ -373,7 +373,7 @@ ul.logoMarcas li img {
 .fundo-login {
   background: var(--verde-primario);
   height: 100vh;
-  background:  url("../Image/fundo-login.jpg") no-repeat center center;
+  background:  url("../Image/gogreen.jpg") no-repeat center center;
   background-size: cover;
 }
 .box-login {
