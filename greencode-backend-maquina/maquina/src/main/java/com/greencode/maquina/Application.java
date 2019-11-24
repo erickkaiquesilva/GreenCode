@@ -107,7 +107,7 @@ public class Application extends javax.swing.JFrame {
         });
         jPanel2.add(passField, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 330, 35));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/button.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/btn-login.png"))); // NOI18N
         jLabel6.setMaximumSize(new java.awt.Dimension(200, 45));
         jLabel6.setMinimumSize(new java.awt.Dimension(200, 45));
         jLabel6.setPreferredSize(new java.awt.Dimension(200, 45));
@@ -116,7 +116,7 @@ public class Application extends javax.swing.JFrame {
                 jLabel6MouseClicked(evt);
             }
         });
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, -1, -1));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 240, -1));
 
         jLabel7.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(146, 146, 146));
