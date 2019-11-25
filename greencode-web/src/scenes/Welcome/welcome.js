@@ -5,6 +5,21 @@ import { withRouter, Link } from "react-router-dom";
 
 
 export default class SignIn extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            name: "",
+            sobrenome: ""
+        }
+    }
+
+    componentDidMount() {
+
+        let user = JSON.parse(localStorage.getItem('user'));
+        this.setState({ id_user: user.id_user, name: user.nome })
+
+    }
     render() {
         return (
             <>

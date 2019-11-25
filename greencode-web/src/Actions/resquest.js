@@ -11,3 +11,12 @@ export const signIn = (user) => {
 export const signUp = (user) => {
     return api.post('/signup', user)
 }
+
+export const summary = (user) => {
+    console.log("----- XPTO: REQUEST SUMMARY:", user)
+    return api.post("/transacoes", user)
+}
+
+export const balance = () => {
+    // return api.get("/usuario/pontos")
+}

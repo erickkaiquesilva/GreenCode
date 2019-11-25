@@ -38,7 +38,6 @@ export default class SignIn extends Component {
     try {
       signIn(this.state)
         .then((response) => {
-          console.log(response.data);
           localStorage.setItem('user', JSON.stringify(response.data))
           this.props.history.push('/dashboard')
         })

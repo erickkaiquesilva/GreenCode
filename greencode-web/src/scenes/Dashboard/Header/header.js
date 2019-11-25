@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { balanceMock } from "../../../Actions/requetMock";
+import { balance } from "../../../Actions/resquest";
 
 export default class Balance extends Component {
     constructor(props) {
@@ -19,10 +20,11 @@ export default class Balance extends Component {
         this.setState({ id_user: user.id_user, name: user.nome })
 
         try {
-            const res = balanceMock(this.state.id_user)
+            const res = balance()
             res.then((response) => {
+                console.log("------ BALANCE", response)
                 localStorage.setItem('balance', JSON.stringify(response))
-                this.setState({ recorded_points: response.recorded_points, recorded_items: response.recorded_items })
+                // this.setState({ recorded_points: response.recorded_points, recorded_items: response.recorded_items })
             })
                 .catch(err => console.log(err))
         } catch (err) {
