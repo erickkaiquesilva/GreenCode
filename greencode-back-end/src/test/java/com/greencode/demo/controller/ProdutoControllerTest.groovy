@@ -18,7 +18,7 @@ class ProdutoControllerTest extends Specification{
 	def ProdutoController controller;
 	def ProdutoRepository tds;
 	def List<Produto> produtos = new ArrayList();
-	
+
 	public void setup(){
 		tds = Mockito.mock(ProdutoRepository.class);
 		controller = new ProdutoController(tds);

@@ -135,4 +135,30 @@ class UsuarioControllerTest extends Specification {
 		
 	}
 	
+	def "deve mudar senha"(){
+		given:
+		Long id = 1;
+		Usuario usuario = new Usuario(id,"nome","senha","sobrenome","email","cpf");
+		
+		when:
+		ResponseEntity<String> resposta = controller.mudarSenha(usuario,"novaSenha");
+
+		then:
+		assertEquals(HttpStatus.OK, resposta.getStatusCode());
+		assertEquals("Senha Alterada", resposta.getBody());
+	}
+	
+	def "não deve mudar senha"(){
+		given:
+		Long id = 1;
+		Usuario usuario = null;
+		
+		when:
+		ResponseEntity<String> resposta = controller.mudarSenha(usuario,"novaSenha");
+
+		then:
+		assertEquals(HttpStatus.UNAUTHORIZED, resposta.getStatusCode());
+
+	}
+	
 }

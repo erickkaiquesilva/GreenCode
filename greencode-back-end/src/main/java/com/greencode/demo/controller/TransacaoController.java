@@ -21,13 +21,12 @@ private TransacaoRepository transacoes;
 	public TransacaoController(TransacaoRepository transacaoRepo) {
 		transacoes = transacaoRepo;
 	}
-	
+
 	@PostMapping("/transacoes")
 	public ResponseEntity<List<Object>> buscarPorUsuario(@RequestBody Usuario usuario){
 		
 		if(usuario != null) {
 			List<Object> lista = transacoes.buscarPorUsuario(usuario.getId());
-			
 			return ResponseEntity.ok(lista);
 			
 		}else {
