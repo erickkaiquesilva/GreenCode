@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { balanceMock } from "../../../Actions/requetMock";
+import { balance } from "../../../Actions/resquest";
 
 export default class Balance extends Component {
     constructor(props) {
@@ -8,6 +9,7 @@ export default class Balance extends Component {
         this.state = {
             id_user: 0,
             name: "",
+            lastname: "",
             recorded_points: 0,
             recorded_items: 0
         }
@@ -16,13 +18,14 @@ export default class Balance extends Component {
     componentDidMount() {
 
         let user = JSON.parse(localStorage.getItem('user'));
-        this.setState({ id_user: user.id_user, name: user.nome })
+        this.setState({ id_user: user.id, name: user.nome, lastname: user.sobrenome})
 
         try {
-            const res = balanceMock(this.state.id_user)
+            const res = balance()
             res.then((response) => {
+                console.log("------ BALANCE", response)
                 localStorage.setItem('balance', JSON.stringify(response))
-                this.setState({ recorded_points: response.recorded_points, recorded_items: response.recorded_items })
+                // this.setState({ recorded_points: response.recorded_points, recorded_items: response.recorded_items })
             })
                 .catch(err => console.log(err))
         } catch (err) {
@@ -36,7 +39,7 @@ export default class Balance extends Component {
                 <div className="col-lg-1"></div>
                 <div className="col-lg-5 informacoes-usuario">
                     {/* <h1><br /> {this.state.name}</h1> */}
-                    <h1>Teste Teste</h1>
+                    <h1>{this.state.name} {this.state.lastname}</h1>
                     <div className="box-pontos">
                         <h4>Seus Pontos</h4>
                         <p>Pts {this.state.recorded_points}</p>
@@ -45,11 +48,12 @@ export default class Balance extends Component {
                         <h4>Qtds Itens Reciclados</h4>
                         <p>Pts {this.state.recorded_points}</p>
                     </div>
+                    
                     <button>Reciclar</button>
                 </div>
                 <div className="col-lg-5 secao-objetivo">
                     <p>
-                        Olá Erick Silva, voce é um reciclador novo por aqui.
+                        Olá {this.state.name} {this.state.lastname}, voce é um reciclador novo por aqui.
                         Então para lhe ajuda veja seu objetivo, eles te ajudam
                         a ganha experiencia e cumprir com seus objetivos,
                         dando mais pontos e mais poder de troca.

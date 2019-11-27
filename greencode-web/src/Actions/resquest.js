@@ -11,3 +11,13 @@ export const signIn = (user) => {
 export const signUp = (user) => {
     return api.post('/signup', user)
 }
+
+export const summary = (user) => {
+    return api.post("/transacoes", { headers : {
+            'Content-type': 'application/json'
+        }, body:{ user } })
+}
+
+export const balance = () => {
+    // return api.get("/usuario/pontos")
+}

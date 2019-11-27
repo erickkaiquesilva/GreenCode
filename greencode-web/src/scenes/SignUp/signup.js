@@ -8,6 +8,7 @@ export default class SignUp extends Component {
 
     this.state = {
       nome: "",
+      sobrenome: "",
       cpf: "",
       email: "",
       senha: "",
@@ -33,8 +34,10 @@ export default class SignUp extends Component {
       signUp(this.state)
         .then((response) => {
           console.log(response);
-          localStorage.setItem('user', JSON.stringify(response))
-          this.props.history.push('/dashboard')
+          localStorage.setItem('user', JSON.stringify(response.data))
+          if(response.status == 200) {
+            this.props.history.push('/welcome')
+          }
         })
         .catch(err => console.log(err))
     } catch (err) {
@@ -60,7 +63,7 @@ export default class SignUp extends Component {
                   <input
                     onChange={e => this.handleChange(e)}
                     className="formulario-linha"
-                    id="nome"
+                    id="email"
                     type="email"
                     placeholder="exemplo@email.com.br"
                     required
@@ -70,8 +73,8 @@ export default class SignUp extends Component {
                     <input
                       onChange={e => this.handleChange(e)}
                       className="formulario-linha-metade fl-left"
-                      id="confirmeSenha"
-                      type="password"
+                      id="nome"
+                      type="text"
                       placeholder="José"
                       required
                     />
@@ -81,8 +84,8 @@ export default class SignUp extends Component {
                     <input
                       onChange={e => this.handleChange(e)}
                       className="formulario-linha-metade"
-                      id="email"
-                      type="email"
+                      id="sobrenome"
+                      type="text"
                       placeholder="Silva"
                       required
                     />

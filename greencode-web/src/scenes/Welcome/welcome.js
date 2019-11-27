@@ -5,6 +5,19 @@ import { withRouter, Link } from "react-router-dom";
 
 
 export default class SignIn extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            name: "",
+            lastname: ""
+        }
+    }
+
+    componentDidMount() {
+        let user = JSON.parse(localStorage.getItem('user'));
+        this.setState({ id_user: user.id, name: user.nome, lastname: user.sobrenome })
+    }
     render() {
         return (
             <>
@@ -12,7 +25,7 @@ export default class SignIn extends Component {
                     <div className="row">
                         <div className="col-lg-1"></div>
                         <div className="col-lg-5 message-welcome">
-                            <h1>Bem Vindo Teste Teste</h1>
+                            <h1>Bem Vindo <br />{this.state.name} {this.state.lastname}</h1>
                             <div className="box-welcome-message">
                                 <p>
                                     Voce acaba de se juntar
