@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.greencode.gerarsenha;
+package com.greencode.email.gerarsenha;
 
 public class PilhaObj<T> {
 

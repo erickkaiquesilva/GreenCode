@@ -1,4 +1,4 @@
-package com.greencode.gerarsenha;
+package com.greencode.email.gerarsenha;
 
 import java.util.Arrays;
 import java.util.Random;
