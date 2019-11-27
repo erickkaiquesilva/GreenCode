@@ -5,13 +5,13 @@
  */
 package com.greencode.gerarsenha;
 
-public class PilhaObj {
+public class PilhaObj<T> {
 
-    private char[] vetor;
+    private T[] vetor;
     private int topo;
 
     public PilhaObj(int tamanho) {
-        this.vetor = new char[tamanho];
+        this.vetor = (T[]) new Object[tamanho];
         this.topo = -1;
     }
 
@@ -29,7 +29,7 @@ public class PilhaObj {
         return false;
     }
 
-    public void push(char info) {
+    public void push(T info) {
         if (isFull()) {
             System.out.println("Lista cheia");
         } else {
@@ -37,17 +37,17 @@ public class PilhaObj {
         }
     }
 
-    public char pop() {
+    public T pop() {
         if (isEmpty()) {
-            return 'n';
+            return null;
         } else {
             return vetor[topo--];
         }
     }
 
-    public char peek() {
+    public T peek() {
         if (isEmpty()) {
-            return 'n';
+            return null;
         }
         return vetor[topo];
     }
@@ -62,7 +62,7 @@ public class PilhaObj {
         }
     }
 
-    public char[] getVetor() {
+    public T[] getVetor() {
         return this.vetor;
     }
 

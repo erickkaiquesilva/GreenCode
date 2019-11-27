@@ -199,7 +199,7 @@ public class Application extends javax.swing.JFrame {
         if (logou()) {
             app.setBemVindo(usuario.getNome());
             setVisible(false);
-            app.recebeAnterior(ex);
+            app.recebeAnterior(ex, usuario);
             app.setVisible(true);
         } else {
             message.setText("Usuário ou Senha Incorreto");

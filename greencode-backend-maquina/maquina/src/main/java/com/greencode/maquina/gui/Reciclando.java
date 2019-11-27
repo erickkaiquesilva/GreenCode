@@ -7,8 +7,16 @@ package com.greencode.maquina.gui;
 
 import com.greencode.coleta.arduino.ColetaArduino;
 import com.greencode.maquina.Application;
+import com.greencode.maquina.model.Reciclavel;
+import com.greencode.maquina.model.Usuario;
+import com.greencode.maquina.service.Services;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import javax.swing.JOptionPane;
+
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  *
@@ -19,8 +27,12 @@ public class Reciclando extends javax.swing.JFrame {
     static Application ex;
     int valor = 0;
     ColetaArduino arduino = new ColetaArduino();
-    
+    Usuario user;
+    Reciclavel reciclavel = new Reciclavel(1L, 2, 20, 1);
 
+    @Autowired
+    Services services = new Services();
+    
     boolean bool = true;
 
     /**
@@ -45,8 +57,9 @@ public class Reciclando extends javax.swing.JFrame {
         }
     };
 
-    public void recebeAnterior(Application app) {
+    public void recebeAnterior(Application app, Usuario usuario) {
         ex = app;
+        user = usuario;
     }
 
     /**
@@ -198,7 +211,10 @@ public class Reciclando extends javax.swing.JFrame {
     }//GEN-LAST:event_btnReciclarMouseClicked
 
     private void btnTerminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTerminarMouseClicked
-        bool = false;
+        int novoPonto = user.getPontos() + (valor * reciclavel.getPontos());
+        services.atualizarPontos(user, novoPonto);
+    	
+    	bool = false;
         setVisible(false);
         ex.recebeAnterior(this);
         ex.setVisible(true);
