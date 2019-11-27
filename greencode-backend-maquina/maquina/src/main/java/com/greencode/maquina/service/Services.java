@@ -5,28 +5,35 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import com.greencode.maquina.model.Usuario;
+import javax.swing.JOptionPane;
 
 @Service
 public class Services {
 
-	private final RestTemplate restTemplate;
-	private final String url;
-	
-	
-	public Services() {
-		restTemplate = new RestTemplate();
-		url = "http://3.211.16.250";
-	}
-	
-	public Usuario login(Usuario user) {
-		String urlLogin = url + "/login";
-		ResponseEntity<Usuario> resposta = restTemplate.postForEntity(urlLogin, user, Usuario.class);
-		return resposta.getBody();
-	}
-	
-	public boolean atualizarPontos(Usuario user, int pontos) {
-		String urlAtualizar = url + "/usuario/atualizarPontos/" + pontos;
-		ResponseEntity<Boolean> resposta = restTemplate.postForEntity(urlAtualizar, user, Boolean.class);
-		return resposta.getBody();
-	}
+    private final RestTemplate restTemplate;
+    private final String url;
+
+    public Services() {
+        restTemplate = new RestTemplate();
+        url = "http://3.211.16.250";
+    }
+
+    public Usuario login(Usuario user) {
+        String urlLogin = url + "/login";
+        ResponseEntity<Usuario> resposta = null ;
+        try{
+            resposta = restTemplate.postForEntity(urlLogin, user, Usuario.class);
+            
+        }catch(Exception e){
+            return null;
+        }
+        
+        return resposta.getBody();
+    }
+
+    public boolean atualizarPontos(Usuario user, int pontos) {
+        String urlAtualizar = url + "/usuario/atualizarPontos/" + pontos;
+        ResponseEntity<Boolean> resposta = restTemplate.postForEntity(urlAtualizar, user, Boolean.class);
+        return resposta.getBody();
+    }
 }

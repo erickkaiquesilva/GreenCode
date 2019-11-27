@@ -30,7 +30,7 @@ public class LoginController {
 	
 	
 	@PostMapping("/login")
-	public ResponseEntity<Usuario> validarLogin(@RequestBody Usuario usuario, HttpSession session) {
+	public ResponseEntity<Usuario> validarLogin(@RequestBody Usuario usuario) {
 		Usuario usuarioLogado = tdUsuario.logar(usuario.getEmail(), usuario.getSenha());
 		
 		if(usuarioLogado != null) {
@@ -40,7 +40,6 @@ public class LoginController {
 				new CreateFile().gravar(lista);
 				lista.limpa();
 			}
-			session.setAttribute("usuarioLogado", usuarioLogado);
 			return ResponseEntity.ok(usuarioLogado);			
 		}
 	

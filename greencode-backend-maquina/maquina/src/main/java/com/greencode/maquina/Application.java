@@ -1,16 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.greencode.maquina;
 
 import com.greencode.maquina.gui.JPassWordFieldHint;
 import com.greencode.maquina.gui.JTextFieldHint;
 import com.greencode.maquina.gui.Reciclando;
+import com.greencode.maquina.model.Usuario;
+import com.greencode.maquina.service.Services;
 import java.awt.Color;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -26,12 +28,20 @@ public class Application extends javax.swing.JFrame {
      * Creates new form Application
      */
     static Application ex;
+    static Reciclando app = new Reciclando();
+    static Usuario usuario;
+
+    @Autowired
+    Services services = new Services();
+
+    public void recebeAnterior(Reciclando app) {
+        app = app;
+    }
 
     public Application() {
         initComponents();
     }
-    
-    Reciclando reciclando = new Reciclando();
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -50,6 +60,7 @@ public class Application extends javax.swing.JFrame {
         userName = new JTextFieldHint(new JTextField(), "user-icon", "exemplo@email.com");
         passField = new JPassWordFieldHint(new JPasswordField(), "padlock", "*********");
         ;
+        message = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -59,7 +70,6 @@ public class Application extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(800, 570));
         setMinimumSize(new java.awt.Dimension(800, 570));
         setPreferredSize(new java.awt.Dimension(800, 570));
         setResizable(false);
@@ -67,7 +77,7 @@ public class Application extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(254, 254, 254));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(159, 157, 157), 1, true));
@@ -86,6 +96,7 @@ public class Application extends javax.swing.JFrame {
         jLabel3.setText("E comece a ganhar pontos recilcando.");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
 
+        userName.setBackground(new java.awt.Color(255, 255, 255));
         userName.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 250, 250), 1, true));
         userName.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -99,6 +110,7 @@ public class Application extends javax.swing.JFrame {
         });
         jPanel2.add(userName, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 330, 35));
 
+        passField.setBackground(new java.awt.Color(255, 255, 255));
         passField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 254, 254)));
         passField.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -107,7 +119,14 @@ public class Application extends javax.swing.JFrame {
         });
         jPanel2.add(passField, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 330, 35));
 
+        message.setFont(new java.awt.Font("Ubuntu", 0, 15)); // NOI18N
+        message.setForeground(new java.awt.Color(227, 32, 32));
+        message.setToolTipText("");
+        message.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jPanel2.add(message, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 330, 20));
+
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/btn-login.png"))); // NOI18N
+        jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel6.setMaximumSize(new java.awt.Dimension(200, 45));
         jLabel6.setMinimumSize(new java.awt.Dimension(200, 45));
         jLabel6.setPreferredSize(new java.awt.Dimension(200, 45));
@@ -116,7 +135,7 @@ public class Application extends javax.swing.JFrame {
                 jLabel6MouseClicked(evt);
             }
         });
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 240, -1));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 220, -1));
 
         jLabel7.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(146, 146, 146));
@@ -137,6 +156,15 @@ public class Application extends javax.swing.JFrame {
         jLabel9.setText("Esqueci minha senha");
         jLabel9.setToolTipText("");
         jLabel9.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel9MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel9MouseExited(evt);
+            }
+        });
         jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, 120, -1));
 
         jLabel10.setFont(new java.awt.Font("Ubuntu", 0, 15)); // NOI18N
@@ -168,8 +196,14 @@ public class Application extends javax.swing.JFrame {
     }//GEN-LAST:event_userNameActionPerformed
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
-        setVisible(false);
-        reciclando.setVisible(true);
+        if (logou()) {
+            app.setBemVindo(usuario.getNome());
+            setVisible(false);
+            app.recebeAnterior(ex);
+            app.setVisible(true);
+        } else {
+            message.setText("Usuário ou Senha Incorreto");
+        }
     }//GEN-LAST:event_jLabel6MouseClicked
 
     private void userNameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userNameMouseClicked
@@ -181,6 +215,14 @@ public class Application extends javax.swing.JFrame {
         passField.setForeground(new Color(151, 205, 41));
         userName.setForeground(new Color(60, 60, 60));
     }//GEN-LAST:event_passFieldMouseClicked
+
+    private void jLabel9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseEntered
+        jLabel9.setForeground(new Color(151, 205, 41));
+    }//GEN-LAST:event_jLabel9MouseEntered
+
+    private void jLabel9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseExited
+        jLabel9.setForeground(new Color(40, 121, 40));
+    }//GEN-LAST:event_jLabel9MouseExited
 
     /**
      * @param args the command line arguments
@@ -194,6 +236,27 @@ public class Application extends javax.swing.JFrame {
             ex = ctx.getBean(Application.class);
             ex.setVisible(true);
         });
+    }
+
+    public boolean logou() {
+
+        Usuario user = new Usuario(passField.getText(), userName.getText());
+        usuario = services.login(user);
+
+        if (usuario != null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    public void resetUsername(){
+        userName.setText("");
+        userName.requestFocus();
+    }
+    
+    public void resetPassField(){
+        passField.setText("");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -210,6 +273,7 @@ public class Application extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel message;
     private javax.swing.JTextField passField;
     private javax.swing.JTextField userName;
     // End of variables declaration//GEN-END:variables
