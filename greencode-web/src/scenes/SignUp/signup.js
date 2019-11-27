@@ -34,8 +34,10 @@ export default class SignUp extends Component {
       signUp(this.state)
         .then((response) => {
           console.log(response);
-          localStorage.setItem('user', JSON.stringify(response))
-          this.props.history.push('/welcome')
+          localStorage.setItem('user', JSON.stringify(response.data))
+          if(response.status == 200) {
+            this.props.history.push('/welcome')
+          }
         })
         .catch(err => console.log(err))
     } catch (err) {

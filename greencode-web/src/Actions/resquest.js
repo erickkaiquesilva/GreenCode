@@ -13,8 +13,9 @@ export const signUp = (user) => {
 }
 
 export const summary = (user) => {
-    console.log("----- XPTO: REQUEST SUMMARY:", user)
-    return api.post("/transacoes", user)
+    return api.post("/transacoes", { headers : {
+            'Content-type': 'application/json'
+        }, body:{ user } })
 }
 
 export const balance = () => {

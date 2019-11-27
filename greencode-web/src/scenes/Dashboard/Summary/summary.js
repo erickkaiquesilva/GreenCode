@@ -23,7 +23,8 @@ export default class Summary extends Component {
             const user = localStorage.getItem('user')
             summary(user)
                 .then((response) => { 
-                    console.log("------ XPTO", response.data)
+                    console.log("------ XPTO TESTANDO RESPOSTA DA REQUEST DO SUMMARY")
+                    console.log(response.data)
                     // this.setState({ extract: response.extract });
                 })
                 .catch(err => console.log(err))

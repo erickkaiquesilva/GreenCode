@@ -38,14 +38,15 @@ export default class SignIn extends Component {
     try {
       signIn(this.state)
         .then((response) => {
-          localStorage.setItem('user', JSON.stringify(response.data))
-          this.props.history.push('/dashboard')
+          if (response.status == 200) {
+            localStorage.setItem('user', JSON.stringify(response.data))
+            this.props.history.push('/dashboard')
+          }
         })
         .catch(err => console.log(err))
     } catch (err) {
       console.log("error ", err);
     }
-
   };
 
   render() {
