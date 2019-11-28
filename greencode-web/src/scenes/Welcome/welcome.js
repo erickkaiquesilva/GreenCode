@@ -18,6 +18,7 @@ export default class SignIn extends Component {
         let user = JSON.parse(localStorage.getItem('user'));
         this.setState({ id_user: user.id, name: user.nome, lastname: user.sobrenome })
     }
+    
     render() {
         return (
             <>
