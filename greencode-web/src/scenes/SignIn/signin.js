@@ -13,7 +13,14 @@ export default class SignIn extends Component {
     this.state = {
       email: "",
       senha: "",
+      Error: ""
     };
+  }
+
+  componentDidMount() {
+    if (localStorage.getItem('user') !== null) {
+      this.props.history.push('/dashboard')
+    }
   }
 
   handleChange = event => {
@@ -30,6 +37,7 @@ export default class SignIn extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+
     var payload = {
       email: this.state.email,
       senha: this.state.senha
@@ -43,13 +51,18 @@ export default class SignIn extends Component {
             this.props.history.push('/dashboard')
           }
         })
-        .catch(err => console.log(err))
+        .catch(e => {
+          console.log("Error XPTO")
+          this.state.Error = "Usuário"
+          this.setState(this.state)
+        })
     } catch (err) {
       console.log("error ", err);
     }
   };
 
   render() {
+    console.log(this.state.Error)
     return (
       <>
         <div className="container-fluid fundo-login">
@@ -78,6 +91,9 @@ export default class SignIn extends Component {
                     type="password"
                     placeholder="**************"
                   />
+                  <p>
+                    {this.state.Error}
+                  </p>
                   <Link><a className="link-esqueciSenha">Esqueci Minha Senha</a></Link>
                   <input className="btn-formulario-linha" type="submit" value="Login" />
                 </form>

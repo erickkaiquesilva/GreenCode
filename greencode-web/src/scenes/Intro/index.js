@@ -31,6 +31,13 @@ import iconInsta from '../../Resource/Image/instagram.png';
 import iconFace from '../../Resource/Image/facebook.png';
 
 export default class Intro extends Component {
+
+    componentDidMount() {
+        if(localStorage.getItem('user') !== null) {
+            this.props.history.push('/dashboard')
+        }
+    }
+
     render() {
         return (
             <>

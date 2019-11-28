@@ -1,5 +1,6 @@
 :root {
   --cinza-escuro: #3E3E3E;
+  --cinza-claro: #c7c7c7;
 
   --verde-primario: #97CD29;
   --verde-secundario: #056A54;
@@ -442,7 +443,7 @@ p.texto-cadastrese a {
   background-attachment: fixed;
   height: 130vh;
 }
-.box-cadastrosss {
+.box-cadastros {
   width: 100%;
   max-width: 600px;
   padding: 50px;
@@ -450,13 +451,13 @@ p.texto-cadastrese a {
   border-radius: 7px;
   margin: 4% 0;
 }
-.box-cadastrosss h1 {
+.box-cadastros h1 {
   font-size: 2.5em;
   padding: 0px 10px;
   color: var(--cinza-primario);
   margin-top: 20px;
 }
-.box-cadastrosss p {
+.box-cadastros p {
   font-size: 1em;
   padding: 0px 10px;
   color: var(--cinza-primario);
@@ -550,7 +551,7 @@ p.texto-cadastrese a {
   font-size: 2.7em;
   font-weight: bold;
 }
-.informacoes-usuario button {
+.informacoes-usuario .btn-reciclar {
   margin: 70px 50px;
   width: 70%;
   height: 70px;
@@ -563,6 +564,30 @@ p.texto-cadastrese a {
   cursor: pointer;
   outline: none;
   font-weight: bold;
+}
+.informacoes-usuario .links-configuracoes {
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+.informacoes-usuario .links-configuracoes a {
+  margin-right: 10px;
+  font-weight: lighter;
+  color: var(--cinza-claro);
+  font-size: 0.895em;
+  cursor: pointer;
+}
+.links-configuracoes .btn-logout {
+  background: transparent;
+  border-color: transparent;
+  font-size: 0.895em;
+  color: var(--cinza-claro);
+  outline: none;
+  cursor: pointer;
+}
+.informacoes-usuario .links-configuracoes a:hover,
+.informacoes-usuario .btn-logout:hover {
+  text-decoration: underline;
+  color: var(--cinza-escuro);
 }
 .informacoes-usuario .box-pontos {
   float: left;
