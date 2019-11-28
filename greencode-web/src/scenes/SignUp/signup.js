@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import NavBar from "../../Components/NavBar/navbar";
 import { signUp } from "../../Actions/resquest";
+import { withRouter, Link } from "react-router-dom";
 
 export default class SignUp extends Component {
   constructor(props) {
@@ -116,6 +117,9 @@ export default class SignUp extends Component {
                   />
                   <input className="btn-formulario-linha" type="submit" value="Criar Conta" />
                 </form>
+                <p className="texto-cadastrese">
+                  Já tem uma conta? Então faça o <Link to="/signIn"><a>login</a></Link> e começe a reciclar
+                </p>
               </div>
             </article>
             <div className="col-lg-6"></div>
