@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Random;
 
 import com.greencode.email.dao.UsuariosRepository;
+import com.greencode.email.gerarsenha.GerarSenha;
 import com.greencode.email.model.Usuario;
 
 @RestController
@@ -30,16 +31,22 @@ public class EmailController {
 		
 		Random gerador = new Random();
 		Usuario usuario = tds.buscarEmail(email);
+		GerarSenha gs = new GerarSenha();
+		String fatorial = gs.fatorial(gerador.nextInt(20) + 13)+"";
+		for(int i = 0; i < 10; i++) {
+			gs.getPilha().add(fatorial.charAt(i));
+		}
+		
 		
 		if(usuario != null) {
-			String senha = usuario.getNome() + "N" + gerador.nextInt(101);
-			tds.atualizarSenha(senha.toLowerCase(), usuario.getId());
+			String senha = gs.exibeSenha(gerador.nextBoolean());
+			tds.atualizarSenha(senha, usuario.getId());
 			
 			SimpleMailMessage msg = new SimpleMailMessage();
 	        msg.setTo(email);
 	
 	        msg.setSubject("Sua Nova Senha");
-	        msg.setText("Nova Senha: " + senha.toLowerCase());
+	        msg.setText("Nova Senha: " + senha);
 	
 	        javaMailSender.send(msg);
 			
