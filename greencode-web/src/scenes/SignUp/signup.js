@@ -46,7 +46,9 @@ export default class SignUp extends Component {
             this.props.history.push('/welcome')
           }
         })
-        .catch(err => console.log(err))
+        .catch(err => {
+          alert("Error")
+        })
     } catch (err) {
       console.log("error ", err);
     }

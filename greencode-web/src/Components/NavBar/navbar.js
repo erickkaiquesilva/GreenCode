@@ -7,7 +7,6 @@ export default class NavBar extends Component {
             <div className="container-fluid topo">
                 <div className="row">
                     <div className="logo col-lg-3 logo">
-                        <h1>TOPO</h1>
                     </div>
                     <div className="menu col-lg-6">
                         <ul>

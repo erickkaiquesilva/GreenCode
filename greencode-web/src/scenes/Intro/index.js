@@ -20,7 +20,7 @@ import iconPontos from '../../Resource/Image/iconPontos.png';
 import iconGarrafaPet from '../../Resource/Image/iconGarrafaPet.png';
 import iconGarrafaVidro from '../../Resource/Image/iconGarrafaVidro.png';
 
-import bannerQuemSomos from '../../Resource/Image/banner-quemsomos.png';
+// import bannerQuemSomos from '../../Resource/Image/banner-quemsomos.png';
 
 import logoIfood from '../../Resource/Image/logoIfood.png';
 import logoPaoAcucar from '../../Resource/Image/logoPaoAcucar.png';
@@ -89,7 +89,6 @@ export default class Intro extends Component {
                             </section>
                             <div className="col-lg-6 box-motivoGreencode">
                                 <h1>Junte-se a <br />Green Code</h1>
-                                <img src={bannerQuemSomos} />
                             </div>
                         </div>
                     </article>
@@ -97,7 +96,7 @@ export default class Intro extends Component {
                 </div>
                 <div className="espaco"></div>
                 <section className="container-fluid secao-comofunciona">
-                    <h1>Como funciona a <br />Green Code?</h1>
+                    <h1>Como funciona a Green Code?</h1>
                     <div className="row">
                         <div className="col-lg-1"></div>
                         <section className="col-lg-5 como-funciona-explicacao">
