@@ -11,9 +11,12 @@ import com.greencode.maquina.model.Reciclavel;
 import com.greencode.maquina.model.Usuario;
 import com.greencode.maquina.service.Services;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +32,9 @@ public class Reciclando extends javax.swing.JFrame {
     ColetaArduino arduino = new ColetaArduino();
     Usuario user;
     Reciclavel reciclavel = new Reciclavel(1L, 2, 20, 1);
+    ImageIcon reciclandoIcon = new ImageIcon("src/main/resources/fundo-recliando-1.png");
+    Toolkit tk = Toolkit.getDefaultToolkit();
+    Dimension d = tk.getScreenSize();
 
     @Autowired
     Services services = new Services();
@@ -40,6 +46,8 @@ public class Reciclando extends javax.swing.JFrame {
      */
     public Reciclando() {
         initComponents();
+        reciclandoIcon.setImage(reciclandoIcon.getImage().getScaledInstance(d.width, d.height, 1));
+        jLabel3.setIcon(reciclandoIcon);
     }
 
     Thread contagem = new Thread() {
@@ -90,9 +98,9 @@ public class Reciclando extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(635, 440));
+        setMinimumSize(new java.awt.Dimension(800, 570));
+        setUndecorated(true);
         setResizable(false);
-        setSize(new java.awt.Dimension(635, 470));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(254, 254, 254));
@@ -191,13 +199,11 @@ public class Reciclando extends javax.swing.JFrame {
         });
         jPanel1.add(btnReciclar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 370, 240, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fundo-recliando-1.png"))); // NOI18N
-        jLabel3.setMaximumSize(new java.awt.Dimension(635, 440));
-        jLabel3.setMinimumSize(new java.awt.Dimension(635, 440));
-        jLabel3.setPreferredSize(new java.awt.Dimension(635, 440));
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 440));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, -1));
+        jLabel3.setPreferredSize(new java.awt.Dimension(d.width, d.height));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, d.width, d.height));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, d.width, d.height));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
