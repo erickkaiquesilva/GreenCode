@@ -428,6 +428,12 @@ p.texto-cadastrese a {
   margin: 30px 0px;
   outline: none;
 }
+.textErrorLogin {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #e25353 !important;
+  padding: 12px;
+}
 .formulario-login .link-esqueciSenha {
   text-align: right;
   display: block;

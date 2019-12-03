@@ -53,7 +53,7 @@ export default class SignIn extends Component {
         })
         .catch(e => {
           console.log("Error XPTO")
-          this.state.Error = "Usuário"
+          this.state.Error = "OPS!!! Usuário ou Senha inválido!"
           this.setState(this.state)
         })
     } catch (err) {
@@ -91,7 +91,7 @@ export default class SignIn extends Component {
                     type="password"
                     placeholder="**************"
                   />
-                  <p>
+                  <p className="textErrorLogin">
                     {this.state.Error}
                   </p>
                   <Link><a className="link-esqueciSenha">Esqueci Minha Senha</a></Link>

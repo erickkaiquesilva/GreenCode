@@ -75,7 +75,7 @@ class Balance extends Component {
                 </div>
                 <div className="col-lg-5 secao-objetivo">
                     <p>
-                        Olá {this.state.name} {this.state.lastname}, voce é um reciclador novo por aqui.
+                        Olá {<span className="bold">{this.state.name} {this.state.lastname}</span>}, voce é um reciclador novo por aqui.
                         Então para lhe ajuda veja seu objetivo, eles te ajudam
                         a ganha experiencia e cumprir com seus objetivos,
                         dando mais pontos e mais poder de troca.
