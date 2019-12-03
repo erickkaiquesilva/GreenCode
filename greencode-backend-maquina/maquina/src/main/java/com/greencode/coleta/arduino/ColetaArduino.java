@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 public class ColetaArduino {
 
     private SerialPort comPort = SerialPort.getCommPort("/dev/ttyACM0");
-
+    //private SerialPort comPort = SerialPort.getCommPort("COM3");
     public boolean CapturaDados(boolean wait) {
 
         comPort.openPort();

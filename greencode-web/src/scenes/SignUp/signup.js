@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import NavBar from "../../Components/NavBar/navbar";
 import { signUp } from "../../Actions/resquest";
+import { withRouter, Link } from "react-router-dom";
 
 export default class SignUp extends Component {
   constructor(props) {
@@ -15,8 +16,14 @@ export default class SignUp extends Component {
     };
   }
 
+  componentDidMount() {
+    if (localStorage.getItem('user') !== null) {
+      this.props.history.push('/dashboard')
+    }
+  }
+
   handleChange = event => {
-    console.log(event.target.value);
+    console.log(event);
 
     const state = Object.assign({}, this.state);
 
@@ -35,11 +42,13 @@ export default class SignUp extends Component {
         .then((response) => {
           console.log(response);
           localStorage.setItem('user', JSON.stringify(response.data))
-          if(response.status == 200) {
+          if (response.status == 200) {
             this.props.history.push('/welcome')
           }
         })
-        .catch(err => console.log(err))
+        .catch(err => {
+          alert("Error")
+        })
     } catch (err) {
       console.log("error ", err);
     }
@@ -52,7 +61,7 @@ export default class SignUp extends Component {
         <div className="container-fluid fundo-cadastro">
           <div className="row">
             <div className="col-lg-1"></div>
-            <article className="col-lg-5 box-cadastrosss">
+            <article className="col-lg-5 box-cadastros">
               <h1>Crie Sua Conta</h1>
               <p>
                 E ajude o mundo a ser mais limpo
@@ -110,6 +119,9 @@ export default class SignUp extends Component {
                   />
                   <input className="btn-formulario-linha" type="submit" value="Criar Conta" />
                 </form>
+                <p className="texto-cadastrese">
+                  Já tem uma conta? Então faça o <Link to="/signIn"><a>login</a></Link> e começe a reciclar
+                </p>
               </div>
             </article>
             <div className="col-lg-6"></div>

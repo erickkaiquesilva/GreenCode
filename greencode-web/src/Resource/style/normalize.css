@@ -1,5 +1,18 @@
-body{
+html, body{
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
-    outline: none;
+    outline: none !important;
+    /* background: #F0F; */
+}
+:root {
+    --cinza-escuro: #3E3E3E;
+    --cinza-claro: #c7c7c7;
+    --verde-primario: #97CD29;
+    --verde-secundario: #056A54;
+    --cinza-primario: #3E3E3E;
+    --laranja: #FF5733;
+    --branco-neve: #F5F7F8;
+}
+.bold{
+    font-weight: bold;
 }

@@ -7,25 +7,38 @@ package com.greencode.maquina.gui;
 
 import com.greencode.coleta.arduino.ColetaArduino;
 import com.greencode.maquina.Application;
+import com.greencode.maquina.model.Reciclavel;
+import com.greencode.maquina.model.Usuario;
+import com.greencode.maquina.service.Services;
+
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  *
- * @author Gustavo
+ * @author lucas
  */
 public class Reciclando extends javax.swing.JFrame {
 
     static Application ex;
     int valor = 0;
     ColetaArduino arduino = new ColetaArduino();
-    ImageIcon backIcon = new ImageIcon("src/main/resources/fundo-recliando-1.png");
-    ImageIcon recilcarIcon = new ImageIcon("src/main/resources/btn-reclicar.png");
-    ImageIcon terminarIcon = new ImageIcon("src/main/resources/btn-terminar.png");
+    Usuario user;
+    Reciclavel reciclavel = new Reciclavel(1L, 2, 20, 1);
+    ImageIcon reciclandoIcon = new ImageIcon("src/main/resources/fundo-recliando-1.png");
     Toolkit tk = Toolkit.getDefaultToolkit();
     Dimension d = tk.getScreenSize();
 
+    @Autowired
+    Services services = new Services();
+    
     boolean bool = true;
 
     /**
@@ -33,11 +46,8 @@ public class Reciclando extends javax.swing.JFrame {
      */
     public Reciclando() {
         initComponents();
-        backIcon.setImage(backIcon.getImage().getScaledInstance(d.width, d.height, 1));
-        jLabel3.setIcon(backIcon);
-        recilcarIcon.setImage(recilcarIcon.getImage().getScaledInstance(btnReciclar.getWidth(),btnReciclar.getHeight(), 1));
-        btnReciclar.setIcon(recilcarIcon);
-        terminarIcon.setImage(terminarIcon.getImage().getScaledInstance(btnTerminar.getWidth(), btnTerminar.getHeight(), 1));
+        reciclandoIcon.setImage(reciclandoIcon.getImage().getScaledInstance(d.width, d.height, 1));
+        jLabel3.setIcon(reciclandoIcon);
     }
 
     Thread contagem = new Thread() {
@@ -55,8 +65,9 @@ public class Reciclando extends javax.swing.JFrame {
         }
     };
 
-    public void recebeAnterior(Application app) {
+    public void recebeAnterior(Application app, Usuario usuario) {
         ex = app;
+        user = usuario;
     }
 
     /**
@@ -69,43 +80,45 @@ public class Reciclando extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
+        textoReciclando = new javax.swing.JLabel();
+        bemVindo = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        btnReciclar = new javax.swing.JLabel();
-        btnTerminar = new javax.swing.JLabel();
-        int jPanel5Altura = (d.height/2)+d.height/4;
-        int jPanel5Largura = (d.width/2)+d.width/4;
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
+        btnTerminar = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         totalReciclando = new javax.swing.JLabel();
-        textoReciclando = new javax.swing.JLabel();
-        bemVindo = new javax.swing.JLabel();
+        btnReciclar = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(635, 440));
+        setMinimumSize(new java.awt.Dimension(800, 570));
         setUndecorated(true);
         setResizable(false);
-        setSize(new java.awt.Dimension(635, 470));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(254, 254, 254));
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(254, 254, 254), 3, true));
         jPanel1.setMaximumSize(new java.awt.Dimension(640, 440));
         jPanel1.setMinimumSize(new java.awt.Dimension(640, 440));
-        jPanel1.setPreferredSize(new Dimension(d.width, d.height));
+        jPanel1.setPreferredSize(new java.awt.Dimension(640, 440));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        
-        jPanel5.setBackground(new java.awt.Color(254, 254, 254,0));
-        jPanel5.setPreferredSize(new Dimension(d.width/3, d.height));
-        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        textoReciclando.setFont(new java.awt.Font("Ubuntu", 1, 36)); // NOI18N
+        textoReciclando.setForeground(new java.awt.Color(254, 254, 254));
+        textoReciclando.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jPanel1.add(textoReciclando, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, 510, 50));
+
+        bemVindo.setFont(new java.awt.Font("Ubuntu", 1, 36)); // NOI18N
+        bemVindo.setForeground(new java.awt.Color(254, 254, 254));
+        bemVindo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jPanel1.add(bemVindo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, 510, 50));
 
         jPanel2.setBackground(new java.awt.Color(5, 108, 84));
         jPanel2.setBorder(null);
@@ -127,15 +140,7 @@ public class Reciclando extends javax.swing.JFrame {
         jLabel8.setText("Pts");
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 57, -1, -1));
 
-        jPanel5.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, jPanel5Altura/4, -1));
-
-        btnReciclar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/btn-reclicar.png"))); // NOI18N
-        btnReciclar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel5.add(btnReciclar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 380, -1, -1));
-
-        btnTerminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/btn-terminar.png"))); // NOI18N
-        btnTerminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel5.add(btnTerminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, (jPanel5Largura/2)-25, 40));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 230, 100));
 
         jPanel3.setBackground(new java.awt.Color(151, 205, 41));
         jPanel3.setBorder(null);
@@ -145,19 +150,28 @@ public class Reciclando extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(254, 254, 254));
         jLabel4.setText("Total Reciclado");
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 16, -1, -1));
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 16, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(254, 254, 254));
         jLabel5.setText("Total");
-        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 53, -1, -1));
+        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 53, -1, -1));
 
         jLabel11.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(254, 254, 254));
         jLabel11.setText("0");
         jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 51, 92, 32));
 
-        jPanel5.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, jPanel2.getHeight(), 220, -1));
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 230, 100));
+
+        btnTerminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/btn-terminar.png"))); // NOI18N
+        btnTerminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnTerminar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnTerminarMouseClicked(evt);
+            }
+        });
+        jPanel1.add(btnTerminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(335, 370, 250, -1));
 
         jPanel4.setBackground(new java.awt.Color(255, 87, 51));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -174,40 +188,54 @@ public class Reciclando extends javax.swing.JFrame {
         totalReciclando.setText("0");
         jPanel4.add(totalReciclando, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 12, 206, 150));
 
-        jPanel5.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, 230, 200));
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 140, 230, 220));
 
-        textoReciclando.setFont(new java.awt.Font("Ubuntu", 1, 36)); // NOI18N
-        textoReciclando.setForeground(new java.awt.Color(254, 254, 254));
-        textoReciclando.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jPanel5.add(textoReciclando, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 510, 50));
+        btnReciclar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/btn-reclicar.png"))); // NOI18N
+        btnReciclar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnReciclar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnReciclarMouseClicked(evt);
+            }
+        });
+        jPanel1.add(btnReciclar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 370, 240, -1));
 
-        bemVindo.setFont(new java.awt.Font("Ubuntu", 1, 36)); // NOI18N
-        bemVindo.setForeground(new java.awt.Color(254, 254, 254));
-        bemVindo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jPanel5.add(bemVindo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 510, 50));
 
-        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints((d.width/2)-jPanel5Largura/2, 
-        		(d.height/2)-jPanel5Altura/2, jPanel5Largura, jPanel5Altura));
+        jLabel3.setPreferredSize(new java.awt.Dimension(d.width, d.height));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, d.width, d.height));
 
-        jLabel3.setMaximumSize(new java.awt.Dimension(635, 440));
-        jLabel3.setMinimumSize(new java.awt.Dimension(635, 440));
-        jLabel3.setPreferredSize(new Dimension(d.width, d.height));
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 440));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, d.width, d.height));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    public void setBemVindo(String nome) {
+    private void btnReciclarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReciclarMouseClicked
+        textoReciclando.setText("Você está reciclando...");
+        bool = true;
+        if(!contagem.isAlive()){
+            contagem.start();
+        }
+    }//GEN-LAST:event_btnReciclarMouseClicked
+
+    private void btnTerminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTerminarMouseClicked
+        int novoPonto = user.getPontos() + (valor * reciclavel.getPontos());
+        services.atualizarPontos(user, novoPonto);
+    	
+    	bool = false;
+        setVisible(false);
+        ex.recebeAnterior(this);
+        ex.setVisible(true);
+        textoReciclando.setText("");
+        ex.resetUsername();
+        ex.resetPassField();
+        totalReciclando.setText("0");
+        valor = 0;
+        bemVindo.setText("");
+    }//GEN-LAST:event_btnTerminarMouseClicked
+
+    public void setBemVindo(String nome){
         bemVindo.setText("Bem Vindo " + nome);
     }
-
-      public void ajustarDimensao(){
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, d.width, d.height));
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, d.width, d.height));
-    }
-
+    
     /**
      * @param args the command line arguments
      */
@@ -228,7 +256,6 @@ public class Reciclando extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JLabel textoReciclando;
     private javax.swing.JLabel totalReciclando;
     // End of variables declaration//GEN-END:variables

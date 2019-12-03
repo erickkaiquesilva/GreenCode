@@ -216,10 +216,11 @@ public class Application extends javax.swing.JFrame {
         if (logou()) {
             app.setBemVindo(usuario.getNome());
             setVisible(false);
-            app.recebeAnterior(ex);
+            app.recebeAnterior(ex,usuario);
             app.setExtendedState(ex.MAXIMIZED_BOTH);
-            app.ajustarDimensao();
+            app.setLocationRelativeTo(null);  
             app.setLocationRelativeTo(null);
+            app.recebeAnterior(ex, usuario);
             app.setVisible(true);
         } else {
             message.setText("Usuário ou Senha Incorreto");
@@ -254,6 +255,7 @@ public class Application extends javax.swing.JFrame {
 
         java.awt.EventQueue.invokeLater(() -> {
             ex = ctx.getBean(Application.class);
+            ex.setLocationRelativeTo(null);  
             ex.setExtendedState(ex.MAXIMIZED_BOTH);
             ex.setVisible(true);
         });

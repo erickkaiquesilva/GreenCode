@@ -31,9 +31,11 @@ public class Services {
         return resposta.getBody();
     }
 
-    public boolean atualizarPontos(Usuario user, int pontos) {
+    public Boolean atualizarPontos(Usuario user, int pontos) {
         String urlAtualizar = url + "/usuario/atualizarPontos/" + pontos;
+        
         ResponseEntity<Boolean> resposta = restTemplate.postForEntity(urlAtualizar, user, Boolean.class);
+        
         return resposta.getBody();
     }
 }

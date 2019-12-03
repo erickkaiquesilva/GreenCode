@@ -1,0 +1,86 @@
+.header-adm {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.header-adm h1 {
+    font-size: 2.3em;
+    font-weight: bold;
+    color: var(--cinza-primario);
+}
+.header-adm p {
+    font-size: 1.7em;
+    font-weight: lighter;
+    color: var(--cinza-primario);
+}
+.infos {
+    padding: 30px 0px;
+}
+.secaoListaMaquinas {
+    padding: 15px;
+}
+.boxInfoLixeira {
+    width: 45%;
+    padding: 10px 8px;
+    margin: 10px 0px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 10px;
+    background: #FFF;
+}
+.boxInfoLixeira h3 {
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 12px;
+    color: var(--cinza-primario);
+}
+.boxInfoLixeira ul {
+    list-style: none;
+    margin: 0;
+}
+.boxInfoLixeira li {
+    display: block;
+    margin: 8px 0px;
+}
+.boxInfoLixeira p {
+    font-weight: lighter;
+}
+.boxInfoLixeira .btnDesligarLixeira {
+    width: 100%;
+    height: 35px;
+    background: #c74747;
+    color: #FFF;
+    border: 2px solid #c24141;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    margin: 10px 0px;
+}
+.boxInfoLixeira .btnDesligarLixeira:hover {
+    background: #c24141;
+}
+.painelDeContagem {
+    padding: 15px;
+}
+.contagemUsuarios,
+.contagemItensReciclados,
+.contagemLixeiras {
+    background: #FFF;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0px;
+}
+.contagemUsuarios h1,
+.contagemItensReciclados h1,
+.contagemLixeiras h1{
+    font-size: 2.3em;
+    font-weight: bold;
+    color: var(--cinza-primario);
+}
+.contagemUsuarios h3,
+.contagemItensReciclados h3,
+.contagemLixeiras h3 {
+    font-size: 1.5em;
+    margin-top: -15px;
+    color: var(--cinza-primario);
+    font-weight: lighter
+}
