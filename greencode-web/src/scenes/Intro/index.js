@@ -46,10 +46,12 @@ export default class Intro extends Component {
                     <div className="row">
                         <div className="col-lg-1"></div>
                         <div className="col-lg-10 conteudo-intro">
-                            <h1>Somos a <br /><div className="green-primary">Green Code?</div></h1>
+                            <h1>Somos a <br /><div className="green-primary">Green Code</div></h1>
                             <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                            A preservação do meio ambiente
+                            começa com pequenas atitudes diárias,
+                            que fazem toda a diferença.
+                            Uma das mais importantes é a reciclagem do lixo.
                             </p>
                             <button>Cadastre-se</button>
                         </div>
@@ -68,21 +70,21 @@ export default class Intro extends Component {
                                         <img src={iconQuemsomos} />
                                         <h2>Quem Somos</h2>
                                         <p>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            A Green Code é uma empresa de tecnologia sustentavel.
                                         </p>
                                     </li>
                                     <li>
                                         <img src={iconValores} />
                                         <h2>Nossos Valores</h2>
                                         <p>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            A Green Code tem como valores Etica, Pensamento sustentável, Empatia, Conscientização Ambiental e Atitude de dono.  
                                         </p>
                                     </li>
                                     <li>
                                         <img src={iconObjetivo} />
                                         <h2>Nosso Objetivo</h2>
                                         <p>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        A Green Code tem como objetivo criar soluções tecnologicas voltadas para a preservação do meio ambiente
                                         </p>
                                     </li>
                                 </ul>
@@ -147,13 +149,13 @@ export default class Intro extends Component {
                         <article className="col-lg-7 explicacao-reciclar">
                             <h1>Porque reciclar?</h1>
                             <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Dentre as muitas razões do porque reciclar, as mais importantes são economia e prevenção. 
+                            Seu processo ajuda a diminuir o desperdício de energia, água, a contaminação do solo e lençóis freáticos, 
+                            além de ajudar a proteger recursos minerais importantes para manutenção do ecossistema e a vida humana.
                             </p>
                             <h1>O que a Green Code <br />recicla?</h1>
                             <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            No momento a Green Code recicla Plasticos e Vidros.
                             </p>
                             <div className="iconsReciclagem">
                                 <ul>
@@ -198,42 +200,8 @@ export default class Intro extends Component {
                         <div className="col-lg-1"></div>
                         <article className="col-lg-3 box-equipe">
                             <img src={ImageTeste1} />
-                            <h4>Victor Ferreira</h4>
-                            <p>Design da Green Code, e apaixonado pela melhoria do meio ambiente.</p>
-                            <ul>
-                                <li><img src={iconGit} /></li>
-                                <li><img src={iconFacebook} /></li>
-                            </ul>
-                        </article>
-                        <article className="col-lg-3 box-equipe">
-                            <img src={ImageTeste2} />
                             <h4>Ana Carolina</h4>
                             <p>Scrum Master Green Code, e uma eterna defensora contra os maltratos ao nosso meio ambiente.</p>
-                            <ul>
-                                <li><img src={iconGit} /></li>
-                                <li><img src={iconFacebook} /></li>
-                            </ul>
-                        </article>
-                        <article className="col-lg-3 box-equipe">
-                            <img src={ImageTeste2} />
-                            <h4>Gustavo Ferreira</h4>
-                            <p>DevOps Green Code, e lutando para que sua cidade fique mais limpa com o uso da tecnologia.</p>
-                            <ul>
-                                <li><img src={iconGit} /></li>
-                                <li><img src={iconFacebook} /></li>
-                            </ul>
-                        </article>
-                        <div className="col-lg-1"></div>
-                    </div>
-
-                    <div className="espaco"></div>
-
-                    <div className="row">
-                        <div className="col-lg-1"></div>
-                        <article className="col-lg-3 box-equipe">
-                            <img src={ImageTeste1} />
-                            <h4>Lucas Castro Melo</h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             <ul>
                                 <li><img src={iconGit} /></li>
                                 <li><img src={iconFacebook} /></li>
@@ -250,8 +218,42 @@ export default class Intro extends Component {
                         </article>
                         <article className="col-lg-3 box-equipe">
                             <img src={ImageTeste2} />
-                            <h4>Erick Silva</h4>
+                            <h4>Lucas Castro de Melo</h4>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <ul>
+                                <li><img src={iconGit} /></li>
+                                <li><img src={iconFacebook} /></li>
+                            </ul>
+                        </article>
+                        <div className="col-lg-1"></div>
+                    </div>
+
+                    <div className="espaco"></div>
+
+                    <div className="row">
+                        <div className="col-lg-1"></div>
+                        <article className="col-lg-3 box-equipe">
+                            <img src={ImageTeste1} />
+                            <h4>Gustavo Ferreira</h4>
+                            <p>DevOps Green Code, e lutando para que sua cidade fique mais limpa com o uso da tecnologia.</p>
+                            <ul>
+                                <li><img src={iconGit} /></li>
+                                <li><img src={iconFacebook} /></li>
+                            </ul>
+                        </article>
+                        <article className="col-lg-3 box-equipe">
+                            <img src={ImageTeste2} />
+                            <h4>Erick da Silva</h4>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <ul>
+                                <li><img src={iconGit} /></li>
+                                <li><img src={iconFacebook} /></li>
+                            </ul>
+                        </article>
+                        <article className="col-lg-3 box-equipe">
+                            <img src={ImageTeste2} />
+                            <h4>Victor Ferreira</h4>
+                            <p>Design da Green Code, e apaixonado pela melhoria do meio ambiente.</p>
                             <ul>
                                 <li><img src={iconGit} /></li>
                                 <li><img src={iconFacebook} /></li>

@@ -12,8 +12,8 @@ export default class NavBar extends Component {
                         <ul>
                             <li>MENU</li>
                             <li>MENU</li>
-                            <li>MENU</li>
-                            <li>MENU</li>
+                            <li>QUEM</li>
+                            <li>CONTATO</li>
                         </ul>
                     </div>
                     <div className="btn-login col-lg-3">
