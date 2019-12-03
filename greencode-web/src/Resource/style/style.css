@@ -312,11 +312,14 @@ ul.logoMarcas li img {
   text-align: center;
   padding: 10px 0px;
   font-weight: lighter;
-  color: #777777;
+  color: #FFF;
 }
 .box-equipe p {
   text-align: center;
   padding: 10px 0px;
+  color: #FFF;
+  font-style: italic;
+  font-size: 0.95em;
 }
 .box-equipe ul {
   list-style: none;
