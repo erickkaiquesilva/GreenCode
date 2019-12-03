@@ -17,20 +17,20 @@ class Balance extends Component {
     }
 
     componentDidMount() {
-        
+        let user;
         if(localStorage.getItem('user') === null) {
             this.props.history.push("/");
         } else {
-            let user = JSON.parse(localStorage.getItem('user'));
+            user = JSON.parse(localStorage.getItem('user'));
             this.setState({ id_user: user.id, name: user.nome, lastname: user.sobrenome })
         }
 
         try {
-            const res = balance()
-            res.then((response) => {
-                console.log("------ BALANCE", response)
+            balance(user)
+            .then((response) => {
+                console.log("------ BALANCE", response.data)
                 localStorage.setItem('balance', JSON.stringify(response))
-                // this.setState({ recorded_points: response.recorded_points, recorded_items: response.recorded_items })
+                this.setState({ recorded_points: response.data })
             })
                 .catch(err => console.log(err))
         } catch (err) {
@@ -68,7 +68,7 @@ class Balance extends Component {
                     </div>
                     <div className="box-itens">
                         <h4>Qtds Itens Reciclados</h4>
-                        <p>Pts {this.state.recorded_points}</p>
+                        <p>Pts {this.state.recorded_items}</p>
                     </div>
 
                     <button className="btn-reciclar">Reciclar</button>

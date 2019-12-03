@@ -18,6 +18,7 @@ export default class Summary extends Component {
     componentDidMount() {
         let user = JSON.parse(localStorage.getItem('user'));
         console.log("------ XPTO12", user)
+
         try {
             summary(user)
                 .then((response) => { 

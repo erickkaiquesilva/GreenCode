@@ -16,6 +16,6 @@ export const summary = (user) => {
     return api.post("/transacoes", user)
 }
 
-export const balance = () => {
-    // return api.get("/usuario/pontos")
+export const balance = (user) => {
+    return api.post("/usuario/pontos", user)
 }
