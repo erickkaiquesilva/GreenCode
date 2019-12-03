@@ -37,6 +37,12 @@ public class Usuario {
 	@JsonProperty
 	private int pontos;
 	
+	@JsonProperty
+	private boolean admin;
+	
+	@JsonProperty
+	private int totalItens;
+	
 	@OneToMany(mappedBy = "usuario")
 	private List<Transacao> transacao;
 	
@@ -51,13 +57,15 @@ public class Usuario {
 		this.senha = senha;
 		this.email = email;
 	}
-	public Usuario(Long id, String nome, String senha,String sobrenome, String email, String cpf) {
+	public Usuario(Long id, String nome, String senha,String sobrenome, String email, String cpf, boolean admin, int totalItens) {
 		this.id = id;
 		this.nome = nome;
 		this.senha = senha;
 		this.email = email;
 		this.cpf = cpf;
 		this.sobrenome = sobrenome;
+		this.admin = admin;
+		this.totalItens = totalItens;
 		
 	}
 	public Long getId() {

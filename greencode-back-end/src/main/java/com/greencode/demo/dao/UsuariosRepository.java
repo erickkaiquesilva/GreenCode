@@ -28,6 +28,13 @@ public interface UsuariosRepository extends JpaRepository<Usuario, Long> {
 	@Query("update Usuario set pontos = :pontos where id = :id")
 	public void atualizarPontos (@Param("pontos") int pontos,@Param("id") Long id);
 	
+	
+	@Transactional
+	@Modifying
+	@Query("update Usuario set totalItens = :itens where id = :id")
+	public void atualizarItens (@Param("itens") int itens,@Param("id") Long id);
+	
+	
 	@Transactional
 	@Modifying
 	@Query("update Usuario set senha = :senha where id = :id")

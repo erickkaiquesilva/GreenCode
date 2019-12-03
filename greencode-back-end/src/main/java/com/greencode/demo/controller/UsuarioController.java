@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -71,6 +72,18 @@ public class UsuarioController {
 		if(usuario != null) {
 			Long usuarioId = usuario.getId();
 			tds.atualizarPontos(pontos, usuarioId);
+			return ResponseEntity.ok(true);
+		}
+		return ResponseEntity.ok(false);
+		
+	}
+	
+	@PutMapping("/usuario/atualizarItens/{itens}")
+	public ResponseEntity<Boolean> atualizarItens(@RequestBody Usuario usuario, @PathVariable int itens){
+		
+		if(usuario != null) {
+			Long usuarioId = usuario.getId();
+			tds.atualizarItens(itens, usuarioId);
 			return ResponseEntity.ok(true);
 		}
 		return ResponseEntity.ok(false);

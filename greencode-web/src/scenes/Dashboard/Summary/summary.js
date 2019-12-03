@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 // IMPORT REQUESTS
-import { summaryMock } from "../../../Actions/requetMock";
 import { summary } from "../../../Actions/resquest";
 // IMPORT ICONS
 import lata_icon from "../../../Resource/Image/lata_icon.png";
@@ -16,16 +15,15 @@ export default class Summary extends Component {
         }
     }
 
-    componentWillMount() {
+    componentDidMount() {
         let user = JSON.parse(localStorage.getItem('user'));
-        console.log("------ XPTO12",user)
+        console.log("------ XPTO12", user)
         try {
-            const user = localStorage.getItem('user')
             summary(user)
                 .then((response) => { 
                     console.log("------ XPTO TESTANDO RESPOSTA DA REQUEST DO SUMMARY")
                     console.log(response.data)
-                    // this.setState({ extract: response.extract });
+                    this.setState({ extract: response.data });
                 })
                 .catch(err => console.log(err))
         } catch (err) {
