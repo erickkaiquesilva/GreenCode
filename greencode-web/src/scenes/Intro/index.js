@@ -198,8 +198,8 @@ export default class Intro extends Component {
                         <div className="col-lg-1"></div>
                         <article className="col-lg-3 box-equipe">
                             <img src={ImageTeste1} />
-                            <h4>Nome do Integrante</h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <h4>Victor Ferreira</h4>
+                            <p>Design da Green Code, e apaixonado pela melhoria do meio ambiente.</p>
                             <ul>
                                 <li><img src={iconGit} /></li>
                                 <li><img src={iconFacebook} /></li>
@@ -207,8 +207,8 @@ export default class Intro extends Component {
                         </article>
                         <article className="col-lg-3 box-equipe">
                             <img src={ImageTeste2} />
-                            <h4>Nome do Integrante</h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <h4>Ana Carolina</h4>
+                            <p>Scrum Master Green Code, e uma eterna defensora contra os maltratos ao nosso meio ambiente.</p>
                             <ul>
                                 <li><img src={iconGit} /></li>
                                 <li><img src={iconFacebook} /></li>
@@ -216,8 +216,8 @@ export default class Intro extends Component {
                         </article>
                         <article className="col-lg-3 box-equipe">
                             <img src={ImageTeste2} />
-                            <h4>Nome do Integrante</h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <h4>Gustavo Ferreira</h4>
+                            <p>DevOps Green Code, e lutando para que sua cidade fique mais limpa com o uso da tecnologia.</p>
                             <ul>
                                 <li><img src={iconGit} /></li>
                                 <li><img src={iconFacebook} /></li>
@@ -232,7 +232,7 @@ export default class Intro extends Component {
                         <div className="col-lg-1"></div>
                         <article className="col-lg-3 box-equipe">
                             <img src={ImageTeste1} />
-                            <h4>Nome do Integrante</h4>
+                            <h4>Lucas Castro Melo</h4>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             <ul>
                                 <li><img src={iconGit} /></li>
@@ -241,7 +241,7 @@ export default class Intro extends Component {
                         </article>
                         <article className="col-lg-3 box-equipe">
                             <img src={ImageTeste2} />
-                            <h4>Nome do Integrante</h4>
+                            <h4>Caio Custodio</h4>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             <ul>
                                 <li><img src={iconGit} /></li>
@@ -250,7 +250,7 @@ export default class Intro extends Component {
                         </article>
                         <article className="col-lg-3 box-equipe">
                             <img src={ImageTeste2} />
-                            <h4>Nome do Integrante</h4>
+                            <h4>Erick Silva</h4>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             <ul>
                                 <li><img src={iconGit} /></li>
