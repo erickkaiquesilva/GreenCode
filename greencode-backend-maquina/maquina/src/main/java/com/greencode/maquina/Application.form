@@ -134,9 +134,6 @@
             </Component>
             <Component class="javax.swing.JTextField" name="userName">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                     <LineBorder roundedCorners="true">
@@ -160,9 +157,6 @@
             </Component>
             <Component class="javax.swing.JTextField" name="passField">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                     <LineBorder>
@@ -206,7 +200,7 @@
                   <Image iconType="3" name="/btn-login.png"/>
                 </Property>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                  <Color id="Hand Cursor"/>
+                  <Color id="Cursor Padr&#xe3;o"/>
                 </Property>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[200, 45]"/>
@@ -275,7 +269,7 @@
                 <Property name="toolTipText" type="java.lang.String" value=""/>
                 <Property name="verticalAlignment" type="int" value="1"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                  <Color id="Hand Cursor"/>
+                  <Color id="Cursor Padr&#xe3;o"/>
                 </Property>
               </Properties>
               <Events>

@@ -23,13 +23,13 @@ public class ReciclavelController {
 	@Autowired
 	private ReciclavelRepository reciclavelRepository;
 
-	@PostMapping("criar")
+	@PostMapping("/criar")
 	public ResponseEntity<String> cadastroMaquina(@RequestBody Reciclavel rec) {
 		reciclavelRepository.save(rec);
 		return ResponseEntity.ok("BOTO Reciclavel!!");
 	}
 
-	@GetMapping("buscar/{status}")
+	@GetMapping("/buscar/{status}")
 	public ResponseEntity<List<Reciclavel>> obterPorStatus(@PathVariable("status") String tipo) {
 		List<Reciclavel> reciclaveis = reciclavelRepository.acharPorTipo(tipo);
 		return reciclaveis.isEmpty() ? ResponseEntity.noContent().build() :

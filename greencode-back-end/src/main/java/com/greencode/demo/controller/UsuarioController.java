@@ -43,15 +43,30 @@ public class UsuarioController {
 	}
 	
 	@PostMapping("/usuario/pontos")
-	public ResponseEntity<Integer> buscarPontos(@RequestBody Usuario usuario){
+	public ResponseEntity<Usuario> buscarPontos(@RequestBody Usuario usuario){
 		
 		if(usuario != null) {
 			int pontos = tds.buscarPontosPorId(usuario.getId());
-			return ResponseEntity.ok(pontos);
+			int itens = tds.buscarItensPorId(usuario.getId());
+			
+			Usuario usr = new Usuario(itens,pontos);
+			
+			return ResponseEntity.ok(usr);
 		}
 		
 		return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
 	} 
+	
+	@PostMapping("/usuario/itens")
+	public ResponseEntity<Integer> buscarItens(@RequestBody Usuario usuario){
+		
+		if(usuario != null) {
+			int itens = tds.buscarItensPorId(usuario.getId());
+			return ResponseEntity.ok(itens);
+		}
+		
+		return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+	}
 	
 	@PostMapping("/usuario/mudarSenha/{senha}")
 	public ResponseEntity<String> mudarSenha(@RequestBody Usuario usuario, @PathVariable("senha") String novaSenha){

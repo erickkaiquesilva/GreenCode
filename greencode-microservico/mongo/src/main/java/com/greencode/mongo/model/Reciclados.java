@@ -13,6 +13,8 @@ public class Reciclados {
 	
 	private Reciclavel reciclavel;
 	
+	private int totalGerado;
+	
 	private int idUsuario;
 	
 	private String nomeUsuario;
@@ -22,12 +24,12 @@ public class Reciclados {
 		
 	}
 	
-	public Reciclados(String id, Maquina maquina, Reciclavel reciclavel, int idUsuario, String nomeUsuario) {
-		this.id = id;
+	public Reciclados(Maquina maquina, Reciclavel reciclavel, int idUsuario, String nomeUsuario, int totalGerado) {
 		this.maquina = maquina;
 		this.reciclavel = reciclavel;
 		this.idUsuario = idUsuario;
 		this.nomeUsuario = nomeUsuario;
+		this.totalGerado = totalGerado;
 	}
 
 	public String getId() {
@@ -48,6 +50,10 @@ public class Reciclados {
 	
 	public String getnomeUsuario() {
 		return nomeUsuario;
+	}
+	
+	public int getTotalGerado() {
+		return totalGerado;
 	}
 	
 	

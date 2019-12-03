@@ -69,8 +69,7 @@ public class Application extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         userName = new JTextFieldHint(new JTextField(), "", "exemplo@exemplo");
         passField = new JPassWordFieldHint(new JPasswordField(), "padlock", "*********");
-        int jPanel2Altura = (d.height)-300;
-        int loginText = jPanel2Altura/14;
+        ;
         message = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -91,27 +90,25 @@ public class Application extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setAlignmentY(0.5f);
-        jPanel2.setPreferredSize(new Dimension((d.width/2)-250, jPanel2Altura));
+        jPanel2.setPreferredSize(new Dimension((d.width/2)-250, (d.height)-300));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(159, 157, 157), 1, true));
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, ((jPanel2Altura/2)-jPanel2Altura/7)+44, (d.width/2)-310, -1));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 204, 330, -1));
 
         jLabel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(159, 157, 157), 1, true));
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, ((jPanel2Altura/2)+jPanel2Altura/12)+44, (d.width/2)-310, -1));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 274, 330, -1));
 
-        jLabel2.setFont(new java.awt.Font("Ubuntu", 0, loginText));
+        jLabel2.setFont(new java.awt.Font("Ubuntu", 0, jPanel2Altura/5));
         jLabel2.setForeground(new java.awt.Color(1, 1, 1));
         jLabel2.setText("Faça Seu Login");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Ubuntu", 0, jPanel2Altura/40)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(1, 1, 1));
         jLabel3.setText("E comece a ganhar pontos recilcando.");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, loginText+35, -1, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
 
-        userName.setBackground(new java.awt.Color(255, 255, 255));
-        userName.setFont(new java.awt.Font("Ubuntu", 0, jPanel2Altura/35));
         userName.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 250, 250), 1, true));
         userName.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -123,55 +120,54 @@ public class Application extends javax.swing.JFrame {
                 userNameActionPerformed(evt);
             }
         });
-        jPanel2.add(userName, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, (jPanel2Altura/2)-jPanel2Altura/7, (d.width/2)-310, 45));
+        jPanel2.add(userName, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 330, 35));
 
-        passField.setBackground(new java.awt.Color(255, 255, 255));
-        passField.setFont(new java.awt.Font("Ubuntu", 0, jPanel2Altura/35));
         passField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(254, 254, 254)));
         passField.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 passFieldMouseClicked(evt);
             }
         });
-        jPanel2.add(passField, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, (jPanel2Altura/2)+jPanel2Altura/12, (d.width/2)-310, 45));
+        jPanel2.add(passField, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 330, 35));
 
-        message.setFont(new java.awt.Font("Ubuntu", 0, jPanel2Altura/35)); // NOI18N
+        message.setFont(new java.awt.Font("Ubuntu", 0, 15)); // NOI18N
         message.setForeground(new java.awt.Color(227, 32, 32));
         message.setToolTipText("");
         message.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jPanel2.add(message, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, ((jPanel2Altura/2)-jPanel2Altura/7)-70, 330, 30));
-        
-        // NOI18N
-        jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel6.setPreferredSize(new java.awt.Dimension(jPanel2Altura/4, jPanel2Altura/13));
+        jPanel2.add(message, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 330, 20));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/btn-login.png"))); // NOI18N
+        jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel6.setMaximumSize(new java.awt.Dimension(200, 45));
+        jLabel6.setMinimumSize(new java.awt.Dimension(200, 45));
+        jLabel6.setPreferredSize(new java.awt.Dimension(200, 45));
         jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel6MouseClicked(evt);
             }
         });
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, jPanel2Altura-(jPanel2Altura/5), jPanel2Altura/3, -1));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 220, -1));
 
-        jLabel7.setFont(new java.awt.Font("Ubuntu", 0, jPanel2Altura/40)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(146, 146, 146));
         jLabel7.setText("comece a reciclar de uma maneira divertida e diferente");
         jLabel7.setToolTipText("");
         jLabel7.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, jPanel2Altura-50, d.width-30, -1));
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 330, -1));
 
-        jLabel8.setFont(new java.awt.Font("Ubuntu", 0, jPanel2Altura/40)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Ubuntu", 0, 15)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(176, 173, 173));
         jLabel8.setText("Senha");
         jLabel8.setToolTipText("");
         jLabel8.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, ((jPanel2Altura/2)+jPanel2Altura/12)-24, 60, -1));
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 60, -1));
 
-        jLabel9.setFont(new java.awt.Font("Ubuntu", 1, jPanel2Altura/40)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Ubuntu", 1, 12)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(40, 121, 40));
         jLabel9.setText("Esqueci minha senha");
         jLabel9.setToolTipText("");
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel9.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel9MouseEntered(evt);
@@ -180,26 +176,24 @@ public class Application extends javax.swing.JFrame {
                 jLabel9MouseExited(evt);
             }
         });
-        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, ((jPanel2Altura/2)+jPanel2Altura/12)+70, (d.width/2)-250, -1));
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, 120, -1));
 
-        jLabel10.setFont(new java.awt.Font("Ubuntu", 0, jPanel2Altura/40)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Ubuntu", 0, 15)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(176, 173, 173));
         jLabel10.setText("E-mail");
         jLabel10.setToolTipText("");
         jLabel10.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, ((jPanel2Altura/2)-jPanel2Altura/7)-24, 60, -1));
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 60, -1));
 
-        jLabel11.setFont(new java.awt.Font("Ubuntu", 0, jPanel2Altura/40)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(146, 146, 146));
         jLabel11.setText("Não tem uma conta ainda? Faça já seu cadastro nosso site e");
         jLabel11.setToolTipText("");
         jLabel11.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, jPanel2Altura-70, d.width-30, -1));
-        
-        int y = (d.height/2) - (jPanel2Altura/2);
-        
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30,y, -1, -1));
- 
+        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 330, -1));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
+
         jLabel1.setPreferredSize(new Dimension(d.width, d.height));
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 

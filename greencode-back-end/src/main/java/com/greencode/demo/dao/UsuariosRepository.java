@@ -23,6 +23,9 @@ public interface UsuariosRepository extends JpaRepository<Usuario, Long> {
 	@Query("select u.pontos from Usuario u where u.id = :id")
 	public int buscarPontosPorId(Long id);
 	
+	@Query("select u.totalItens from Usuario u where u.id = :id")
+	public int buscarItensPorId(Long id);
+	
 	@Transactional
 	@Modifying
 	@Query("update Usuario set pontos = :pontos where id = :id")

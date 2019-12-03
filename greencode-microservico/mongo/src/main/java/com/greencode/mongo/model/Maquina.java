@@ -13,15 +13,15 @@ public class Maquina {
 	private String local;
 	
 	private String status;
+	
+	private String nivel;
 
-	public Maquina() {
-		super();
-	}
+	public Maquina() {}
 
-	public Maquina(String id, String local,String status) {
-		this.id = id;
+	public Maquina( String local,String status, String nivel) {
 		this.status = status;
 		this.local = local;
+		this.nivel = nivel;
 		
 	}
 	public String getId() {
@@ -33,5 +33,7 @@ public class Maquina {
 	public String getLocal() {
 		return local;
 	}
-
+	public String getNivel() {
+		return nivel;
+	}
 }

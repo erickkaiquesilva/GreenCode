@@ -57,6 +57,12 @@ public class Usuario {
 		this.senha = senha;
 		this.email = email;
 	}
+	
+	public Usuario(int itens, int pontos) {
+		this.totalItens = itens;
+		this.pontos = pontos;
+	}
+	
 	public Usuario(Long id, String nome, String senha,String sobrenome, String email, String cpf, boolean admin, int totalItens) {
 		this.id = id;
 		this.nome = nome;
