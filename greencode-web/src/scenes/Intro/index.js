@@ -4,8 +4,12 @@ import NavBar from '../../Components/NavBar/navbar'
 import ImageApp from '../../Resource/Image/movel.png';
 import LogoAppStore from '../../Resource/Image/logo-appStore.png';
 import LogoGooglePlay from '../../Resource/Image/logo-googlePlay.png';
-import ImageTeste1 from '../../Resource/Image/imageTeste1.png';
-import ImageTeste2 from '../../Resource/Image/imageTeste2.png';
+import Ana from '../../Resource/Image/Ana.jpg';
+import Caio from '../../Resource/Image/Caio.jpg';
+import Erick from '../../Resource/Image/Erick.jpg';
+import Gustavo from '../../Resource/Image/Gustavo.jpg';
+import Lucas from '../../Resource/Image/Lucas.jpg';
+import Victor from '../../Resource/Image/Victor.jpg';
 import iconGit from '../../Resource/Image/vector-git.png';
 import iconFacebook from '../../Resource/Image/vector-facebook.png';
 
@@ -199,7 +203,7 @@ export default class Intro extends Component {
                     <div className="row">
                         <div className="col-lg-1"></div>
                         <article className="col-lg-3 box-equipe">
-                            <img src={ImageTeste1} />
+                        <img src={Ana} />
                             <h4>Ana Carolina</h4>
                             <p>Scrum Master Green Code, e uma eterna defensora contra os maltratos ao nosso meio ambiente.</p>
                             <ul>
@@ -208,7 +212,7 @@ export default class Intro extends Component {
                             </ul>
                         </article>
                         <article className="col-lg-3 box-equipe">
-                            <img src={ImageTeste2} />
+                            <img src={Caio} />
                             <h4>Caio Custodio</h4>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             <ul>
@@ -217,8 +221,8 @@ export default class Intro extends Component {
                             </ul>
                         </article>
                         <article className="col-lg-3 box-equipe">
-                            <img src={ImageTeste2} />
-                            <h4>Lucas Castro de Melo</h4>
+                            <img src={Erick} />
+                            <h4>Erick da Silva</h4>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             <ul>
                                 <li><img src={iconGit} /></li>
@@ -233,7 +237,7 @@ export default class Intro extends Component {
                     <div className="row">
                         <div className="col-lg-1"></div>
                         <article className="col-lg-3 box-equipe">
-                            <img src={ImageTeste1} />
+                            <img src={Gustavo} />
                             <h4>Gustavo Ferreira</h4>
                             <p>DevOps Green Code, e lutando para que sua cidade fique mais limpa com o uso da tecnologia.</p>
                             <ul>
@@ -242,8 +246,8 @@ export default class Intro extends Component {
                             </ul>
                         </article>
                         <article className="col-lg-3 box-equipe">
-                            <img src={ImageTeste2} />
-                            <h4>Erick da Silva</h4>
+                            <img src={Lucas} />
+                            <h4>Lucas Castro de Melo</h4>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             <ul>
                                 <li><img src={iconGit} /></li>
@@ -251,7 +255,7 @@ export default class Intro extends Component {
                             </ul>
                         </article>
                         <article className="col-lg-3 box-equipe">
-                            <img src={ImageTeste2} />
+                            <img src={Victor} />
                             <h4>Victor Ferreira</h4>
                             <p>Design da Green Code, e apaixonado pela melhoria do meio ambiente.</p>
                             <ul>
