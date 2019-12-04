@@ -11,10 +11,14 @@
 .topo {
   background: var(--verde-primario);
   color: #fff;
-  padding: 12px 0px;
 }
-.topo .logo {
-  padding: 0px 50px;
+.logo img{
+  width: 100%;
+  max-width: 106px;
+  max-height: 106px;
+  padding: 2px;
+  margin-left: 70px;
+  margin-top: 15px;
 }
 .topo .menu ul {
   list-style: none;
@@ -23,11 +27,9 @@
   display: inline;
   margin: 0px 40px;
 }
-.topo .menu {
-  margin-top: 20px;
-}
 .topo .btn-login {
-  margin-top: 5px;
+  margin-top: -10px;
+  margin-bottom: 10px;
 }
 .topo .btn-login .link-login {
   font-size: 1.5em;
@@ -364,7 +366,7 @@ ul.logoMarcas li img {
 }
 .formulario-faleconosco textarea { height: 180px;}
 .formulario-faleconosco input[type="submit"] {
-  max-width: 300px;
+  max-width: 320px;
   display: block;
 }
 /* 
@@ -374,7 +376,7 @@ ul.logoMarcas li img {
 /* ESTILIZAÇÃO FORMULARIO DE LOGIN */
 .fundo-login {
   background: var(--verde-primario);
-  height: 100vh;
+  min-height: 100vh;
   background:  url("../Image/fundo-login.jpg") no-repeat center center;
   background-size: cover;
 }
@@ -449,7 +451,7 @@ p.texto-cadastrese a {
   background:  url("../Image/fundo-cadastro.jpg") no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
-  height: 130vh;
+  min-height: 100vh;
 }
 .box-cadastros {
   width: 100%;
@@ -457,7 +459,7 @@ p.texto-cadastrese a {
   padding: 50px;
   background: #FFF;
   border-radius: 7px;
-  margin: 4% 0;
+  margin: 3% 0;
 }
 .box-cadastros h1 {
   font-size: 2.5em;

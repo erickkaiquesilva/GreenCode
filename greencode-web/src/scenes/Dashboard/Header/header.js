@@ -29,8 +29,8 @@ class Balance extends Component {
             balance(user)
             .then((response) => {
                 console.log("------ BALANCE", response.data)
-                localStorage.setItem('balance', JSON.stringify(response))
-                this.setState({ recorded_points: response.data })
+                this.setState({recorded_points: response.data.pontos, recorded_items: response.data.totalItens})
+                
             })
                 .catch(err => console.log(err))
         } catch (err) {

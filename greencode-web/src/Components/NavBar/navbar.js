@@ -8,9 +8,7 @@ export default class NavBar extends Component {
             <div className="container-fluid topo">
                 <div className="row">
                     <div className="logo col-lg-3 logo">
-                    <ul>
-                    <img src={logo} /> 
-                   </ul>
+                        <img src={logo} /> 
                     </div>
                     <div className="menu col-lg-6">
                         <br></br><br></br>

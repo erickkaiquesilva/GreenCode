@@ -30,7 +30,7 @@ export default class Dashboard extends Component {
     return (
       <>
         <div className="container-fluid dashboard">
-            <Header authentication={this.authentication} />
+            <Header />
             <Summary />
         </div>
       </>
