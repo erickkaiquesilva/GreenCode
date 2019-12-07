@@ -38,4 +38,18 @@ public class Services {
         
         return resposta.getBody();
     }
+    
+    public Boolean atualizarItens(Usuario user, int itens) {
+        String urlAtualizar = url + "/usuario/atualizarItens/" + itens;
+        
+        ResponseEntity<Boolean> resposta = restTemplate.postForEntity(urlAtualizar, user, Boolean.class);
+        
+        return resposta.getBody();
+    }
+    
+    public String enviarEmail(String email) {
+		String urlEmail = url + "/email/enviar";
+		ResponseEntity<String> resposta = restTemplate.postForEntity(urlEmail, email, String.class);
+		return resposta.getBody();
+	}
 }

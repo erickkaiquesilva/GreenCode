@@ -206,8 +206,10 @@ public class Reciclando extends javax.swing.JFrame {
 
     private void btnTerminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTerminarMouseClicked
         int novoPonto = user.getPontos() + (valor * reciclavel.getPontos());
+        int novoQtdItens = user.getTotalItens() + valor;
         services.atualizarPontos(user, novoPonto);
-    	
+    	services.atualizarItens(user, novoQtdItens);
+        
     	bool = false;
         ex.recebeAnterior(this);
         ex.setVisible(true);

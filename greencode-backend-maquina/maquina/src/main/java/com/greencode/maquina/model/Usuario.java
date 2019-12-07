@@ -36,7 +36,11 @@ public class Usuario {
         super();
     }
 
-    public Usuario(String senha, String email) {
+    public int getTotalItens() {
+		return totalItens;
+	}
+
+	public Usuario(String senha, String email) {
         this.senha = senha;
         this.email = email;
     }

@@ -35,7 +35,7 @@ public class Application extends javax.swing.JFrame {
     Services services = new Services();
 
     public void recebeAnterior(Reciclando app) {
-        app = app;
+        this.app = app;
     }
 
     public Application() {
@@ -169,6 +169,9 @@ public class Application extends javax.swing.JFrame {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel9MouseExited(evt);
             }
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel9MouseClicked(evt);
+            }
         });
         jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, 120, -1));
 
@@ -188,7 +191,7 @@ public class Application extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 340, 420));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fundo-login.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("../icons/fundo-login.jpg"))); // NOI18N
         jLabel1.setMaximumSize(new java.awt.Dimension(640, 480));
         jLabel1.setMinimumSize(new java.awt.Dimension(640, 480));
         jLabel1.setPreferredSize(new java.awt.Dimension(640, 480));
@@ -215,6 +218,12 @@ public class Application extends javax.swing.JFrame {
             message.setText("Usuário ou Senha Incorreto");
         }
     }//GEN-LAST:event_jLabel6MouseClicked
+    
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        String email = JOptionPane.showInputDialog("Digite Seu Email Cadastrado");
+        JOptionPane.showMessageDialog(null, services.enviarEmail(email));
+    }
+    
 
     private void userNameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userNameMouseClicked
         userName.setForeground(new Color(151, 205, 41));

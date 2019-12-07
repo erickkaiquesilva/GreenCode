@@ -50,7 +50,7 @@ public class EmailController {
 	
 	        javaMailSender.send(msg);
 			
-			return ResponseEntity.ok("Senha Alterada");
+			return ResponseEntity.ok("Senha Alterada, Verifique seu Email");
 		}
 		
 		return ResponseEntity.ok("Email não cadastrado");
